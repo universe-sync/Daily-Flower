@@ -1,0 +1,53 @@
+/* base
+--------------------------- */
+@use "../global/variables" as v;
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+// font-familyやcolorなどは適宜変更して使うこと
+// font-sizeを62.5%にすることで、基準のサイズを10pxにできる
+// よって各font-sizeはpx数にremをつけて指定すれば良い
+html{
+    font-size: v.$fz-base;
+    line-height: 1.6;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #333;
+    font-size: 1.6rem;
+    font-family: v.$ff-base;
+    min-width: v.$sp-width;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video,
+object{
+    max-width: 100%;
+    height: auto;
+    border: none;
+    display: block;
+}
+
+a{
+    color: v.$link-color;
+    text-decoration: none;
+
+    &:hover{
+        opacity: 0.1;
+        transition: all 0.3s;
+    }
+}
+
+a:hover img{
+    text-decoration: none;
+    opacity: 0.1;
+    transition: all 0.3s;
+}

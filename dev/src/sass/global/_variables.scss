@@ -1,0 +1,30 @@
+// color
+// ──────────────────────────────
+$main-color: #382620; // メインカラー
+$accent-color: #F07317; // アクセントカラー
+$base-color-dark: #31452d; //ベースカラー（濃）
+$base-color-pale: #eeead0; //ベースカラー（薄）
+$text-color-bk: #333333; // テキストカラー（黒）
+$text-color-wh: #FFFFFF; // テキストカラー（白）
+$link-color: #0066c0; // リンクカラー
+
+// フォント
+$ff-awesome: "Font Awesome 5 Free", sans-serif; // Font Awesome
+$ff-base: "Lora", "Noto Serif JP", sans-serif; // フォントファミリー
+$fz-base: 62.5%; // ベースフォントサイズ font-sizeを62.5%にすることで、基準のサイズを10pxにできる
+$fw-base: 400; // ベースフォントウェイト
+$lh-base: 1.6; // ベース行間
+
+// レイアウト
+$inner-width: 1040px; // インナー幅サイズ
+$tab-width: 768px; // タブレット下限サイズ
+$sp-width: 375px; //　スマホサイズ
+
+
+// ブレークポイント
+$breakpoints: (
+  // タブレット以上の場合
+  "tab": "screen and (min-width: #{$tab-width})",
+  // PC以上の場合
+  "pc": "screen and (min-width: #{$inner-width})"
+);

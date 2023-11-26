@@ -1,0 +1,10 @@
+@use "../../global/variables" as v;
+@use "../../global/mixin" as m;
+
+.u-br{
+    display: block;
+
+     @include m.mq('tab'){
+            display: none;
+    }
+}

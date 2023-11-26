@@ -1,0 +1,9 @@
+// mixin.scss
+@use "./variables" as v; // variables.scssをインポートします
+@use "sass:map";
+
+@mixin mq($breakpoint: tab){ // デフォルトはタブレット
+    @media #{map-get(v.$breakpoints, $breakpoint)} {
+        @content;
+    }
+}

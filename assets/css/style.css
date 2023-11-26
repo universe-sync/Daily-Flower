@@ -1,0 +1,210 @@
+/*--------------------------------------*
+ * foundation
+ *--------------------------------------*/
+
+/* base
+--------------------------- */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+	line-height: 1.6;
+	scroll-behavior: smooth;
+}
+
+body {
+	color: #333;
+	font-family: "Lora", "Noto Serif JP", sans-serif;
+	font-size: 1.6rem;
+	min-width: 375px;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+img,
+video,
+object {
+	border: none;
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	color: #0066c0;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.1;
+	transition: all 0.3s;
+}
+
+a:hover img {
+	opacity: 0.1;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* layout
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* object
+*--------------------------------------*/
+
+/*--------------------------------------*
+* component
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+.c-drawer-icon {
+	cursor: pointer;
+}
+
+.c-drawer-icon__bars {
+	display: inline-block;
+	height: 20px;
+	position: relative;
+	width: 22px;
+}
+
+.c-drawer-icon__bar {
+	background: #5c5c5c;
+	border-radius: 4px;
+	display: block;
+	height: 4px;
+	left: 0;
+	position: absolute;
+	transition: all 0.3s linear 0s;
+	width: 100%;
+}
+
+.c-drawer-icon__bar:nth-of-type(1) {
+	top: 0;
+}
+
+.c-drawer-icon__bar:nth-of-type(2) {
+	top: 8px;
+}
+
+.c-drawer-icon__bar:nth-of-type(3) {
+	top: 16px;
+}
+
+.l-header__nav.c-drawer-icon--active {
+	transform: translateX(0);
+}
+
+.c-drawer-icon--active .c-drawer-icon__bar:nth-of-type(1) {
+	top: 10px;
+	transform: rotate(-45deg);
+}
+
+.c-drawer-icon--active .c-drawer-icon__bar:nth-of-type(2) {
+	background: transparent;
+}
+
+.c-drawer-icon--active .c-drawer-icon__bar:nth-of-type(3) {
+	top: 10px;
+	transform: rotate(45deg);
+}
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+.c-cta {
+	bottom: 5px;
+	position: fixed;
+	right: 16px;
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	z-index: 101;
+}
+
+.c-cta img {
+	height: 49px;
+	width: 49px;
+}
+
+.c-cta__show {
+	opacity: 1;
+	visibility: visible;
+}
+
+/*--------------------------------------*
+* project
+*--------------------------------------*/
+
+/*--------------------------------------*
+* utility
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+.u-br {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+
+.c-cta {
+	bottom: 42px;
+	right: 40.5px;
+}
+
+.u-br {
+	display: none;
+}
+
+}
+
+@media screen and (min-width: 1040px) {
+
+.c-drawer-icon {
+	display: none;
+}
+
+}
+

@@ -1,0 +1,26 @@
+@use "../../global/variables" as v;
+@use "../../global/mixin" as m;
+
+.c-cta {
+    position: fixed;
+    right: 16px;
+    bottom: 5px;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    z-index: 101;
+
+    @include m.mq('tab'){
+        right: 40.5px;
+        bottom: 42px;
+    }
+
+    img {
+        width: 49px;
+        height: 49px;
+    }
+
+    &__show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
