@@ -1,7 +1,7 @@
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
-.c-drawer-icon {
+.c-drawer {
     cursor: pointer;
     // background-color:rgba(239, 239, 239, 0);
     // line-height: 0.7;
@@ -43,13 +43,13 @@
 
 //ドロワーアイコンをクリックした時
 //メニューを右からスライドさせて表示する
-.l-header__nav.c-drawer-icon--active {
+.l-header__nav.c-drawer--active {
   transform: translateX(0);
 }
 
 //ドロワーアイコンのアニメーション
-.c-drawer-icon--active {
-    .c-drawer-icon__bar {
+.c-drawer--active {
+    .c-drawer__bar {
         &:nth-of-type(1) {
             top: 10px;
             transform: rotate(-45deg);

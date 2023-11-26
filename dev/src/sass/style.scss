@@ -23,7 +23,6 @@
  * component
  *--------------------------------------*/
  @use "./object/component/inner";
- @use "./object/component/button";
  @use "./object/component/section";
  @use "./object/component/hover";
  @use "./object/component/drawer";
@@ -32,7 +31,13 @@
  /*--------------------------------------*
  * project
  *--------------------------------------*/
-
+ @use "./object/project/about";
+ @use "./object/project/faq";
+ @use "./object/project/fv";
+ @use "./object/project/order";
+ @use "./object/project/plan";
+ @use "./object/project/service";
+ @use "./object/project/voice";
 
  /*--------------------------------------*
  * utility

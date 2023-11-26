@@ -12,18 +12,16 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 16px;
 	height: 100%;
-	line-height: 1.6;
+	line-height: 400;
 	scroll-behavior: smooth;
 }
 
 body {
-	color: #333;
+	color: #333333;
 	font-family: "Lora", "Noto Serif JP", sans-serif;
-	font-size: 1.6rem;
 	min-width: 375px;
-	overflow-x: hidden;
 	width: 100%;
 }
 
@@ -42,12 +40,12 @@ a {
 }
 
 a:hover {
-	opacity: 0.1;
+	opacity: 0.8;
 	transition: all 0.3s;
 }
 
 a:hover img {
-	opacity: 0.1;
+	opacity: 0.8;
 	text-decoration: none;
 	transition: all 0.3s;
 }
@@ -92,22 +90,18 @@ a:hover img {
 * global
 *--------------------------------------*/
 
-/*--------------------------------------*
-* global
-*--------------------------------------*/
-
-.c-drawer-icon {
+.c-drawer {
 	cursor: pointer;
 }
 
-.c-drawer-icon__bars {
+.c-drawer__bars {
 	display: inline-block;
 	height: 20px;
 	position: relative;
 	width: 22px;
 }
 
-.c-drawer-icon__bar {
+.c-drawer__bar {
 	background: #5c5c5c;
 	border-radius: 4px;
 	display: block;
@@ -118,32 +112,32 @@ a:hover img {
 	width: 100%;
 }
 
-.c-drawer-icon__bar:nth-of-type(1) {
+.c-drawer__bar:nth-of-type(1) {
 	top: 0;
 }
 
-.c-drawer-icon__bar:nth-of-type(2) {
+.c-drawer__bar:nth-of-type(2) {
 	top: 8px;
 }
 
-.c-drawer-icon__bar:nth-of-type(3) {
+.c-drawer__bar:nth-of-type(3) {
 	top: 16px;
 }
 
-.l-header__nav.c-drawer-icon--active {
+.l-header__nav.c-drawer--active {
 	transform: translateX(0);
 }
 
-.c-drawer-icon--active .c-drawer-icon__bar:nth-of-type(1) {
+.c-drawer--active .c-drawer__bar:nth-of-type(1) {
 	top: 10px;
 	transform: rotate(-45deg);
 }
 
-.c-drawer-icon--active .c-drawer-icon__bar:nth-of-type(2) {
+.c-drawer--active .c-drawer__bar:nth-of-type(2) {
 	background: transparent;
 }
 
-.c-drawer-icon--active .c-drawer-icon__bar:nth-of-type(3) {
+.c-drawer--active .c-drawer__bar:nth-of-type(3) {
 	top: 10px;
 	transform: rotate(45deg);
 }
@@ -176,6 +170,39 @@ a:hover img {
 *--------------------------------------*/
 
 /*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+.p-fv__message {
+	background-color: #382620;
+	font-size: 18px;
+}
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
+* global
+*--------------------------------------*/
+
+/*--------------------------------------*
 * utility
 *--------------------------------------*/
 
@@ -194,15 +221,19 @@ a:hover img {
 	right: 40.5px;
 }
 
+.p-fv__message {
+	font-size: 22px;
+}
+
 .u-br {
 	display: none;
 }
 
 }
 
-@media screen and (min-width: 1040px) {
+@media screen and (min-width: 1240px) {
 
-.c-drawer-icon {
+.c-drawer {
 	display: none;
 }
 
