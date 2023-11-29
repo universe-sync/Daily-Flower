@@ -2,13 +2,5 @@
 @use "../../global/mixin" as m;
 
 .p-fv{
-    
-    &__message{
-        font-size: 18px;
-        background-color: v.$main-color;
-
-        @include m.mq('tab'){
-            font-size: 22px;
-        }
-    }
+   
 }
