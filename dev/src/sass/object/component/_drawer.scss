@@ -3,8 +3,9 @@
 
 .c-drawer {
     cursor: pointer;
-    // background-color:rgba(239, 239, 239, 0);
-    // line-height: 0.7;
+    height: 80px;
+    display: flex;
+    align-items: center;
 
     @include m.mq('pc'){
         display: none;
@@ -12,15 +13,15 @@
 
   &__bars {
     display: inline-block;
-    width: 22px;
-    height: 20px;
+    width: 34px;
+    height: 24px;
     position: relative;
   }
 
   &__bar {
     position: absolute;
     display: block;
-    background: #5c5c5c;
+    background: rgba(73, 29, 1, 0.8);
     width: 100%;
     height: 4px;
     left: 0;
@@ -32,24 +33,23 @@
     }
 
     &:nth-of-type(2) {
-        top: 8px;
+        top: 10px;
     }
 
     &:nth-of-type(3) {
-        top: 16px;
+        top: 20px;
     }
   }
 }
 
-//ドロワーアイコンをクリックした時
-//メニューを右からスライドさせて表示する
-.l-header__nav.c-drawer--active {
+/* ドロワーアイコンをクリックした時
+メニューを右からスライドさせて表示する */
+.l-header__navSp.c-drawer__iconActive {
   transform: translateX(0);
 }
 
-//ドロワーアイコンのアニメーション
-.c-drawer--active {
-    .c-drawer__bar {
+/* ドロワーアイコンをバツにするアニメーション */
+.c-drawer__iconActive.c-drawer__bar {
         &:nth-of-type(1) {
             top: 10px;
             transform: rotate(-45deg);
@@ -61,5 +61,4 @@
             top: 10px;
             transform: rotate(45deg);
         }
-    }
 }

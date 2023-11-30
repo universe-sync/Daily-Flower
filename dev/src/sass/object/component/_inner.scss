@@ -2,6 +2,11 @@
 @use "../../global/mixin" as m;
 
 .c-inner {
+    margin: 0 auto;
 
+    @include m.mq('pc'){
+        width: v.$inner-width;
+    }
+    
 }
 

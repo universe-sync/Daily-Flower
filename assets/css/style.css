@@ -14,15 +14,14 @@
 html {
 	font-size: 16px;
 	height: 100%;
-	line-height: 400;
 	scroll-behavior: smooth;
 }
 
 body {
 	color: #333333;
-	font-family: "Lora", "Noto Serif JP", sans-serif;
-	min-width: 375px;
-	width: 100%;
+	font-family: YuGothic, "Yu Gothic", sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
 }
 
 img,
@@ -35,7 +34,7 @@ object {
 }
 
 a {
-	color: #0066c0;
+	color: #491D01;
 	text-decoration: none;
 }
 
@@ -62,6 +61,48 @@ a:hover img {
 * global
 *--------------------------------------*/
 
+.l-header__inner {
+	height: 80px;
+	position: relative;
+	z-index: 100;
+}
+
+.l-header__contents {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-right: 30px;
+}
+
+.l-header__logo {
+	width: 165px;
+}
+
+.l-header__navSp {
+	background-color: #F0E6E5;
+	height: 600px;
+	opacity: 0.8;
+	padding-left: 40px;
+	padding-top: 40px;
+	position: absolute; /*SP用のメニュー*/
+	right: 0;
+	text-align: left;
+	top: 0px;
+	transform: translateX(105%);
+	transition: all 0.5s ease 0s;
+	width: 100%;
+	z-index: 99;
+}
+
+.l-header__navPc {
+	display: none; /*PC用のメニュー*/
+}
+
+.l-header__lists {
+	padding-top: 170px;
+	text-align: center;
+}
+
 /*--------------------------------------*
 * global
 *--------------------------------------*/
@@ -78,6 +119,10 @@ a:hover img {
 * global
 *--------------------------------------*/
 
+.c-inner {
+	margin: 0 auto;
+}
+
 /*--------------------------------------*
 * global
 *--------------------------------------*/
@@ -91,18 +136,21 @@ a:hover img {
 *--------------------------------------*/
 
 .c-drawer {
+	align-items: center;
 	cursor: pointer;
+	display: flex;
+	height: 80px;
 }
 
 .c-drawer__bars {
 	display: inline-block;
-	height: 20px;
+	height: 24px;
 	position: relative;
-	width: 22px;
+	width: 34px;
 }
 
 .c-drawer__bar {
-	background: #5c5c5c;
+	background: rgba(73, 29, 1, 0.8);
 	border-radius: 4px;
 	display: block;
 	height: 4px;
@@ -117,27 +165,32 @@ a:hover img {
 }
 
 .c-drawer__bar:nth-of-type(2) {
-	top: 8px;
+	top: 10px;
 }
 
 .c-drawer__bar:nth-of-type(3) {
-	top: 16px;
+	top: 20px;
 }
 
-.l-header__nav.c-drawer--active {
+/* ドロワーアイコンをクリックした時
+メニューを右からスライドさせて表示する */
+
+.l-header__navSp.c-drawer__iconActive {
 	transform: translateX(0);
 }
 
-.c-drawer--active .c-drawer__bar:nth-of-type(1) {
+/* ドロワーアイコンをバツにするアニメーション */
+
+.c-drawer__iconActive.c-drawer__bar:nth-of-type(1) {
 	top: 10px;
 	transform: rotate(-45deg);
 }
 
-.c-drawer--active .c-drawer__bar:nth-of-type(2) {
+.c-drawer__iconActive.c-drawer__bar:nth-of-type(2) {
 	background: transparent;
 }
 
-.c-drawer--active .c-drawer__bar:nth-of-type(3) {
+.c-drawer__iconActive.c-drawer__bar:nth-of-type(3) {
 	top: 10px;
 	transform: rotate(45deg);
 }
@@ -181,11 +234,6 @@ a:hover img {
 * global
 *--------------------------------------*/
 
-.p-fv__message {
-	background-color: #382620;
-	font-size: 18px;
-}
-
 /*--------------------------------------*
 * global
 *--------------------------------------*/
@@ -221,10 +269,6 @@ a:hover img {
 	right: 40.5px;
 }
 
-.p-fv__message {
-	font-size: 22px;
-}
-
 .u-br {
 	display: none;
 }
@@ -232,6 +276,18 @@ a:hover img {
 }
 
 @media screen and (min-width: 1240px) {
+
+.l-header__navPc {
+	display: block;
+}
+
+.l-header__lists {
+	display: flex;
+}
+
+.c-inner {
+	width: 1240px;
+}
 
 .c-drawer {
 	display: none;

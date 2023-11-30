@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Flower</title>
+    <!-- reset.css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <!-- google fonts -->
-    <!-- /google fonts -->
     <!-- original -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <!-- .l-header -->
     <header class="l-header">
-      <div class="l-header__wrapper">
+      <div class="l-header__inner c-inner">
         <div class="l-header__contents">
-          <img src="" alt="" class="l-header__logo" />
+          <img src="./assets/img/logo.png" alt="Daily Flowerのロゴ" class="l-header__logo" />
 
           <!-- .c-drawer -->
           <button
@@ -31,8 +30,8 @@
           </button>
           <!-- /.c-drawer -->
 
-          <!-- .l-header__nav -->
-          <nav class="l-header__nav for-drawer">
+          <!-- .l-header__navPc PC用のメニュー-->
+          <nav class="l-header__navPc">
             <ul class="l-header__lists">
               <li class="l-header__list">
                 <a href="#service" class="l-header__listLink js-drawer-close">
@@ -46,33 +45,58 @@
               </li>
               <li class="l-header__list">
                 <a href="#news" class="l-header__listLink js-drawer-close">
-                  <span class="l-header__linkJp"></span>
-                  <span class="l-header__linkEn"></span>
+                  ご利用方法
                 </a>
               </li>
               <li class="l-header__list">
                 <a href="#info" class="l-header__listLink js-drawer-close">
-                  <span class="l-header__linkJp"></span>
-                  <span class="l-header__linkEn"></span>
+                  お客様の声
                 </a>
               </li>
               <li class="l-header__list">
                 <a href="#" class="l-header__listLink js-drawer-close">
-                  <span class="l-header__linkJp"></span>
-                  <span class="l-header__linkEn"></span>
+                  FAQ
                 </a>
               </li>
-              <li class="l-header__list">
-                <a href="#contact" class="l-header__listLink js-drawer-close">
-                  <span class="l-header__linkJp"></span>
-                  <span class="l-header__linkEn"></span>
-                </a>
-              </li>
+
             </ul>
           </nav>
         </div>
-        <!-- /.l-header__nav -->
+        <!-- /.l-header__navPc -->
       </div>
+
+      <!-- .l-header__navPc SP用のメニュー-->
+      <nav class="l-header__navSp for-drawer">
+        <ul class="l-header__lists">
+          <li class="l-header__list">
+            <a href="#service" class="l-header__listLink js-drawer-close">
+              Daily Flowerとは
+            </a>
+          </li>
+          <li class="l-header__list">
+            <a href="#plan" class="l-header__listLink js-drawer-close">
+              お届けプラン
+            </a>
+          </li>
+          <li class="l-header__list">
+            <a href="#" class="l-header__listLink js-drawer-close">
+              ご利用方法
+            </a>
+          </li>
+          <li class="l-header__list">
+            <a href="#voice" class="l-header__listLink js-drawer-close">
+              お客様の声
+            </a>
+          </li>
+          <li class="l-header__list">
+            <a href="#faq" class="l-header__listLink js-drawer-close">
+              FAQ
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.l-header__navSp -->
     </header>
     <!-- /.l-header -->
 
@@ -100,11 +124,13 @@
       <section id="plan" class="p-plan">
         <div class="c-inner">
           <h2 class="c-section__title">
-            <span class="u-inline-block__en"></span>
-            <span class="u-inline-block__jp"></span>
+            <span class="c-section__titleEn">Plan</span>
+            <span class="u-inline__block__jp">プラン</span>
           </h2>
           <div class="##__contents">
-            <div class="" id="__content"></div>
+            <div class="" id="__content">
+              <img src="./assets/img/flower3 2.png" alt="">
+            </div>
           </div>
         </div>
       </section>
@@ -130,9 +156,7 @@
 
       <!-- .c-to-top トップへ戻るボタン-->
       <div class="c-to-top">
-        <a href="#"
-          ><img src="./assets/img/sp/totop.png" alt="トップへ戻るボタン"
-        /></a>
+        <a href="#order"></a>
       </div>
       <!-- /.c-to-top -->
 
@@ -148,16 +172,25 @@
     <!-- l-footer -->
     <footer class="l-footer">
       <div class="c-inner">
-        <div class="l-footer__content">
+        <div class="l-footer__contents">
           <ul class="l-footer__lists">
             <li class="l-footer__list">
-              <a class="l-footer__listLink" href="#"></a>
+              <a class="l-footer__listLink" href="#service">Daily Flowerとは</a>
             </li>
             <li class="l-footer__list">
-              <a class="l-footer__listLink" href="#"></a>
+              <a class="l-footer__listLink" href="#plan">お届けプラン</a>
+            </li>
+            <li class="l-footer__list">
+              <a class="l-footer__listLink" href="#">ご利用方法</a>
+            </li>
+            <li class="l-footer__list">
+              <a class="l-footer__listLink" href="#voice">お客様の声</a>
+            </li>
+            <li class="l-footer__list">
+              <a class="l-footer__listLink" href="#faq">FAQ</a>
             </li>
           </ul>
-          <small class="l-footer__copyright">&copy;##</small>
+          <small class="l-footer__copyright">&copy;Daily Flower</small>
         </div>
       </div>
     </footer>

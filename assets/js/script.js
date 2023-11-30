@@ -5,28 +5,16 @@ $(document).ready(function () {
 
     //メニューの開閉
     let targetClass = jQuery(this).attr("data-target");
-    jQuery("." + targetClass).toggleClass("c-drawer-icon--active");
+    jQuery("." + targetClass).toggleClass("c-drawer__iconActive");
 
     //ドロワーアイコン（バー）のアニメーション
-    jQuery(this).find(".c-drawer-icon__bars").toggleClass("c-drawer-icon--active");
+    jQuery(this).find(".c-drawer__bar").toggleClass("c-drawer__iconActive");
     
     return false;
   });
 
   //メニュー内のリンクをクリックした時もドロワーを閉じる
   jQuery(".js-drawer-close").on("click", function (e) {
-    jQuery(".c-drawer-icon--active").removeClass("c-drawer-icon--active");
+    jQuery(".c-drawer__iconActive").removeClass("c-drawer__iconActive");
   });
-});
-
-// スクロール検知
-$(window).on("scroll", function () {
-  // トップから800pxの位置以上にスクロールしたら
-  if (800 < jQuery(this).scrollTop()) {
-    // showクラスをつける
-    jQuery('.c-to-top').addClass('c-to-top__show');
-  } else {
-    // 800pxを下回ったらshowクラスを削除
-    jQuery('.c-to-top').removeClass('c-to-top__show');
-  }
 });

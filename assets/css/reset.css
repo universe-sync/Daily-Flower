@@ -76,3 +76,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+button {
+  background: transparent;
+}
