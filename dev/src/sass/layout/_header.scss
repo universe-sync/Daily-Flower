@@ -20,8 +20,9 @@
         width: 165px;
     }
 
-    &__navSp { /*SP用のメニュー*/
-        position: absolute;
+    /* SP用のメニュー ここから */
+    &__navSp {
+        position: fixed;
         width: 100%;
         height: 600px;
         top: 0px;
@@ -36,23 +37,28 @@
         opacity: 0.8;
     }
 
-    &__navPc { /*PC用のメニュー*/
+    &__listsSp{
+        padding-top: 170px;
+        text-align: center;
+    }
+    /* SP用のメニュー ここまで */
+
+    /* PC用のメニュー ここから */
+    &__navPc {
         display: none;
 
         @include m.mq('pc'){
             display: block;
         }
-
     }
 
-    &__lists{
-        padding-top: 170px;
-        text-align: center;
-
+    &__listsPc{
 
         @include m.mq('pc'){
             display: flex;
         }
     }
-}
 
+    /* PC用のメニュー ここまで */
+
+}

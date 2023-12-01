@@ -2,5 +2,90 @@
 @use "../global/mixin" as m;
 
 .l-footer {
+    padding-top: 55px;
+    background-color: #f7f7f7;
 
+    &__inner{
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &__contents{
+
+        @include m.mq('pc'){ /* PCでは横並びにして、左右を入れ替える */
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__lists{ /* フッターメニュー */
+        text-align: center;
+    }
+
+    &__list{
+        font-size: 14px;
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__copyrightPc{ /* PC用のコピーライト */
+        display: none;
+        text-align: center;
+
+        @include m.mq('pc'){
+            display: block;
+        }
+    }
+
+    &__contentB{
+        
+    }
+
+    &__contentWrap{ /* ロゴとSNSアイコンを横並びにする */
+        display: flex;
+        gap: 18px;
+        max-width: 325px;
+        margin: 0 auto;
+    }
+
+    &__logo{ /* ロゴ */
+        width: 162px;
+    }
+
+    &__icons{ /* SNSアイコン */
+        display: flex;
+        gap: 18px;
+    }
+
+    &__icon{
+        width: 29.05px;
+        height: 29.05px;
+        opacity: 0.8;
+        margin-top: 50px;
+    }
+
+    &__info{ /* 住所とemail */
+        font-size: 14px;
+        color: v.$text-color-br;
+        max-width: 280px;
+        margin: 0 auto;
+        line-height: 22px;
+    }
+
+    &__copyrightSp{ /* SP用のコピーライト */
+        display: block;
+        text-align: center;
+        color: v.$text-color-br;
+        font-size: 20px;
+        margin-top: 70px;
+        padding-bottom: 50px;
+
+        @include m.mq('pc'){
+            display: none;
+        }
+    }
 }

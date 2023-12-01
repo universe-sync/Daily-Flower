@@ -5,8 +5,7 @@
     margin: 0 auto;
 
     @include m.mq('pc'){
-        width: v.$inner-width;
+        max-width: v.$inner-width;
     }
-    
 }
 

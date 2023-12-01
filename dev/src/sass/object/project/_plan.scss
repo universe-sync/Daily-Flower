@@ -2,5 +2,9 @@
 @use "../../global/mixin" as m;
 
 .p-plan{
-    
+    background-image: url(../../../../../assets/img/plan-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 1880px;
 }

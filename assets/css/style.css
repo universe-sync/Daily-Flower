@@ -61,6 +61,9 @@ a:hover img {
 * global
 *--------------------------------------*/
 
+.l-header { /* SP用のメニュー ここから */ /* SP用のメニュー ここまで */ /* PC用のメニュー ここから */ /* PC用のメニュー ここまで */
+}
+
 .l-header__inner {
 	height: 80px;
 	position: relative;
@@ -84,7 +87,7 @@ a:hover img {
 	opacity: 0.8;
 	padding-left: 40px;
 	padding-top: 40px;
-	position: absolute; /*SP用のメニュー*/
+	position: fixed;
 	right: 0;
 	text-align: left;
 	top: 0px;
@@ -94,18 +97,85 @@ a:hover img {
 	z-index: 99;
 }
 
-.l-header__navPc {
-	display: none; /*PC用のメニュー*/
-}
-
-.l-header__lists {
+.l-header__listsSp {
 	padding-top: 170px;
 	text-align: center;
+}
+
+.l-header__navPc {
+	display: none;
 }
 
 /*--------------------------------------*
 * global
 *--------------------------------------*/
+
+.l-footer {
+	background-color: #f7f7f7;
+	padding-top: 55px;
+}
+
+.l-footer__inner {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.l-footer__lists {
+	text-align: center; /* フッターメニュー */
+}
+
+.l-footer__list {
+	font-size: 14px;
+}
+
+.l-footer__list:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.l-footer__copyrightPc {
+	display: none; /* PC用のコピーライト */
+	text-align: center;
+}
+
+.l-footer__contentWrap {
+	display: flex; /* ロゴとSNSアイコンを横並びにする */
+	gap: 18px;
+	margin: 0 auto;
+	max-width: 325px;
+}
+
+.l-footer__logo {
+	width: 162px; /* ロゴ */
+}
+
+.l-footer__icons {
+	display: flex; /* SNSアイコン */
+	gap: 18px;
+}
+
+.l-footer__icon {
+	height: 29.05px;
+	margin-top: 50px;
+	opacity: 0.8;
+	width: 29.05px;
+}
+
+.l-footer__info {
+	color: #491D01;
+	font-size: 14px; /* 住所とemail */
+	line-height: 22px;
+	margin: 0 auto;
+	max-width: 280px;
+}
+
+.l-footer__copyrightSp {
+	color: #491D01;
+	display: block; /* SP用のコピーライト */
+	font-size: 20px;
+	margin-top: 70px;
+	padding-bottom: 50px;
+	text-align: center;
+}
 
 /*--------------------------------------*
 * object
@@ -126,6 +196,24 @@ a:hover img {
 /*--------------------------------------*
 * global
 *--------------------------------------*/
+
+.c-section__title {
+	font-family: Yu Mincho;
+	padding-top: 60px;
+	text-align: center;
+}
+
+.c-section__titleEn {
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 38px;
+}
+
+.c-section__titleJp {
+	font-size: 14px;
+	line-height: 22px;
+}
 
 /*--------------------------------------*
 * global
@@ -200,22 +288,56 @@ a:hover img {
 *--------------------------------------*/
 
 .c-cta {
-	bottom: 5px;
-	position: fixed;
-	right: 16px;
+	bottom: 50px;
+	left: 50%;
+	position: fixed; /* スクロールしても追従するボタン */
+	transform: translateX(-50%);
 	transition: all 0.3s ease 0s;
-	visibility: hidden;
 	z-index: 101;
 }
 
-.c-cta img {
-	height: 49px;
-	width: 49px;
+.c-cta__link {
+	align-items: center;
+	background-color: transparent;
+	border: 0.5px solid #333;
+	border-radius: 2px;
+	box-shadow: 0px 2px 11px 0px rgba(51, 51, 51, 0.25);
+	color: #333333;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	justify-content: center;
+	opacity: 0.8;
+	position: relative;
+	width: 215px;
 }
 
-.c-cta__show {
-	opacity: 1;
-	visibility: visible;
+.c-cta__link:hover {
+	background-color: #FAEFEC;
+}
+
+.c-cta__link::after {
+	background-image: url(../../../../../assets/img/cta-arrow.svg);
+	bottom: 12px;
+	content: "";
+	height: 8px;
+	position: absolute; /* 矢印 */
+	right: 12px;
+	width: 13px;
+}
+
+.c-cta__firstLine {
+	font-size: 11px; /* 1行目のテキスト */
+	line-height: 18px;
+}
+
+.c-cta__number {
+	font-size: 13px; /* 50％Off */
+	line-height: 21px;
+}
+
+.c-cta__secondLine {
+	line-height: 27px; /* 2行目のテキスト */
 }
 
 /*--------------------------------------*
@@ -242,6 +364,14 @@ a:hover img {
 * global
 *--------------------------------------*/
 
+.p-plan {
+	background-image: url(../../../../../assets/img/plan-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 1880px;
+}
+
 /*--------------------------------------*
 * global
 *--------------------------------------*/
@@ -264,11 +394,6 @@ a:hover img {
 
 @media screen and (min-width: 768px) {
 
-.c-cta {
-	bottom: 42px;
-	right: 40.5px;
-}
-
 .u-br {
 	display: none;
 }
@@ -281,16 +406,34 @@ a:hover img {
 	display: block;
 }
 
-.l-header__lists {
+.l-header__listsPc {
 	display: flex;
 }
 
+.l-footer__contents {
+	display: flex; /* PCでは横並びにして、左右を入れ替える */
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.l-footer__copyrightPc {
+	display: block;
+}
+
+.l-footer__copyrightSp {
+	display: none;
+}
+
 .c-inner {
-	width: 1240px;
+	max-width: 1240px;
 }
 
 .c-drawer {
 	display: none;
+}
+
+.c-cta__link {
+	width: 389px;
 }
 
 }

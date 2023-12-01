@@ -2,6 +2,24 @@
 @use "../../global/mixin" as m;
 
 .c-section {
+    
+    &__title{
+        padding-top: 60px;
+        text-align: center;
+        font-family: Yu Mincho;
+    }
 
+    &__titleEn{
+        display: block;
+        // font-family: Yu Mincho;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 38px;
+    }
+    
+    &__titleJp{
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
