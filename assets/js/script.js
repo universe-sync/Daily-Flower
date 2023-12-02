@@ -1,22 +1,30 @@
 // ドロワーアイコンの挙動（メニューの開閉とアイコンのアニメーション）
 $(document).ready(function () {
   // ドロワーアイコンをクリックすることで発火
-  jQuery(".js-drawer").on("click", function (e) {
+  $('.js-drawer').on('click', function (e) {
     e.preventDefault();
 
     //メニューの開閉
-    let targetClass = jQuery(this).attr("data-target");
-    jQuery("." + targetClass).toggleClass("c-drawer__iconActive");
+    let targetClass = $(this).attr('data-target');
+    $('.' + targetClass).toggleClass('c-drawer__iconActive');
 
     //ドロワーアイコン（バー）のアニメーション
-    jQuery(this).find(".c-drawer__bar").toggleClass("c-drawer__iconActive");
+    $(this).find('.c-drawer__bar').toggleClass('c-drawer__iconActive');
     
+    // 背景のスクロールを制御 メニューを開いている時はスクロールさせない
+    if ($('.' + targetClass).hasClass('c-drawer__iconActive')) {
+      $('body').css('overflow', 'hidden'); // スクロールを無効化
+    } else {
+      $('body').css('overflow', ''); // スクロールを有効化
+    }
+
     return false;
   });
 
   //メニュー内のリンクをクリックした時もドロワーを閉じる
-  jQuery(".js-drawer-close").on("click", function (e) {
-    jQuery(".c-drawer__iconActive").removeClass("c-drawer__iconActive");
+  $('.js-drawer-close').on('click', function (e) {
+    $('.c-drawer__iconActive').removeClass('c-drawer__iconActive');
+    $('body').css('overflow', ''); // スクロールを有効化
   });
 });
 

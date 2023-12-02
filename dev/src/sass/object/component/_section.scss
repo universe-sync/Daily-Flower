@@ -10,19 +10,28 @@
     &__title{ /* セクションタイトル */
         padding-top: 60px;
         text-align: center;
-        font-family: Yu Mincho;
+        font-family: 'YuMincho', 'Yu Mincho', '游明朝体', 'Yu Mincho Light', sans-serif;        
     }
 
     &__titleEn{
         display: block;
-        // font-family: Yu Mincho;
         font-size: 24px;
         font-weight: 600;
         line-height: 38px;
+
+        @include m.mq('pc'){
+            font-size: 32px;
+            line-height: 51px;
+        }
     }
     
     &__titleJp{
         font-size: 14px;
         line-height: 22px;
+
+        @include m.mq('pc'){
+            font-size: 18px;
+            line-height: 29px;
+        }
     }
 }
