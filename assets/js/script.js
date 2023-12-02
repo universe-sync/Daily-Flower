@@ -1,5 +1,6 @@
+// ドロワーアイコンの挙動（メニューの開閉とアイコンのアニメーション）
 $(document).ready(function () {
-  // ドロワー
+  // ドロワーアイコンをクリックすることで発火
   jQuery(".js-drawer").on("click", function (e) {
     e.preventDefault();
 
@@ -17,4 +18,22 @@ $(document).ready(function () {
   jQuery(".js-drawer-close").on("click", function (e) {
     jQuery(".c-drawer__iconActive").removeClass("c-drawer__iconActive");
   });
+});
+
+// コンバージョンボタンが画面の下に来た時の挙動（位置を上に変える）
+const button = document.getElementById('ctaButton'); // ボタン要素を取得
+
+// スクロールイベントを監視
+window.addEventListener('scroll', () => {
+    // ページの高さ
+    const pageHeight = document.documentElement.scrollHeight;
+    // 現在のスクロール位置
+    const scrollPosition = window.innerHeight + window.scrollY;
+    
+    // ページの最後に近づいたか判断
+    if (pageHeight - scrollPosition < 100) { // 100は調整可能
+        button.classList.add('button-up');
+    } else {
+        button.classList.remove('button-up');
+    }
 });

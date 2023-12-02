@@ -1,13 +1,10 @@
 /*===================================================================
-# 選べるプランセクション
+# ご利用方法セクション
 ===================================================================*/
 
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
-.p-plan{
-    background-image: url(../../../../../assets/img/plan-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
+.p-guide{
+
 }

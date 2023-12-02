@@ -1,9 +1,13 @@
+/*===================================================================
+# セクション
+===================================================================*/
+
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
 .c-section {
     
-    &__title{
+    &__title{ /* セクションタイトル */
         padding-top: 60px;
         text-align: center;
         font-family: Yu Mincho;
@@ -22,4 +26,3 @@
         line-height: 22px;
     }
 }
-
