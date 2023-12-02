@@ -5,6 +5,224 @@
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
-.p-fv{
-   
+.p-fv {
+  position: relative;
+  padding: 38px 0 184px;
+
+  @include m.mq("pc") {
+    padding: 0;
+    margin-top: -80px;
+  }
+
+  &__message {
+    padding: 0 20px;
+
+    @include m.mq("pc") {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(881 / 1440 * 100%);
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    line-height: normal;
+    animation-delay: 3s;
+
+    @include m.mq("pc") {
+      font-size: 50px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 30px;
+      background: rgba(249, 169, 162, 0.3);
+      border-radius: 50px;
+      left: 40%;
+      bottom: 0;
+      animation: border_anime 3s linear forwards;
+      animation-delay: 8s;
+
+      @include m.mq("pc") {
+        height: 40%;
+      }
+    }
+  }
+
+  @keyframes border_anime {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 65%;
+    }
+  }
+
+  &__sub-title {
+    margin-top: 14px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  &__picture {
+    margin-top: 37px;
+    padding-top: calc(329 / 375 * 100%);
+    background: url(../img/fv-flower.png) no-repeat center center / cover;
+
+    @include m.mq("pc") {
+      margin-top: 0;
+      padding-top: calc(700 / 1440 * 100%);
+      background: url(../img/fv-flower.png) no-repeat top left /
+        calc(1050 / 1400 * 100%);
+    }
+  }
+
+  &__button {
+    margin-top: 37px;
+    text-align: center;
+
+    @include m.mq("pc") {
+      position: absolute;
+      margin-top: 0;
+      left: calc(881 / 1440 * 100%);
+      bottom: calc(131 / 700 * 100%);
+    }
+
+    a {
+      display: inline-block;
+      color: #333;
+      background: #fff;
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 10px 58px 5px 29px;
+      font-size: 11px;
+      transition: all 0.3s ease;
+
+      @include m.mq("pc") {
+        padding: 10px 58px 5px 29px;
+        font-size: 20px;
+      }
+
+      p {
+        position: relative;
+        font-size: 16px;
+
+        @include m.mq("pc") {
+          font-size: 30px;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url(../img/guidance_left-arrow.png) no-repeat center
+            center/contain;
+          width: 13px;
+          height: 13px;
+          right: -20px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+
+          @include m.mq("pc") {
+            width: 24px;
+            height: 24px;
+            right: -37px;
+          }
+        }
+      }
+
+      &:hover {
+        background: #faefec;
+      }
+    }
+  }
+
+  &__scrollDown {
+    position: absolute;
+    right: 12%;
+    animation: arrowmove 2s ease-in-out infinite;
+
+    @include m.mq("pc") {
+      bottom: 10px;
+      right: calc(69 / 1440 * 100%);
+      right: 6%;
+    }
+
+    @keyframes arrowmove {
+      0% {
+        bottom: 1%;
+      }
+      50% {
+        bottom: 3%;
+      }
+      100% {
+        bottom: 1%;
+      }
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.14;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+
+      @include m.mq("pc") {
+        font-size: 14px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: url(../img/guidance_down-arrow.png) no-repeat center
+        center/contain;
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: -20px;
+
+      @include m.mq("pc") {
+        width: 100px;
+        height: 100px;
+        left: -30px;
+      }
+    }
+  }
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delay-time02 {
+  animation-delay: 4s;
+}
+
+.delay-time03 {
+  animation-delay: 5s;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
