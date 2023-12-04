@@ -497,7 +497,7 @@ a:hover img {
   margin-top: 117px;
   margin-left: auto;
   margin-right: auto;
-  /*タブレットサイズで、contents部分がspのレイアウト（縦一列）のままだと左右の余白が開きすぎると
+  /*タブレットサイズでcontents部分がspのレイアウト（縦一列）のままだと左右の余白が開きすぎると
   考え、pcのレイアウト（2×2）でcontent部分やそのgapを調整しました。*/
 }
 @media screen and (min-width: 768px) {
