@@ -688,6 +688,149 @@ a:hover img {
 /*===================================================================
 # Voiceセクション
 ===================================================================*/
+.p-voice {
+  background-image: url(../../../../../assets/img/voice-sp-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-bottom: 72px;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice {
+    background-image: url(../../../../../assets/img/voice-pc-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
+.p-voice__contents {
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 117px;
+  margin-left: auto;
+  margin-right: auto;
+  /*タブレットサイズで、contents部分がspのレイアウト（縦一列）のままだと左右の余白が開きすぎると
+  考え、pcのレイアウト（2×2）でcontent部分やそのgapを調整しました。*/
+}
+@media screen and (min-width: 768px) {
+  .p-voice__contents {
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 2fr));
+    gap: 60px 50px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__contents {
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 2fr));
+    gap: 60px 139px;
+    margin-top: 47px;
+  }
+}
+.p-voice__content {
+  border-radius: 3px;
+  background: #F7F7F7;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.p-voice__prof {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  border-bottom: 1px solid #333;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__prof {
+    gap: 47px;
+  }
+}
+.p-voice__profImg {
+  max-width: 70%;
+  margin: 5px auto;
+}
+.p-voice__profIcon {
+  width: 75px;
+  height: 75px;
+  clip-path: circle(50% at 50% 50%);
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: #FCFFFC;
+  margin-top: 24px;
+  margin-left: 23px;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__profIcon {
+    width: 90px;
+    height: 90px;
+    margin-top: 9px;
+    margin-left: 15px;
+  }
+}
+.p-voice__profText {
+  left: 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__profText {
+    padding-top: 25px;
+    padding-bottom: 7px;
+  }
+}
+.p-voice__text {
+  padding-top: 14px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__text {
+    padding: 22px 22px 22px 23px;
+  }
+}
+.p-voice__textP {
+  font-size: 20px;
+}
+.p-voice__profTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__profTitle {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__profRight {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+  }
+}
+.p-voice__profAge {
+  font-size: 14px;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__profAge {
+    font-size: 20px;
+  }
+}
+.p-voice__profRate > img {
+  width: 120px;
+  height: 26px;
+}
+@media screen and (min-width: 1240px) {
+  .p-voice__profRate > img {
+    width: 155px;
+    height: 32px;
+  }
+}
+
 /*===================================================================
 # 改行のレスポンシブ
 ===================================================================*/
