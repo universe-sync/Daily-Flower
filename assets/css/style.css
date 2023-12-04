@@ -445,6 +445,44 @@ a:hover img {
 /*===================================================================
 # アバウトセクション
 ===================================================================*/
+.p-about {
+  padding-bottom: 138px;
+  background: url(../../../../../assets/img/about-bg-sp.png) no-repeat center center/cover;
+}
+@media screen and (min-width: 1240px) {
+  .p-about {
+    padding-bottom: 84px;
+    background: url(../../../../../assets/img/about-bg.png) no-repeat center center/cover;
+  }
+}
+.p-about__inner {
+  padding: 0 55px;
+}
+@media screen and (min-width: 1240px) {
+  .p-about__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+.p-about__container {
+  margin-top: 44px;
+  border-radius: 4px;
+}
+@media screen and (min-width: 1240px) {
+  .p-about__container {
+    margin-top: 78px;
+  }
+}
+.p-about__container p {
+  font-size: 16px;
+}
+@media screen and (min-width: 1240px) {
+  .p-about__container p {
+    font-size: 20px;
+  }
+}
+
 /*===================================================================
 # FAQセクション
 ===================================================================*/
