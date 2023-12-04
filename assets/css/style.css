@@ -79,7 +79,7 @@ a:hover img {
   z-index: 99;
   transform: translateX(105%);
   transition: all 0.5s ease 0s;
-  background-color: #f0E6E5;
+  background-color: #F0E6E5;
   opacity: 0.8;
 }
 .l-header__listsSp {
@@ -133,8 +133,7 @@ a:hover img {
     justify-content: space-between;
   }
 }
-.l-footer__lists {
-  /* フッターメニュー */
+.l-footer__lists { /* フッターメニュー */
   text-align: center;
 }
 @media screen and (min-width: 1240px) {
@@ -237,8 +236,7 @@ a:hover img {
 .c-section__title { /* セクションタイトル */
   padding-top: 60px;
   text-align: center;
-  font-family: "YuMincho", "Yu Mincho", "游明朝体", "Yu Mincho Light",
-    sans-serif;
+  font-family: "YuMincho", "Yu Mincho", "游明朝体", "Yu Mincho Light", sans-serif;
 }
 .c-section__titleEn {
   display: block;
@@ -385,7 +383,7 @@ a:hover img {
   }
 }
 .c-cta__link:hover {
-  background-color: #FAEfEC;
+  background-color: #FAEFEC;
 }
 .c-cta__link::after { /* 矢印を擬似要素で表示 */
   position: absolute;
