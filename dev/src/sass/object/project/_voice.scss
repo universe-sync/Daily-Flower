@@ -5,6 +5,150 @@
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
-.p-voice{
-    
-}
+.p-voice {
+    background-image: url(../../../../../assets/img/voice-sp-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 72px;
+  
+    @include m.mq(pc) {
+      background-image: url(../../../../../assets/img/voice-pc-bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+  
+    &__contents {
+      max-width: 335px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      margin-top: 117px;
+      margin-left: auto;
+      margin-right: auto;
+  
+      /*タブレットサイズで、contents部分がspのレイアウト（縦一列）のままだと左右の余白が開きすぎると
+  考え、pcのレイアウト（2×2）でcontent部分やそのgapを調整しました。*/
+      @include m.mq(tab) {
+        max-width: 768px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(335px, 2fr));
+        gap: 60px 50px;
+      }
+  
+      @include m.mq(pc) {
+        max-width: 1240px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(550px, 2fr));
+        gap: 60px 139px;
+        margin-top: 47px;
+      }
+    }
+  
+    &__content {
+      border-radius: 3px;
+      background: #F7F7F7;
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+  
+    &__prof {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      border-bottom: 1px solid #333;
+  
+      @include m.mq(pc) {
+        gap: 47px;
+      }
+    }
+  
+    &__profImg {
+      max-width: 70%;
+      margin: 5px auto;
+    }
+  
+    &__profIcon {
+      width: 75px;
+      height: 75px;
+      clip-path: circle(50% at 50% 50%);
+      border: 1px solid;
+      border-radius: 50%;
+      background-color: #FCFFFC;
+      margin-top: 24px;
+      margin-left: calc(40px - 17px);
+  
+      @include m.mq(pc) {
+        width: 90px;
+        height: 90px;
+        margin-top: 9px;
+        margin-left: calc(32px - 17px);
+      }
+    }
+  
+    &__profText {
+      left: 0;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+  
+      @include m.mq(pc) {
+        padding-top: 25px;
+        padding-bottom: 7px;
+      }
+    }
+  
+    &__text {
+      padding-top: 14px;
+      padding-bottom: 20px;
+  
+      @include m.mq(pc) {
+        padding: 22px calc(39px - 17px) 22px calc(40px - 17px);
+      }
+    }
+  
+    &__textP {
+      font-size: 20px;
+    }
+  
+    &__profTitle {
+      font-size: 18px;
+      font-weight: 500;
+  
+      @include m.mq(pc) {
+        font-size: 24px;
+      }
+    }
+  
+    &__profRight {
+      @include m.mq(pc) {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+      }
+    }
+  
+    &__profAge {
+      font-size: 14px;
+  
+      @include m.mq(pc) {
+        font-size: 20px;
+      }
+    }
+  
+    &__profRate {
+      & > img {
+        width: 120px;
+        height: 26px;
+  
+        @include m.mq(pc) {
+          width: 155px;
+          height: 32px;
+        }
+      }
+    }
+  }
+  
