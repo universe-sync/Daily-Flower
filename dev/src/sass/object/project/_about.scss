@@ -5,6 +5,41 @@
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
-.p-about{
-    
+.p-about {
+  padding-bottom:138px;
+  background: url(../../../../../assets/img/about-bg-sp.png) no-repeat center
+    center / cover;
+
+  @include m.mq("pc") {
+    padding-bottom: 84px;
+    background: url(../../../../../assets/img/about-bg.png) no-repeat center
+      center / cover;
+  }
+
+  &__inner {
+    padding: 0 55px;
+
+    @include m.mq("pc") {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  &__container {
+    margin-top: 44px;
+    border-radius: 4px;
+
+    @include m.mq("pc") {
+      margin-top: 78px;
+    }
+
+    p {
+      font-size: 16px;
+
+      @include m.mq("pc") {
+        font-size: 20px;
+      }
+    }
+  }
 }
