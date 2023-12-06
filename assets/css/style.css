@@ -294,7 +294,8 @@ a:hover img {
 ===================================================================*/
 
 .c-cta {
-	bottom: 50px;
+	background-color: #fff;
+	bottom: 108px;
 	left: 50%;
 	position: fixed; /* スクロールしても追従するコンバージョンボタン */
 	transform: translateX(-50%);
@@ -585,7 +586,7 @@ a:hover img {
 	margin: 20px auto; /* プランの間にある「or」 */
 }
 
-.p-plan .p-plan__pulus {
+.p-plan .p-plan__plus {
 	height: 40px;
 	margin: 30px auto;
 	width: 40px; /* コースと選べる間隔との間にあるプラス画像 */
@@ -626,6 +627,10 @@ a:hover img {
 }
 
 .p-plan__gallery { /* ギャラリー */
+}
+
+.p-plan__titleWrap {
+	margin: 0 40px; /* ギャラリーのタイトルと説明の余白調整 */
 }
 
 .p-plan__galleryTitle {
@@ -895,9 +900,9 @@ a:hover img {
 
 .c-cta {
 	bottom: auto;
-	left: auto;
+	left: 100px;
 	right: 11.8056%;
-	top: 300px;
+	top: 400px;
 	transform: translateX(0);
 }
 

@@ -9,15 +9,16 @@
     position: fixed; /* スクロールしても追従するコンバージョンボタン */
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50px;
+    bottom: 108px;
     transition: all 0.3s ease 0s;
     z-index: 101;
+    background-color: #fff;
 
     @include m.mq('pc'){
-        left: auto;
+        left: 100px;
         right: 11.8056%;
         transform: translateX(0);
-        top: 300px;
+        top: 400px;
         bottom: auto;
     }
 

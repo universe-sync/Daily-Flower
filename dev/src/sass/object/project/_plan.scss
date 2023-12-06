@@ -87,7 +87,7 @@
         margin: 20px auto;
     }
 
-    .p-plan__pulus { /* コースと選べる間隔との間にあるプラス画像 */
+    .p-plan__plus { /* コースと選べる間隔との間にあるプラス画像 */
         width: 40px;
         height: 40px;
         margin: 30px auto;
@@ -131,9 +131,13 @@
     }
     
     &__gallery { /* ギャラリー */
-        // padding: 0 40px;
+        
     }
     
+    &__titleWrap{ /* ギャラリーのタイトルと説明の余白調整 */
+        margin: 0 40px;
+    }
+
     &__galleryTitle { /* ギャラリーのタイトル */
         font-family: Tangerine;
         font-size: 40px;
@@ -153,8 +157,8 @@
         margin:0 auto;
 
         img{
-            width:60vw; /* スライダー内の画像を60vwにしてレスポンシブ化 */
-            height:auto;
+            width: 60vw; /* スライダー内の画像を60vwにしてレスポンシブ化 */
+            height: auto;
         }
     }
 }

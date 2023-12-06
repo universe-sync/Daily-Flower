@@ -59,16 +59,16 @@ $('.p-plan__slider').slick({
   centerMode: true, //要素を中央ぞろえにする
   variableWidth: true, //幅の違う画像の高さを揃えて表示
   dots: true, //下部ドットナビゲーションの表示
-  responsive: [
-    {
-      breakpoint: 768, // 768px以上の画面サイズ
-      settings: {
-        slidesToShow: 5, // 5枚の画像を表示
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    }
-    // 他のブレイクポイント設定もここに追加可能
-  ]
+  // responsive: [
+  //   {
+  //     breakpoint: 768, // 768px以上の画面サイズ
+  //     settings: {
+  //       slidesToShow: 5, // 5枚の画像を表示
+  //       slidesToScroll: 1,
+  //       infinite: true,
+  //       dots: true
+  //     }
+  //   }
+  //   // 他のブレイクポイント設定もここに追加可能
+  // ]
 });
