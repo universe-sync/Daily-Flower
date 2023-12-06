@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Flower</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Slick Carousel CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <!-- reset.css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- original -->
@@ -14,7 +27,12 @@
     <header class="l-header">
       <div class="l-header__inner c-inner">
         <div class="l-header__contents">
-          <a href="#"><img src="./assets/img/header-logo.png" alt="Daily Flowerのロゴ" class="l-header__logo" /></a>
+          <a href="#"
+            ><img
+              src="./assets/img/header-logo.png"
+              alt="Daily Flowerのロゴ"
+              class="l-header__logo"
+          /></a>
 
           <!-- .c-drawer -->
           <button
@@ -58,7 +76,6 @@
                   FAQ
                 </a>
               </li>
-
             </ul>
           </nav>
         </div>
@@ -127,9 +144,9 @@
           <div class="p-about__container">
             <p>
               花々は自然の中で生まれ、季節の変化や環境の影響を受けながら成長します。<br /><br />
-  
+
               そのため特有のエネルギーや象徴が宿り、私たちの心身にさまざまな良い影響をもたらすと考えられています。<br /><br />
-  
+
               わたしたちDaily
               Flowerは、美しさだけでなくそんな素晴らしい力を秘めたお花を多くの方にお届けして、Happyになっていただきたいという思いでこのサービスを始めました。
             </p>
@@ -139,9 +156,7 @@
       <!-- /.p-about -->
 
       <!-- .p-service -->
-      <section id="service" class="p-service">
-        
-      </section>
+      <section id="service" class="p-service"></section>
       <!-- /.p-service -->
 
       <!-- .p-plan -->
@@ -149,28 +164,48 @@
         <div class="c-inner">
           <h2 class="c-section__title">
             <span class="c-section__titleEn">Plan</span>
-            <span class="c-section__titleJp">ライフスタイルに合わせて選べる2つのプラン</span>
+            <span class="c-section__titleJp"
+              >ライフスタイルに合わせて選べる2つのプラン</span
+            >
           </h2>
-          <div class="p-plan__courses">
-            <div class="p-plan__course p-plan__courseA">
-              <span class="p-plan__upperText">選べるコース①</span>
-              <p class="p-plan__courseTitle">ライト</p>
-              <p class="p-plan__price"><span class="p-plan__priceNum">1,290</span>円(税込)/回</p>
-              <p class="p-plan__shipping">送料無料</p>
-              <img src="./assets/img/plan-01.png" alt="ライトコースの画像" class="p-plan__courseImg">
-              <span class="p-plan__lowerText">お花の本数4~6本</span>
-            </div>
-            <p class="p-plan__or">or</p>
-            <div class="p-plan__course p-plan__courseB">
-              <span class="p-plan__upperText">選べるコース②</span>
-              <p class="p-plan__courseTitle">スタンダード</p>
-              <p class="p-plan__price"><span class="p-plan__priceNum">1,900</span>円(税込)/回</p>
-              <p class="p-plan__shipping">送料無料</p>
-              <img src="./assets/img/plan-02.png" alt="スタンダードコースの画像" class="p-plan__courseImg">
-              <span class="p-plan__lowerText">お花の本数7~9本</span>
+          <div class="p-plan__courseWrap">
+            <div class="p-plan__courses">
+              <div class="p-plan__course p-plan__courseA">
+                <span class="p-plan__upperText">選べるコース①</span>
+                <p class="p-plan__courseTitle">ライト</p>
+                <p class="p-plan__price">
+                  <span class="p-plan__priceNum">1,290</span>円(税込)/回
+                </p>
+                <p class="p-plan__shipping">送料無料</p>
+                <img
+                  src="./assets/img/plan-01.png"
+                  alt="ライトコースの画像"
+                  class="p-plan__courseImg"
+                />
+                <span class="p-plan__lowerText">お花の本数4~6本</span>
+              </div>
+              <p class="p-plan__or">or</p>
+              <div class="p-plan__course p-plan__courseB">
+                <span class="p-plan__upperText">選べるコース②</span>
+                <p class="p-plan__courseTitle">スタンダード</p>
+                <p class="p-plan__price">
+                  <span class="p-plan__priceNum">1,900</span>円(税込)/回
+                </p>
+                <p class="p-plan__shipping">送料無料</p>
+                <img
+                  src="./assets/img/plan-02.png"
+                  alt="スタンダードコースの画像"
+                  class="p-plan__courseImg"
+                />
+                <span class="p-plan__lowerText">お花の本数7~9本</span>
+              </div>
             </div>
           </div>
-          <img src="./assets/img/plan-plus.png" alt="プラスの画像" class="p-plan__pulus">
+          <img
+            src="./assets/img/plan-plus.png"
+            alt="プラスの画像"
+            class="p-plan__pulus"
+          />
           <div class="p-plan__intervals">
             <span class="p-plan__intervalsTitle">選べる間隔</span>
             <div class="p-plan__interval">
@@ -186,44 +221,171 @@
           <div class="p-plan__gallery">
             <p class="p-plan__galleryTitle">Gallery</p>
             <p class="p-plan__galleryText">例えばこんなお花が届きます</p>
-            <img src="./assets/img/plan-03.jpg" alt="花のスライド画像1" class="p-plan_galleryImg">
-            <img src="./assets/img/plan-04.jpg" alt="花のスライド画像2" class="p-plan_galleryImg">
-            <img src="./assets/img/plan-05.jpg" alt="花のスライド画像3" class="p-plan_galleryImg">
-            <img src="./assets/img/plan-06.jpg" alt="花のスライド画像4" class="p-plan_galleryImg">
-            <img src="./assets/img/plan-07.jpg" alt="花のスライド画像5" class="p-plan_galleryImg">
+            <ul class="p-plan__slider">
+              <li>
+                <img
+                  src="./assets/img/plan-03.jpg"
+                  alt="花のスライド画像1"
+                  class="p-plan__galleryImg"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/plan-04.jpg"
+                  alt="花のスライド画像2"
+                  class="p-plan__galleryImg"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/plan-05.jpg"
+                  alt="花のスライド画像3"
+                  class="p-plan__galleryImg"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/plan-06.jpg"
+                  alt="花のスライド画像4"
+                  class="p-plan__galleryImg"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/plan-07.jpg"
+                  alt="花のスライド画像5"
+                  class="p-plan__galleryImg"
+                />
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <!-- /.p-plan -->
 
       <!-- .p-flow -->
-      <section id="flow" class="p-flow">
-
-      </section>
+      <section id="flow" class="p-flow"></section>
       <!-- /.p-flow -->
 
       <!-- .p-voice -->
       <section id="voice" class="p-voice">
-        
+        <div class="c-inner">
+          <h2 class="c-section__title">
+            <span class="c-section__titleEn">Voice</span>
+            <span class="c-section__titleJp">お客様の声</span>
+          </h2>
+          <div class="p-voice__contents">
+            <div class="p-voice__content">
+              <div class="p-voice__prof">
+                <div class="p-voice__profIcon">
+                  <div class="p-voice__profImg">
+                    <img src="./assets/img/voice-prof-icon1.png" alt="" />
+                  </div>
+                </div>
+                <div class="p-voice__profText">
+                  <span class="p-voice__profTitle">心が癒されます</span>
+                  <div class="p-voice__profRight">
+                    <span class="p-voice__profAge">30代 女性</span>
+                    <span class="p-voice__profRate"
+                      ><img src="./assets/img/5rate-star.png" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-voice__text">
+                <p class="p-voice__textP">
+                  お花のサブスクを始めてから、毎月家に届くお花が楽しみで仕方ありません。種類も豊富で、季節ごとに変わるのが嬉しいです。花束を眺めるだけで、心が癒されます。
+                </p>
+              </div>
+            </div>
+            <div class="p-voice__content">
+              <div class="p-voice__prof">
+                <div class="p-voice__profIcon">
+                  <div class="p-voice__profImg">
+                    <img src="./assets/img/voice-prof-icon2.png" alt="" />
+                  </div>
+                </div>
+                <div class="p-voice__profText">
+                  <span class="p-voice__profTitle">新しい花との出会い</span>
+                  <div class="p-voice__profRight">
+                    <span class="p-voice__profAge">50代 女性</span>
+                    <span class="p-voice__profRate"
+                      ><img src="./assets/img/4rate-star.png" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-voice__text">
+                <p class="p-voice__textP">
+                  お花の種類が豊富で、季節ごとに変わるので、自分では選ばないような新しい花との出会いがあります。お花を飾ると部屋がパッと明るくなり、気分も華やぎます。
+                </p>
+              </div>
+            </div>
+            <div class="p-voice__content">
+              <div class="p-voice__prof">
+                <div class="p-voice__profIcon">
+                  <div class="p-voice__profImg">
+                    <img src="./assets/img/voice-prof-icon3.png" alt="" />
+                  </div>
+                </div>
+                <div class="p-voice__profText">
+                  <span class="p-voice__profTitle">自分へのご褒美</span>
+                  <div class="p-voice__profRight">
+                    <span class="p-voice__profAge">20代 女性</span>
+                    <span class="p-voice__profRate"
+                      ><img src="./assets/img/4rate-star.png" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-voice__text">
+                <p class="p-voice__textP">
+                  サブスクリプションならではの手軽さが気に入っています。花を選ぶためにお店に行く手間が省け、自分へのご褒美がポストに届くのはいいいですね。少量から選べるのでコスパもいいです。
+                </p>
+              </div>
+            </div>
+            <div class="p-voice__content">
+              <div class="p-voice__prof">
+                <div class="p-voice__profIcon">
+                  <div class="p-voice__profImg">
+                    <img src="./assets/img/voice-prof-icon4.png" alt="" />
+                  </div>
+                </div>
+                <div class="p-voice__profText">
+                  <span class="p-voice__profTitle">母へのプレゼント</span>
+                  <div class="p-voice__profRight">
+                    <span class="p-voice__profAge">40代 男性</span>
+                    <span class="p-voice__profRate"
+                      ><img src="./assets/img/5rate-star.png" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-voice__text">
+                <p class="p-voice__textP">
+                  お花のサブスクは贈り物にも最適です。遠くに住む母親のために始めました。毎月届くのを心待ちにしているようです。これがきっかけで親子の会話も増えました。ありがとうございます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- /.p-voice -->
 
       <!-- .p-faq -->
-      <section id="faq" class="p-faq">
-        
-      </section>
+      <section id="faq" class="p-faq"></section>
       <!-- /.p-faq -->
 
       <!-- .p-order -->
-      <section id="order" class="p-order">
-        
-      </section>
+      <section id="order" class="p-order"></section>
       <!-- /.p-order -->
 
       <!-- .c-cta コンバージョンボタン-->
       <div id="ctaButton" class="c-cta">
         <a href="#order" class="c-cta__link">
-          <span class="c-cta__firstLine">今なら初月<span class="c-cta__number">50%Off</span>で</span>
+          <span class="c-cta__firstLine"
+            >今なら初月<span class="c-cta__number">50%Off</span>で</span
+          >
           <span class="c-cta__secondLine">お花の定期便を始める</span>
         </a>
       </div>
@@ -231,6 +393,8 @@
 
       <!-- jQueryのファイルを読み込む -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <!-- Slickのファイルを読み込む -->
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <!-- iScrollのファイルを読み込む -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
       <!-- JavaScriptのファイルを読み込む -->
@@ -246,19 +410,29 @@
             <nav class="l-footer__nav">
               <ul class="l-footer__lists">
                 <li class="l-footer__list">
-                  <a class="l-footer__listLink c-hover__link" href="#service">Daily Flowerとは</a>
+                  <a class="l-footer__listLink c-hover__link" href="#service"
+                    >Daily Flowerとは</a
+                  >
                 </li>
                 <li class="l-footer__list">
-                  <a class="l-footer__listLink c-hover__link" href="#plan">お届けプラン</a>
+                  <a class="l-footer__listLink c-hover__link" href="#plan"
+                    >お届けプラン</a
+                  >
                 </li>
                 <li class="l-footer__list">
-                  <a class="l-footer__listLink c-hover__link" href="#flow">ご利用方法</a>
+                  <a class="l-footer__listLink c-hover__link" href="#flow"
+                    >ご利用方法</a
+                  >
                 </li>
                 <li class="l-footer__list">
-                  <a class="l-footer__listLink c-hover__link" href="#voice">お客様の声</a>
+                  <a class="l-footer__listLink c-hover__link" href="#voice"
+                    >お客様の声</a
+                  >
                 </li>
                 <li class="l-footer__list">
-                  <a class="l-footer__listLink c-hover__link" href="#faq">FAQ</a>
+                  <a class="l-footer__listLink c-hover__link" href="#faq"
+                    >FAQ</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -266,23 +440,45 @@
           </div>
           <div class="l-footer__contentB">
             <div class="l-footer__contentWrap">
-              <a href="#"><img src="./assets/img/footer-logo.png" alt="Daily Flowerのロゴ" class="l-footer__logo"></a>
+              <a href="#"
+                ><img
+                  src="./assets/img/footer-logo.png"
+                  alt="Daily Flowerのロゴ"
+                  class="l-footer__logo"
+              /></a>
               <div class="l-footer__icons">
-                <a href="#" class="l-footer__iconLink"><img src="./assets/img/x.svg" alt="X" class="l-footer__icon"></a>
-                <a href="#" class="l-footer__iconLink"><img src="./assets/img/instagram.svg" alt="instagram" class="l-footer__icon"></a>
-                <a href="#" class="l-footer__iconLink"><img src="./assets/img/facebook.svg" alt="facebook" class="l-footer__icon"></a>
+                <a href="#" class="l-footer__iconLink"
+                  ><img src="./assets/img/x.svg" alt="X" class="l-footer__icon"
+                /></a>
+                <a href="#" class="l-footer__iconLink"
+                  ><img
+                    src="./assets/img/instagram.svg"
+                    alt="instagram"
+                    class="l-footer__icon"
+                /></a>
+                <a href="#" class="l-footer__iconLink"
+                  ><img
+                    src="./assets/img/facebook.svg"
+                    alt="facebook"
+                    class="l-footer__icon"
+                /></a>
               </div>
             </div>
             <div class="l-footer__info">
               <p class="l-footer__zipcode">〒123-4567</p>
-              <p class="l-footer__address">東京都渋谷区神宮前1-2-3 デイトラビル3階</p>
+              <p class="l-footer__address">
+                東京都渋谷区神宮前1-2-3 デイトラビル3階
+              </p>
               <p class="l-footer__tel">03-1234-5678</p>
-              <a href="mailto:dailyflower@example.com" class="l-footer__email">dailyflower@example.com</a>
+              <a href="mailto:dailyflower@example.com" class="l-footer__email"
+                >dailyflower@example.com</a
+              >
             </div>
             <small class="l-footer__copyrightSp">&copy;Daily Flower</small>
           </div>
+        </div>
       </div>
     </footer>
-    <!-- /.footer -->
+    <!-- /.l-footer -->
   </body>
 </html>

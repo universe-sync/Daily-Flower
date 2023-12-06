@@ -10,5 +10,213 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    padding-bottom: 1500px;
+    // padding-bottom: 1500px;
+
+    &__courseWrap{ /* コースパート全体 */
+        margin: 100px auto 0;
+        text-align: center;
+    }
+
+    &__courses {
+    
+    }
+
+    &__courseA {
+    
+    }
+
+    &__courseB {
+    
+    }
+
+    &__course{ /* 各コース */
+        border: 1px solid #333;
+        background-color: #FCFFFC;
+        margin: 0 auto;
+        width: calc(193px / 375px * 100%);
+        height: auto;
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    &__upperText { /* 枠のタイトル（選べるコース） */
+        position: absolute;
+        background-color: #FCFFFC;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+        white-space: nowrap;
+        padding: 0 5px;
+    }
+
+    &__courseTitle { /* コース名 */
+        margin-top: 20px;
+    }
+
+    &__price { /* 金額 */
+    
+    }
+
+    &__priceNum{ /* 金額の数字 */
+
+    }
+
+    &__shipping { /* 送料無料 */
+    
+    }
+
+    &__courseImg{ /* コース内の画像 */
+        width: calc(100px / 191px * 100%);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &__lowerText { /* お花の本数 */
+        position: absolute;
+        background-color: #FFD9D0E5;
+        border-radius: 3px;
+        opacity: 0.9;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        padding: 1px 15px;
+    }
+
+    &__or { /* プランの間にある「or」 */
+        margin: 20px auto;
+    }
+
+    .p-plan__pulus { /* コースと選べる間隔との間にあるプラス画像 */
+        width: 40px;
+        height: 40px;
+        margin: 30px auto;
+    }
+
+    &__intervals { /* 選べる間隔パート */
+        border: 1px solid #333;
+        background-color: #FCFFFC;
+        margin: 0 auto 58px;
+        width: calc(193px / 375px * 100%);
+        height: auto;
+        position: relative;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    
+    &__intervalsTitle { /* 選べる間隔のタイトル */
+        position: absolute;
+        background-color: #FCFFFC;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+        white-space: nowrap;
+        padding: 0 5px;
+    }
+    
+    &__interval { /* 間隔のパターン */
+        margin-top: 30px;
+    }
+    
+    &__intervalWeelk { /* 毎週・隔週 */
+    
+    }
+    
+    &_intervalText { /* お好きな曜日 */
+    
+    }
+    
+    &__intervalOr { /* 間隔パート内の「or」 */
+    
+    }
+    
+    &__gallery { /* ギャラリー */
+        // padding: 0 40px;
+    }
+    
+    &__galleryTitle { /* ギャラリーのタイトル */
+        font-family: Tangerine;
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+    &__galleryText {
+    
+    }
+    
+    &__galleryImg {
+    
+    }
+    
+    &__slider { /* スライダー */
+        width:94%; /* 横幅94%で左右に余白を持たせて中央寄せ */
+        margin:0 auto;
+
+        img{
+            width:60vw; /* スライダー内の画像を60vwにしてレスポンシブ化 */
+            height:auto;
+        }
+    }
+}
+
+.p-plan__slider .slick-slide {
+	transform: scale(0.8); /* 左右の画像のサイズを80%に */
+	transition: all .5s; /* 拡大や透過のアニメーションを0.5秒で行う */
+	opacity: 0.5; /* 透過50% */
+}
+
+.p-plan__slider .slick-slide.slick-center{
+	transform: scale(1); /* 中央の画像のサイズだけ等倍に */
+	opacity: 1; /* 透過なし */
+}
+
+/* 矢印の設定 */
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute; /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer; /*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev { /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next { /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
 }
