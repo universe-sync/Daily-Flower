@@ -45,3 +45,24 @@ window.addEventListener('scroll', () => {
         button.classList.remove('button-up');
     }
 });
+
+// 最初のTOP画像バックグラウンドからロゴが浮き出て３秒後に消える
+$(function () {
+  function end_loader() {
+    $(".loader").fadeOut(800);
+  }
+  function show_logo() {
+    $(".loader .loader__logo").fadeIn(600);
+  }
+  function hide_logo() {
+    $(".loader .loader__logo").fadeOut(600);
+  }
+  $(window).on("load", function () {
+    setTimeout(function () {
+      show_logo();
+    }, 1000);
+    setTimeout(function () {
+      end_loader();
+    }, 3000);
+  });
+});
