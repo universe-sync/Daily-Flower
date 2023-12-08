@@ -768,6 +768,162 @@ a:hover img {
 /*===================================================================
 # What's Daily Flower（サービス）セクション
 ===================================================================*/
+.p-service {
+  position: relative;
+  padding-bottom: 80px;
+  background: url(../../../../../assets/img/service-bg.png) no-repeat center center/cover;
+}
+.p-service::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+@media screen and (min-width: 1240px) {
+  .p-service {
+    padding-bottom: 109px;
+  }
+}
+.p-service__inner {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 30;
+}
+.p-service__list {
+  /*SP縦並び*/
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 84px;
+  padding: 0 48px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__list {
+    /*PC,TAB横並び*/
+    flex-direction: row;
+    margin-top: 51px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-service__list {
+    /*PC,TAB横並び*/
+    flex-direction: row;
+  }
+}
+.p-service__item {
+  width: 100%;
+}
+.p-service__item + .p-service__item {
+  margin-top: 79px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__item {
+    width: 23.6363636364%;
+  }
+  .p-service__item + .p-service__item {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-service__item {
+    width: 23.6363636364%;
+  }
+  .p-service__item + .p-service__item {
+    margin-top: 0;
+  }
+}
+.p-service__head {
+  display: flex;
+  align-items: center;
+}
+.p-service__headImg {
+  width: 40px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__headImg {
+    width: 49px;
+  }
+}
+.p-service__headText--top {
+  color: #491d01;
+  font-family: "Tangerine", cursive; /*google fonts*/
+  font-size: 32px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__headText--top {
+    font-size: 40px;
+  }
+}
+.p-service__headText--bottom {
+  color: #491d01;
+  font-size: 18px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__headText--bottom {
+    font-size: 22px;
+  }
+}
+.p-service__body {
+  margin-top: 12px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__body {
+    margin-top: 15px;
+  }
+}
+.p-service__bodyWrapper {
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 200px;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__bodyWrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-service__bodyWrapper {
+    width: 100%;
+  }
+}
+.p-service__bodyImg {
+  padding-top: 100%;
+  position: relative;
+  transition-duration: 0.3s;
+}
+.p-service__bodyImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+}
+.p-service__bodyImg:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+.p-service__bodyText {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: normal;
+}
+@media screen and (min-width: 1240px) {
+  .p-service__bodyText {
+    margin-top: 19px;
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+
 /*===================================================================
 # Voiceセクション
 ===================================================================*/

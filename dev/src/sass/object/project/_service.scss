@@ -5,6 +5,159 @@
 @use "../../global/variables" as v;
 @use "../../global/mixin" as m;
 
-.p-service{
-    
+.p-service {
+  position: relative;
+  padding-bottom: 80px;
+  background: url(../../../../../assets/img/service-bg.png) no-repeat center
+    center / cover;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.30);
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+  @include m.mq("pc") {
+    padding-bottom: 109px;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 30;
+  }
+
+  &__list {
+    /*SP縦並び*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 84px;
+    padding: 0 48px;
+
+    @include m.mq("pc") {
+      /*PC,TAB横並び*/
+      flex-direction: row;
+      margin-top: 51px;
+      padding: 0;
+    }
+
+    @include m.mq("tab") {
+      /*PC,TAB横並び*/
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    width: 100%;
+
+    & + & {
+      margin-top: 79px;
+    }
+
+    @include m.mq("pc") {
+      width: calc(260 / 1100 * 100%);
+      & + & {
+        margin-top: 0;
+      }
+    }
+    @include m.mq("tab") {
+      width: calc(260 / 1100 * 100%);
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+  }
+
+  &__headImg {
+    width: 40px;
+
+    @include m.mq("pc") {
+      width: 49px;
+    }
+  }
+
+  &__headText--top {
+    color: #491d01;
+    font-family: "Tangerine", cursive; /*google fonts*/
+    font-size: 32px;
+
+    @include m.mq("pc") {
+      font-size: 40px;
+    }
+  }
+
+  &__headText--bottom {
+    color: #491d01;
+    font-size: 18px;
+
+    @include m.mq("pc") {
+      font-size: 22px;
+    }
+  }
+
+  &__body {
+    margin-top: 12px;
+
+    @include m.mq("pc") {
+      margin-top: 15px;
+    }
+  }
+
+  &__bodyWrapper {
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 200px;
+
+    @include m.mq("pc") {
+      width: 100%;
+    }
+    @include m.mq("tab") {
+      width: 100%;
+    }
+  }
+
+  &__bodyImg {
+    padding-top: calc(220 / 220 * 100%);
+    position: relative;
+    transition-duration: 0.3s;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+    }
+  }
+
+  &__bodyText {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: normal;
+
+    @include m.mq("pc") {
+      margin-top: 19px;
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
 }
