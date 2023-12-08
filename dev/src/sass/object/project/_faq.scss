@@ -6,5 +6,139 @@
 @use "../../global/mixin" as m;
 
 .p-faq{
-    
+    background-image: url(../../../../../assets/img/faq-sp-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding-bottom: 138px;
+
+    &__inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__boxes {
+        padding-top: 79px;
+        padding-bottom: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__box {
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        vertical-align: middle;
+    }
+
+    &__head {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 35%;
+            left: 91%;
+            width: 2px;
+            height: 15px;
+            background-color: #000066;
+            transition: transform 0.5s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 35%;
+            left: 91%;
+            width: 2px;
+            height: 15px;
+            background-color: #000066;
+            transition: opacity 1s;
+            transform: rotate(90deg);
+            transition: opacity 0.5s;
+        }
+    }
+    &__minus {
+        &::before {
+            transform: rotate(90deg);
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    &__jsButton {
+        opacity: 0;
+    }
+
+    &__qBody {
+        display: flex;
+        flex-direction: row;
+        max-width: 313px;
+    }
+
+    &__qIcon {
+        background-color: #FFF;
+        border: 1px solid;
+        border-radius: 50%;
+        width: 23px;
+        height: 26px;
+        margin: 18px 16px 18px 8px;
+    }
+
+    &__q {
+
+    }
+
+    &__qText {
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: left;
+        max-width: 248px;
+    }
+
+    &__open {
+ 
+    }
+
+    &__aWrapper {
+        display: none;
+    }
+
+    &__aBody {
+        display: flex;
+        flex-direction: row;
+        padding-right: 19px;
+        padding-bottom: 19px;
+
+    }
+
+    &__aIcon {
+        background-color: #FFF;
+        border: 1px solid;
+        border-radius: 50%;
+        width: 23px;
+        height: 26px;
+        margin-left: 8px;
+        margin-right: 6px;
+    }
+
+    &__a {
+        display: block;
+        text-align: center;
+    }
+
+    &__aInner {
+        width: 279px;
+        background-color: #F9F1F0;
+        padding: 12px 13px;
+    }
+
+    &__aText {
+        width: 253px;
+        font-size: 14px;
+    }
+
 }

@@ -45,3 +45,20 @@ window.addEventListener('scroll', () => {
         button.classList.remove('button-up');
     }
 });
+
+//　アコーディオン開閉ボタン
+$(".js-accordion").on("click", function (e) {
+  e.preventDefault();
+
+  //     jQuery(this).next().slideToggle();
+  $(this).toggleClass("p-faq__minus");
+
+  if ($(this).parent().hasClass("is-open")) {
+    $(this).parent().removeClass("is-open");
+    $(this).next().slideUp(500);
+  } else {
+    $(this).parent().addClass("is-open");
+    $(this).next().slideDown(500);
+  }
+});
+
