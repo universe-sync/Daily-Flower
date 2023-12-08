@@ -15,15 +15,15 @@
     background-color: #fff;
 
     @include m.mq('pc'){
-        right: 11.8056%;
+        left: 62.7%;
         transform: translateX(0);
-        top: 400px;
+        top: 553px;
         bottom: auto;
     }
 
     &__link{
         color: v.$text-color-bk;
-        background-color: transparent;
+        // background-color: transparent;
         border: 0.5px solid #333;
         border-radius: 2px;
         width: 215px;
