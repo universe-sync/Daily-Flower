@@ -499,7 +499,6 @@ a:hover img {
 @media screen and (min-width: 1240px) {
   .p-fv {
     padding: 0;
-    margin-top: -80px;
   }
 }
 .p-fv__message {
@@ -508,9 +507,8 @@ a:hover img {
 @media screen and (min-width: 1240px) {
   .p-fv__message {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 61.1805555556%;
+    top: 36.2820512821%;
+    left: 61.1111111111%;
   }
 }
 .p-fv__title {
@@ -557,76 +555,23 @@ a:hover img {
   font-weight: 300;
   line-height: normal;
 }
-.p-fv__picture {
-  margin-top: 37px;
-  padding-top: 87.7333333333%;
-  background: url(../img/fv-flower.png) no-repeat center center/cover;
-}
 @media screen and (min-width: 1240px) {
-  .p-fv__picture {
-    margin-top: 0;
-    padding-top: 48.6111111111%;
-    background: url(../img/fv-flower.png) no-repeat top left/75%;
-  }
-}
-.p-fv__button {
-  margin-top: 37px;
-  text-align: center;
-}
-@media screen and (min-width: 1240px) {
-  .p-fv__button {
-    position: absolute;
-    margin-top: 0;
-    left: 61.1805555556%;
-    bottom: 18.7142857143%;
-  }
-}
-.p-fv__button a {
-  display: inline-block;
-  color: #333;
-  background: #fff;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 10px 58px 5px 29px;
-  font-size: 11px;
-  transition: all 0.3s ease;
-}
-@media screen and (min-width: 1240px) {
-  .p-fv__button a {
-    padding: 10px 58px 5px 29px;
-    font-size: 20px;
-  }
-}
-.p-fv__button a p {
-  position: relative;
-  font-size: 16px;
-}
-@media screen and (min-width: 1240px) {
-  .p-fv__button a p {
+  .p-fv__sub-title {
+    margin-top: 47px;
     font-size: 30px;
   }
 }
-.p-fv__button a p::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: url(../img/guidance_left-arrow.png) no-repeat center center/contain;
-  width: 13px;
-  height: 13px;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
+.p-fv__picture {
+  margin-top: 37px;
+  padding-top: 87.7333333333%;
+  background: url(../../../../../assets/img/fv-flower.png) no-repeat center center/cover;
 }
 @media screen and (min-width: 1240px) {
-  .p-fv__button a p::after {
-    width: 24px;
-    height: 24px;
-    right: -37px;
+  .p-fv__picture {
+    margin-top: -160px;
+    padding-top: 54.1666666667%;
+    background: url(../../../../../assets/img/fv-flower.png) no-repeat top left/72.9166666667%;
   }
-}
-.p-fv__button a:hover {
-  background: #faefec;
 }
 .p-fv__scrollDown {
   position: absolute;
