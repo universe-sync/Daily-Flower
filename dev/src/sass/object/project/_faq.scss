@@ -37,8 +37,19 @@
     }
 
     &__box {
-        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-        vertical-align: middle;
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
+        margin-left: auto;
+        margin-right: auto;
+        width: 335px;
+
+        @include m.mq(tab) {
+            width: 745px;
+        }
+
+        @include m.mq(pc) {
+            width: 1240px;
+            background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
+        }
     }
 
     &__head {
@@ -78,7 +89,7 @@
             }
         }
     }
-    
+
     &__minus {
         &::before {
             transform: rotate(90deg);
@@ -160,18 +171,20 @@
     }
 
     &__aInner {
-        min-width: 279px;
+        display: block;
+        width: 279px;
         background-color: #F9F1F0;
         padding: 12px 13px;
 
+
         @include m.mq(tab) {
-            width: 1108px;
+            width: 689px;
             padding: 23px 24px 41px 24px;
         }
 
         @include m.mq(pc) {
             width: 1108px;
-            padding: 23px 24px 41px 24px;
+            padding: 23px 21px 29px;
         }
     }
 

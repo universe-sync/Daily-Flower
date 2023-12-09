@@ -401,8 +401,10 @@ a:hover img {
 }
 
 .p-faq__box {
-	background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
-	vertical-align: middle;
+	background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+	margin-left: auto;
+	margin-right: auto;
+	width: 335px;
 }
 
 .p-faq__head {
@@ -497,8 +499,9 @@ a:hover img {
 
 .p-faq__aInner {
 	background-color: #F9F1F0;
-	min-width: 279px;
+	display: block;
 	padding: 12px 13px;
+	width: 279px;
 }
 
 .p-faq__aText {
@@ -903,9 +906,13 @@ a:hover img {
 
 @media screen and (min-width: 768px) {
 
+.p-faq__box {
+	width: 745px;
+}
+
 .p-faq__aInner {
 	padding: 23px 24px 41px 24px;
-	width: 1108px;
+	width: 689px;
 }
 
 .p-faq__spHidden {
@@ -1082,6 +1089,11 @@ a:hover img {
 	padding-right: 0;
 }
 
+.p-faq__box {
+	background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+	width: 1240px;
+}
+
 .p-faq__head::before {
 	left: 95%;
 }
@@ -1108,7 +1120,7 @@ a:hover img {
 }
 
 .p-faq__aInner {
-	padding: 23px 24px 41px 24px;
+	padding: 23px 21px 29px;
 	width: 1108px;
 }
 
