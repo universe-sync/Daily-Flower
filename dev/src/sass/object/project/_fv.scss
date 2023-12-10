@@ -68,13 +68,13 @@
     font-weight: 300;
     line-height: normal;
 
-    @include m.mq('pc') {
+    @include m.mq('pc') { /*font-size修正*/
       margin-top: 47px;
       font-size: 30px;
     }
   }
 
-  &__picture {
+  &__picture { /*画像変更*/
     margin-top: 37px;
     padding-top: calc(329 / 375 * 100%);
     background: url(../../../../../assets/img/fv-flower.png) no-repeat center center / cover;

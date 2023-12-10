@@ -556,12 +556,12 @@ a:hover img {
   line-height: normal;
 }
 @media screen and (min-width: 1240px) {
-  .p-fv__sub-title {
+  .p-fv__sub-title { /*font-size修正*/
     margin-top: 47px;
     font-size: 30px;
   }
 }
-.p-fv__picture {
+.p-fv__picture { /*画像変更*/
   margin-top: 37px;
   padding-top: 87.7333333333%;
   background: url(../../../../../assets/img/fv-flower.png) no-repeat center center/cover;
