@@ -66,3 +66,18 @@ $(function () {
     }, 3000);
   });
 });
+
+//　アコーディオン開閉ボタンをクリックでAが開く、プラスボタンがマイナスに、もう一度クリックで戻る
+$(".js-accordion").on("click", function (e) {
+  e.preventDefault();
+
+  $(this).toggleClass("p-faq__minus");
+
+  if ($(this).parent().hasClass("is-open")) {
+    $(this).parent().removeClass("is-open");
+    $(this).next().slideUp(500);
+  } else {
+    $(this).parent().addClass("is-open");
+    $(this).next().slideDown(500);
+  }
+});
