@@ -11,7 +11,6 @@
 
   @include m.mq("pc") {
     padding: 0;
-    margin-top: -80px;
   }
 
   &__message {
@@ -19,9 +18,8 @@
 
     @include m.mq("pc") {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(881 / 1440 * 100%);
+      top: calc(283 / 780 * 100%);
+      left: calc(880 / 1440 * 100%);
     }
   }
 
@@ -69,81 +67,26 @@
     font-size: 22px;
     font-weight: 300;
     line-height: normal;
+
+    @include m.mq('pc') { /*font-size修正*/
+      margin-top: 47px;
+      font-size: 30px;
+    }
   }
 
-  &__picture {
+  &__picture { /*画像変更*/
     margin-top: 37px;
     padding-top: calc(329 / 375 * 100%);
-    background: url(../img/fv-flower.png) no-repeat center center / cover;
+    background: url(../../../../../assets/img/fv-flower.png) no-repeat center center / cover;
 
     @include m.mq("pc") {
-      margin-top: 0;
-      padding-top: calc(700 / 1440 * 100%);
-      background: url(../img/fv-flower.png) no-repeat top left /
-        calc(1050 / 1400 * 100%);
+      margin-top: -160px;
+      padding-top: calc(780 / 1440 * 100%);
+      background: url(../../../../../assets/img/fv-flower.png) no-repeat top left /
+        calc(1050 / 1440 * 100%);
     }
   }
 
-  &__button {
-    margin-top: 37px;
-    text-align: center;
-
-    @include m.mq("pc") {
-      position: absolute;
-      margin-top: 0;
-      left: calc(881 / 1440 * 100%);
-      bottom: calc(131 / 700 * 100%);
-    }
-
-    a {
-      display: inline-block;
-      color: #333;
-      background: #fff;
-      border: 1px solid #333;
-      border-radius: 4px;
-      padding: 10px 58px 5px 29px;
-      font-size: 11px;
-      transition: all 0.3s ease;
-
-      @include m.mq("pc") {
-        padding: 10px 58px 5px 29px;
-        font-size: 20px;
-      }
-
-      p {
-        position: relative;
-        font-size: 16px;
-
-        @include m.mq("pc") {
-          font-size: 30px;
-        }
-
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          background: url(../img/guidance_left-arrow.png) no-repeat center
-            center/contain;
-          width: 13px;
-          height: 13px;
-          right: -20px;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: all 0.3s ease;
-
-          @include m.mq("pc") {
-            width: 24px;
-            height: 24px;
-            right: -37px;
-          }
-        }
-      }
-
-      &:hover {
-        background: #faefec;
-      }
-    }
-  }
 
   &__scrollDown {
     position: absolute;
