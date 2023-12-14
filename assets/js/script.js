@@ -49,7 +49,7 @@ window.addEventListener('scroll', () => {
 // 最初のTOP画像バックグラウンドからロゴが浮き出て３秒後に消える
 $(function () {
   function end_loader() {
-    $(".loader").fadeOut(800);
+    $(".loader").fadeOut(4000); /*フェードアウト４秒に変更*/
   }
   function show_logo() {
     $(".loader .loader__logo").fadeIn(600);
@@ -63,7 +63,7 @@ $(function () {
     }, 1000);
     setTimeout(function () {
       end_loader();
-    }, 3000);
+    }, 4000); /*画像表示時間３秒から4秒に変更*/
   });
 });
 
