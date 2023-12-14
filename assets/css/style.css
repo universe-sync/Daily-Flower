@@ -962,7 +962,7 @@ a:hover img {
 }
 @media screen and (min-width: 1240px) {
   .p-service__item {
-    width: 23.6363636364%;
+    width: 25.267249757%;
   }
   .p-service__item + .p-service__item {
     margin-top: 0;
@@ -970,7 +970,7 @@ a:hover img {
 }
 @media screen and (min-width: 768px) {
   .p-service__item {
-    width: 23.6363636364%;
+    width: 25.267249757%;
   }
   .p-service__item + .p-service__item {
     margin-top: 0;
@@ -1035,6 +1035,7 @@ a:hover img {
   padding-top: 100%;
   position: relative;
   transition-duration: 0.3s;
+  /* 画像ホバー時のスケール削除*/
 }
 .p-service__bodyImg img {
   position: absolute;
@@ -1043,10 +1044,6 @@ a:hover img {
   width: 120%;
   height: 120%;
   transform: translate(-50%, -50%);
-}
-.p-service__bodyImg:hover {
-  transform: scale(1.1);
-  transition-duration: 0.3s;
 }
 .p-service__bodyText {
   margin-top: 12px;

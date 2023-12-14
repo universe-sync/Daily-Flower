@@ -63,13 +63,13 @@
     }
 
     @include m.mq("pc") {
-      width: calc(260 / 1100 * 100%);
+      width: calc(260 / 1029 * 100%);
       & + & {
         margin-top: 0;
       }
     }
     @include m.mq("tab") {
-      width: calc(260 / 1100 * 100%);
+      width: calc(260 / 1029 * 100%);
       & + & {
         margin-top: 0;
       }
@@ -143,10 +143,8 @@
       height: 120%;
       transform: translate(-50%, -50%);
     }
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 0.3s;
-    }
+
+    /* 画像ホバー時のスケール削除*/
   }
 
   &__bodyText {
