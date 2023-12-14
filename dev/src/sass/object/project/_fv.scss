@@ -18,7 +18,7 @@
 
     @include m.mq("pc") {
       position: absolute;
-      top: calc(203 / 780 * 100%);
+      top: calc(203 / 700 * 100%);
       left: calc(880 / 1440 * 100%);
     }
   }
