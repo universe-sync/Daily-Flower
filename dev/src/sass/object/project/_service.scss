@@ -123,10 +123,10 @@
     width: 200px;
 
     @include m.mq("pc") {
-      width: 100%;
+      width: 220px;
     }
     @include m.mq("tab") {
-      width: 100%;
+      width: 220px;
     }
   }
 

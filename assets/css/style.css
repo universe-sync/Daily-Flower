@@ -1023,12 +1023,12 @@ a:hover img {
 }
 @media screen and (min-width: 1240px) {
   .p-service__bodyWrapper {
-    width: 100%;
+    width: 220px;
   }
 }
 @media screen and (min-width: 768px) {
   .p-service__bodyWrapper {
-    width: 100%;
+    width: 220px;
   }
 }
 .p-service__bodyImg {
