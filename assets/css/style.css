@@ -927,7 +927,7 @@ a:hover img {
 }
 .p-service__inner {
   position: relative;
-  max-width: 1100px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
   z-index: 30;
@@ -944,7 +944,7 @@ a:hover img {
   .p-service__list {
     /*PC,TAB横並び*/
     flex-direction: row;
-    margin-top: 51px;
+    margin: 51px auto 0;
     padding: 0;
   }
 }
@@ -952,17 +952,18 @@ a:hover img {
   .p-service__list {
     /*PC,TAB横並び*/
     flex-direction: row;
+    margin: 51px auto 0;
   }
 }
 .p-service__item {
   width: 100%;
 }
 .p-service__item + .p-service__item {
-  margin-top: 79px;
+  margin-top: 80px;
 }
 @media screen and (min-width: 1240px) {
   .p-service__item {
-    width: 25.267249757%;
+    width: 260px;
   }
   .p-service__item + .p-service__item {
     margin-top: 0;
@@ -970,7 +971,7 @@ a:hover img {
 }
 @media screen and (min-width: 768px) {
   .p-service__item {
-    width: 25.267249757%;
+    width: 260px;
   }
   .p-service__item + .p-service__item {
     margin-top: 0;
