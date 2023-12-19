@@ -11,16 +11,16 @@
   background: url(../../../../../assets/img/service-bg.png) no-repeat center
     center / cover;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.30);
-        top: 0;
-        left: 0;
-        z-index: 10;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
 
   @include m.mq("pc") {
     padding-bottom: 109px;
@@ -28,7 +28,7 @@
 
   &__inner {
     position: relative;
-    max-width: 1100px;
+    max-width: 1040px;
     width: 100%;
     margin: 0 auto;
     z-index: 30;
@@ -42,16 +42,18 @@
     margin-top: 84px;
     padding: 0 48px;
 
-    @include m.mq("pc") {
-      /*PC,TAB横並び*/
-      flex-direction: row;
-      margin-top: 51px;
-      padding: 0;
-    }
-
     @include m.mq("tab") {
       /*PC,TAB横並び*/
       flex-direction: row;
+      margin: 51px auto 0;
+      padding: 0 20px;
+    }
+
+    @include m.mq("pc") {
+      /*PC,TAB横並び*/
+      flex-direction: row;
+      margin: 51px auto 0;
+      padding: 0;
     }
   }
 
@@ -59,17 +61,18 @@
     width: 100%;
 
     & + & {
-      margin-top: 79px;
+      margin-top: 80px;
     }
 
-    @include m.mq("pc") {
-      width: calc(260 / 1100 * 100%);
+    @include m.mq("tab") {
+      width: 240px;
       & + & {
         margin-top: 0;
       }
     }
-    @include m.mq("tab") {
-      width: calc(260 / 1100 * 100%);
+
+    @include m.mq("pc") {
+      width: 260px;
       & + & {
         margin-top: 0;
       }
@@ -122,11 +125,12 @@
     margin: 0 auto;
     width: 200px;
 
-    @include m.mq("pc") {
-      width: 100%;
-    }
     @include m.mq("tab") {
-      width: 100%;
+      width: 200px;
+    }
+
+    @include m.mq("pc") {
+      width: 220px;
     }
   }
 
@@ -143,10 +147,8 @@
       height: 120%;
       transform: translate(-50%, -50%);
     }
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 0.3s;
-    }
+
+    /* 画像ホバー時のスケール削除*/
   }
 
   &__bodyText {
