@@ -379,6 +379,198 @@ a:hover img {
 /*===================================================================
 # FAQセクション
 ===================================================================*/
+.p-faq {
+  background-image: url(../../../../../assets/img/faq-sp-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 72px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq {
+    background-image: url(../../../../../assets/img/faq-pc-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+.p-faq__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.p-faq__boxes {
+  padding-top: 79px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.p-faq__box {
+  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+  margin-left: auto;
+  margin-right: auto;
+  width: 335px;
+}
+@media screen and (min-width: 768px) {
+  .p-faq__box {
+    width: 745px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__box {
+    width: 1240px;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+  }
+}
+.p-faq__head {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.p-faq__head::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 91%;
+  width: 2px;
+  height: 15px;
+  background-color: #000066;
+  transition: transform 0.5s;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__head::before {
+    left: 95%;
+  }
+}
+.p-faq__head::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 91%;
+  width: 2px;
+  height: 15px;
+  background-color: #000066;
+  transition: opacity 1s;
+  transform: rotate(90deg);
+  transition: opacity 0.5s;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__head::after {
+    left: 95%;
+  }
+}
+.p-faq__minus::before {
+  transform: rotate(90deg);
+}
+.p-faq__minus::after {
+  opacity: 0;
+}
+.p-faq__jsButton {
+  opacity: 0;
+}
+.p-faq__qBody {
+  display: flex;
+  flex-direction: row;
+  max-width: 313px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__qBody {
+    max-width: 1240px;
+  }
+}
+.p-faq__qIcon {
+  background-color: #FFF;
+  border: 1px solid;
+  border-radius: 50%;
+  width: 23px;
+  height: 26px;
+  margin: 18px 16px 18px 8px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__qIcon {
+    margin: 20px 18px 26px 33px;
+  }
+}
+.p-faq__qText {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  max-width: 248px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__qText {
+    max-width: 100%;
+  }
+}
+.p-faq__aWrapper {
+  display: none;
+}
+.p-faq__aBody {
+  display: flex;
+  flex-direction: row;
+  padding-right: 19px;
+  padding-bottom: 19px;
+}
+.p-faq__aIcon {
+  background-color: #FFF;
+  border: 1px solid;
+  border-radius: 50%;
+  width: 23px;
+  height: 26px;
+  margin-left: 8px;
+  margin-right: 6px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__aIcon {
+    margin-left: 32px;
+    margin-right: 18px;
+  }
+}
+.p-faq__a {
+  display: block;
+  text-align: center;
+}
+.p-faq__aInner {
+  display: block;
+  width: 279px;
+  background-color: #F9F1F0;
+  padding: 12px 13px;
+}
+@media screen and (min-width: 768px) {
+  .p-faq__aInner {
+    width: 689px;
+    padding: 23px 24px 41px 24px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__aInner {
+    width: 1108px;
+    padding: 23px 21px 29px;
+  }
+}
+.p-faq__aText {
+  width: 253px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1240px) {
+  .p-faq__aText {
+    width: 1060px;
+    font-size: 16px;
+  }
+}
+.p-faq__spHidden {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .p-faq__spHidden {
+    display: inline;
+  }
+}
 
 /*===================================================================
 # Flowセクション
