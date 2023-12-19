@@ -46,30 +46,31 @@ a:hover img {
 # ヘッダー
 ===================================================================*/
 
-.l-header { /* SP用のメニュー ここから */ /* SP用のメニュー ここまで */ /* PC用のメニュー ここから */ /* PC用のメニュー ここまで */
+.l-header { /* メニュー ここから */ /* メニュー ここまで */ /* PC用のメニュー ここから */ /* PC用のメニュー ここまで */
 }
 
 .l-header__inner {
 	height: 80px;
 	position: relative;
-	z-index: 100;
 }
 
 .l-header__contents {
 	align-items: center;
+	background-color: #F7F7F7;
 	display: flex;
 	justify-content: space-between;
-	margin-right: 30px;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
 }
 
 .l-header__logo {
 	width: 165px; /* ロゴ画像 */
 }
 
-.l-header__navSp {
+.l-header__nav {
 	background-color: #ffd9d0;
 	height: auto;
-	opacity: 0.8;
 	position: fixed;
 	right: 0;
 	top: 0px;
@@ -79,14 +80,14 @@ a:hover img {
 	z-index: 99;
 }
 
-.l-header__listsSp {
+.l-header__lists {
 	font-size: 20px;
 	margin-bottom: 145px;
 	padding-top: 175px;
 	text-align: center;
 }
 
-.l-header__listSp:not(:last-child) {
+.l-header__list:not(:last-child) {
 	margin-bottom: 40px;
 }
 
@@ -234,11 +235,13 @@ a:hover img {
 	cursor: pointer;
 	display: flex;
 	height: 80px;
+	z-index: 1001;
 }
 
 .c-drawer__bars {
 	display: inline-block;
 	height: 24px;
+	margin-right: 30px;
 	position: relative;
 	width: 34px;
 }
@@ -269,7 +272,7 @@ a:hover img {
 /* ドロワーアイコンをクリックした時
 メニューを右からスライドさせて表示する */
 
-.l-header__navSp.c-drawer__iconActive {
+.l-header__nav.c-drawer__iconActive {
 	transform: translateX(0);
 }
 
@@ -295,7 +298,7 @@ a:hover img {
 
 .c-cta {
 	background-color: #fff;
-	bottom: 108px;
+	bottom: 110px;
 	left: 50%;
 	position: fixed; /* スクロールしても追従するコンバージョンボタン */
 	transform: translateX(-50%);
@@ -379,197 +382,138 @@ a:hover img {
 /*===================================================================
 # FAQセクション
 ===================================================================*/
+
 .p-faq {
-  background-image: url(../../../../../assets/img/faq-sp-bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding-bottom: 72px;
+	background-image: url(../../../../../assets/img/faq-sp-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-bottom: 72px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq {
-    background-image: url(../../../../../assets/img/faq-pc-bg.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
+
 .p-faq__inner {
-  padding-left: 20px;
-  padding-right: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__inner {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+
 .p-faq__boxes {
-  padding-top: 79px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding-top: 79px;
 }
+
 .p-faq__box {
-  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
-  margin-left: auto;
-  margin-right: auto;
-  width: 335px;
+	background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+	margin-left: auto;
+	margin-right: auto;
+	width: 335px;
 }
-@media screen and (min-width: 768px) {
-  .p-faq__box {
-    width: 745px;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .p-faq__box {
-    width: 1240px;
-    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
-  }
-}
+
 .p-faq__head {
-  display: block;
-  position: relative;
-  width: 100%;
+	display: block;
+	position: relative;
+	width: 100%;
 }
+
 .p-faq__head::before {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 91%;
-  width: 2px;
-  height: 15px;
-  background-color: #000066;
-  transition: transform 0.5s;
+	background-color: #000066;
+	content: "";
+	height: 15px;
+	left: 91%;
+	position: absolute;
+	top: 35%;
+	transition: transform 0.5s;
+	width: 2px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__head::before {
-    left: 95%;
-  }
-}
+
 .p-faq__head::after {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 91%;
-  width: 2px;
-  height: 15px;
-  background-color: #000066;
-  transition: opacity 1s;
-  transform: rotate(90deg);
-  transition: opacity 0.5s;
+	background-color: #000066;
+	content: "";
+	height: 15px;
+	left: 91%;
+	position: absolute;
+	top: 35%;
+	transform: rotate(90deg);
+	transition: opacity 1s;
+	transition: opacity 0.5s;
+	width: 2px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__head::after {
-    left: 95%;
-  }
-}
+
 .p-faq__minus::before {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
+
 .p-faq__minus::after {
-  opacity: 0;
+	opacity: 0;
 }
+
 .p-faq__jsButton {
-  opacity: 0;
+	opacity: 0;
 }
+
 .p-faq__qBody {
-  display: flex;
-  flex-direction: row;
-  max-width: 313px;
+	display: flex;
+	flex-direction: row;
+	max-width: 313px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__qBody {
-    max-width: 1240px;
-  }
-}
+
 .p-faq__qIcon {
-  background-color: #FFF;
-  border: 1px solid;
-  border-radius: 50%;
-  width: 23px;
-  height: 26px;
-  margin: 18px 16px 18px 8px;
+	background-color: #FFF;
+	border: 1px solid;
+	border-radius: 50%;
+	height: 26px;
+	margin: 18px 16px 18px 8px;
+	width: 23px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__qIcon {
-    margin: 20px 18px 26px 33px;
-  }
-}
+
 .p-faq__qText {
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: left;
-  max-width: 248px;
+	margin-bottom: auto;
+	margin-top: auto;
+	max-width: 248px;
+	text-align: left;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__qText {
-    max-width: 100%;
-  }
-}
+
 .p-faq__aWrapper {
-  display: none;
+	display: none;
 }
+
 .p-faq__aBody {
-  display: flex;
-  flex-direction: row;
-  padding-right: 19px;
-  padding-bottom: 19px;
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 19px;
+	padding-right: 19px;
 }
+
 .p-faq__aIcon {
-  background-color: #FFF;
-  border: 1px solid;
-  border-radius: 50%;
-  width: 23px;
-  height: 26px;
-  margin-left: 8px;
-  margin-right: 6px;
+	background-color: #FFF;
+	border: 1px solid;
+	border-radius: 50%;
+	height: 26px;
+	margin-left: 8px;
+	margin-right: 6px;
+	width: 23px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__aIcon {
-    margin-left: 32px;
-    margin-right: 18px;
-  }
-}
+
 .p-faq__a {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
+
 .p-faq__aInner {
-  display: block;
-  width: 279px;
-  background-color: #F9F1F0;
-  padding: 12px 13px;
+	background-color: #F9F1F0;
+	display: block;
+	padding: 12px 13px;
+	width: 279px;
 }
-@media screen and (min-width: 768px) {
-  .p-faq__aInner {
-    width: 689px;
-    padding: 23px 24px 41px 24px;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .p-faq__aInner {
-    width: 1108px;
-    padding: 23px 21px 29px;
-  }
-}
+
 .p-faq__aText {
-  width: 253px;
-  font-size: 14px;
+	font-size: 14px;
+	width: 253px;
 }
-@media screen and (min-width: 1240px) {
-  .p-faq__aText {
-    width: 1060px;
-    font-size: 16px;
-  }
-}
+
 .p-faq__spHidden {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .p-faq__spHidden {
-    display: inline;
-  }
+	display: none;
 }
 
 /*===================================================================
@@ -590,7 +534,7 @@ a:hover img {
 }
 
 .p-fv__title {
-	animation-delay: 3s;
+	animation-delay: 5s;
 	display: inline-block;
 	font-size: 30px;
 	line-height: normal;
@@ -599,15 +543,16 @@ a:hover img {
 
 .p-fv__title::after {
 	animation: border_anime 3s linear forwards;
-	animation-delay: 8s;
+	animation-delay: 9s;
 	background: rgba(249, 169, 162, 0.3);
 	border-radius: 50px;
-	bottom: 0;
 	content: "";
 	display: block;
-	height: 30px;
+	height: 30%;
 	left: 40%;
 	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 0;
 }
 
@@ -619,47 +564,9 @@ a:hover img {
 }
 
 .p-fv__picture {
-	background: url(../img/fv-flower.png) no-repeat center center/cover;
+	background: url(../../../../../assets/img/fv-flower.png) no-repeat center center/cover; /*画像変更*/
 	margin-top: 37px;
 	padding-top: 87.7333333333%;
-}
-
-.p-fv__button {
-	margin-top: 37px;
-	text-align: center;
-}
-
-.p-fv__button a {
-	background: #fff;
-	border: 1px solid #333;
-	border-radius: 4px;
-	color: #333;
-	display: inline-block;
-	font-size: 11px;
-	padding: 10px 58px 5px 29px;
-	transition: all 0.3s ease;
-}
-
-.p-fv__button a p {
-	font-size: 16px;
-	position: relative;
-}
-
-.p-fv__button a p::after {
-	background: url(../img/guidance_left-arrow.png) no-repeat center center/contain;
-	content: "";
-	display: block;
-	height: 13px;
-	position: absolute;
-	right: -20px;
-	top: 50%;
-	transform: translateY(-50%);
-	transition: all 0.3s ease;
-	width: 13px;
-}
-
-.p-fv__button a:hover {
-	background: #faefec;
 }
 
 .p-fv__scrollDown {
@@ -695,11 +602,7 @@ a:hover img {
 }
 
 .delay-time02 {
-	animation-delay: 4s;
-}
-
-.delay-time03 {
-	animation-delay: 5s;
+	animation-delay: 6s;
 }
 
 /* ===============================================
@@ -707,49 +610,6 @@ a:hover img {
 =============================================== */
 
 /*最初のTOP画像追加*/
-
-.loader {
-	align-items: center;
-	background: url(../../../../../assets/img/loader-bg.png) no-repeat center/cover;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 110;
-}
-
-.loader::after {
-	background: rgba(255, 255, 255, 0.6);
-	content: "";
-	display: block;
-	height: 100vh;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 120;
-}
-
-.loader__logo {
-	content: "";
-	display: block;
-	display: none;
-	height: 500px;
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 500px;
-	z-index: 130;
-}
-
-.loader__logo img {
-	height: 100%;
-	width: 100%;
-}
 
 /*===================================================================
 # お申込みセクション
@@ -975,7 +835,7 @@ a:hover img {
 
 .p-service__inner {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1040px;
 	position: relative;
 	width: 100%;
 	z-index: 30;
@@ -994,7 +854,7 @@ a:hover img {
 }
 
 .p-service__item + .p-service__item {
-	margin-top: 79px;
+	margin-top: 80px;
 }
 
 .p-service__head {
@@ -1031,7 +891,7 @@ a:hover img {
 .p-service__bodyImg {
 	padding-top: 100%;
 	position: relative;
-	transition-duration: 0.3s;
+	transition-duration: 0.3s; /* 画像ホバー時のスケール削除*/
 }
 
 .p-service__bodyImg img {
@@ -1041,11 +901,6 @@ a:hover img {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 120%;
-}
-
-.p-service__bodyImg:hover {
-	transform: scale(1.1);
-	transition-duration: 0.3s;
 }
 
 .p-service__bodyText {
@@ -1150,12 +1005,27 @@ a:hover img {
 
 @media screen and (min-width: 768px) {
 
+.p-faq__box {
+	width: 745px;
+}
+
+.p-faq__aInner {
+	padding: 23px 24px 41px 24px;
+	width: 689px;
+}
+
+.p-faq__spHidden {
+	display: inline;
+}
+
 .p-service__list { /*PC,TAB横並び*/
 	flex-direction: row;
+	margin: 51px auto 0;
+	padding: 0 20px;
 }
 
 .p-service__item {
-	width: 23.6363636364%;
+	width: 240px;
 }
 
 .p-service__item + .p-service__item {
@@ -1163,7 +1033,7 @@ a:hover img {
 }
 
 .p-service__bodyWrapper {
-	width: 100%;
+	width: 200px;
 }
 
 .p-voice__contents {
@@ -1183,6 +1053,15 @@ a:hover img {
 
 .l-header__contents {
 	margin-right: 12px;
+}
+
+.l-header__lists {
+	display: flex;
+	gap: 20px;
+}
+
+.l-header__list {
+	font-size: 20px;
 }
 
 .l-header__navPc {
@@ -1307,16 +1186,66 @@ a:hover img {
 	font-size: 20px;
 }
 
+.p-faq {
+	background-image: url(../../../../../assets/img/faq-pc-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.p-faq__inner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.p-faq__box {
+	background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+	width: 1240px;
+}
+
+.p-faq__head::before {
+	left: 95%;
+}
+
+.p-faq__head::after {
+	left: 95%;
+}
+
+.p-faq__qBody {
+	max-width: 1240px;
+}
+
+.p-faq__qIcon {
+	margin: 20px 18px 26px 33px;
+}
+
+.p-faq__qText {
+	max-width: 100%;
+}
+
+.p-faq__aIcon {
+	margin-left: 32px;
+	margin-right: 18px;
+}
+
+.p-faq__aInner {
+	padding: 23px 21px 29px;
+	width: 1108px;
+}
+
+.p-faq__aText {
+	font-size: 16px;
+	width: 1060px;
+}
+
 .p-fv {
-	margin-top: -80px;
 	padding: 0;
 }
 
 .p-fv__message {
-	left: 61.1805555556%;
+	left: 61.1111111111%;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 29%;
 }
 
 .p-fv__title {
@@ -1327,32 +1256,15 @@ a:hover img {
 	height: 40%;
 }
 
+.p-fv__sub-title {
+	font-size: 30px; /*font-size修正*/
+	margin-top: 47px;
+}
+
 .p-fv__picture {
-	background: url(../img/fv-flower.png) no-repeat top left/75%;
+	background: url(../../../../../assets/img/fv-flower.png) no-repeat top left/72.9166666667%;
 	margin-top: 0;
 	padding-top: 48.6111111111%;
-}
-
-.p-fv__button {
-	bottom: 18.7142857143%;
-	left: 61.1805555556%;
-	margin-top: 0;
-	position: absolute;
-}
-
-.p-fv__button a {
-	font-size: 20px;
-	padding: 10px 58px 5px 29px;
-}
-
-.p-fv__button a p {
-	font-size: 30px;
-}
-
-.p-fv__button a p::after {
-	height: 24px;
-	right: -37px;
-	width: 24px;
 }
 
 .p-fv__scrollDown {
@@ -1377,12 +1289,12 @@ a:hover img {
 
 .p-service__list { /*PC,TAB横並び*/
 	flex-direction: row;
-	margin-top: 51px;
+	margin: 51px auto 0;
 	padding: 0;
 }
 
 .p-service__item {
-	width: 23.6363636364%;
+	width: 260px;
 }
 
 .p-service__item + .p-service__item {
@@ -1406,7 +1318,7 @@ a:hover img {
 }
 
 .p-service__bodyWrapper {
-	width: 100%;
+	width: 220px;
 }
 
 .p-service__bodyText {
@@ -1467,34 +1379,6 @@ a:hover img {
 .p-voice__profRate > img {
 	height: 32px;
 	width: 155px;
-}
-
-}
-
-@keyframes border_anime {
-
-0% {
-	width: 0;
-}
-
-100% {
-	width: 65%;
-}
-
-}
-
-@keyframes arrowmove {
-
-0% {
-	bottom: 1%;
-}
-
-50% {
-	bottom: 3%;
-}
-
-100% {
-	bottom: 1%;
 }
 
 }

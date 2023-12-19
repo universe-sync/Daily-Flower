@@ -54,14 +54,14 @@
     }
   }
 
-  @keyframes border_anime {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 47%;
-    }
-  }
+  // @keyframes border_anime {
+  //   0% {
+  //     width: 0;
+  //   }
+  //   100% {
+  //     width: 47%;
+  //   }
+  // }
 
   &__sub-title {
     margin-top: 14px;
@@ -102,17 +102,17 @@
       right: 6%;
     }
 
-    @keyframes arrowmove {
-      0% {
-        bottom: 1%;
-      }
-      50% {
-        bottom: 3%;
-      }
-      100% {
-        bottom: 1%;
-      }
-    }
+    // @keyframes arrowmove {
+    //   0% {
+    //     bottom: 1%;
+    //   }
+    //   50% {
+    //     bottom: 3%;
+    //   }
+    //   100% {
+    //     bottom: 1%;
+    //   }
+    // }
 
     span {
       font-size: 12px;
@@ -173,46 +173,46 @@
 # loader
 =============================================== */
 /*最初のTOP画像追加*/
-.loader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: url(../../../../../assets/img/loader-bg.png) no-repeat
-    center/cover;
-  z-index: 110;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// .loader {
+//   position: fixed;
+//   width: 100%;
+//   height: 100vh;
+//   background: url(../../../../../assets/img/loader-bg.png) no-repeat
+//     center/cover;
+//   z-index: 110;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.6);
-    top: 0;
-    left: 0;
-    z-index: 120;
-  }
-}
+//   &::after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     width: 100%;
+//     height: 100vh;
+//     background: rgba(255, 255, 255, 0.6);
+//     top: 0;
+//     left: 0;
+//     z-index: 120;
+//   }
+// }
 
-.loader__logo {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 130;
-  display: none;
+// .loader__logo {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 500px;
+//   height: 500px;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 130;
+//   display: none;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }

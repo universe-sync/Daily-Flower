@@ -10,6 +10,8 @@
     height: 80px;
     display: flex;
     align-items: center;
+    z-index: 1001
+    ;
 
     @include m.mq('pc'){
         display: none;
@@ -20,6 +22,7 @@
     width: 34px;
     height: 24px;
     position: relative;
+    margin-right: 30px;
   }
 
   &__bar {
@@ -48,7 +51,7 @@
 
 /* ドロワーアイコンをクリックした時
 メニューを右からスライドさせて表示する */
-.l-header__navSp.c-drawer__iconActive {
+.l-header__nav.c-drawer__iconActive {
   transform: translateX(0);
 }
 
