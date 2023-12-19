@@ -42,17 +42,18 @@
     margin-top: 84px;
     padding: 0 48px;
 
+    @include m.mq("tab") {
+      /*PC,TAB横並び*/
+      flex-direction: row;
+      margin: 51px auto 0;
+      padding: 0 20px;
+    }
+
     @include m.mq("pc") {
       /*PC,TAB横並び*/
       flex-direction: row;
       margin: 51px auto 0;
       padding: 0;
-    }
-    
-    @include m.mq("tab") {
-      /*PC,TAB横並び*/
-      flex-direction: row;
-      margin: 51px auto 0;
     }
   }
 
@@ -63,13 +64,14 @@
       margin-top: 80px;
     }
 
-    @include m.mq("pc") {
-      width: 260px;
+    @include m.mq("tab") {
+      width: 240px;
       & + & {
         margin-top: 0;
       }
     }
-    @include m.mq("tab") {
+
+    @include m.mq("pc") {
       width: 260px;
       & + & {
         margin-top: 0;
@@ -123,10 +125,11 @@
     margin: 0 auto;
     width: 200px;
 
-    @include m.mq("pc") {
-      width: 220px;
-    }
     @include m.mq("tab") {
+      width: 200px;
+    }
+
+    @include m.mq("pc") {
       width: 220px;
     }
   }

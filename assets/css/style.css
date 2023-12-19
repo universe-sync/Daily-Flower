@@ -940,6 +940,14 @@ a:hover img {
   margin-top: 84px;
   padding: 0 48px;
 }
+@media screen and (min-width: 768px) {
+  .p-service__list {
+    /*PC,TAB横並び*/
+    flex-direction: row;
+    margin: 51px auto 0;
+    padding: 0 20px;
+  }
+}
 @media screen and (min-width: 1240px) {
   .p-service__list {
     /*PC,TAB横並び*/
@@ -948,28 +956,21 @@ a:hover img {
     padding: 0;
   }
 }
-@media screen and (min-width: 768px) {
-  .p-service__list {
-    /*PC,TAB横並び*/
-    flex-direction: row;
-    margin: 51px auto 0;
-  }
-}
 .p-service__item {
   width: 100%;
 }
 .p-service__item + .p-service__item {
   margin-top: 80px;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 768px) {
   .p-service__item {
-    width: 260px;
+    width: 240px;
   }
   .p-service__item + .p-service__item {
     margin-top: 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1240px) {
   .p-service__item {
     width: 260px;
   }
@@ -1022,12 +1023,12 @@ a:hover img {
   margin: 0 auto;
   width: 200px;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 768px) {
   .p-service__bodyWrapper {
-    width: 220px;
+    width: 200px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1240px) {
   .p-service__bodyWrapper {
     width: 220px;
   }
