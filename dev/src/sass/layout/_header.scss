@@ -10,6 +10,11 @@
     &__inner{
         height: 80px;
         position: relative;
+
+        @include m.mq('pc'){
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &__contents{
@@ -22,12 +27,17 @@
         z-index: 1000;
 
         @include m.mq('pc'){
-            margin-right: 12px;
+            gap: 170px;
+            justify-content: flex-start;
         }
     }
 
     &__logo{ /* ロゴ画像 */
         width: 165px;
+
+        @include m.mq('pc'){
+            margin-left: 100px;
+        }
     }
 
     /* メニュー ここから */
@@ -35,12 +45,22 @@
         position: fixed;
         width: 100%;
         height: auto;
-        top: 0px;
+        top: 0;
         right: 0;
         z-index: 99;
         transform: translateX(105%);
         transition: all 0.5s ease 0s;
         background-color: #ffd9d0;
+
+        @include m.mq('pc'){
+            position: static;
+            width: auto;
+            transform: none;
+            top: auto;
+            right: auto;
+            background-color: #f7f7f7;
+            z-index: 0;
+        }
 
     }
 
@@ -52,7 +72,10 @@
 
         @include m.mq('pc'){
             display: flex;
-            gap: 20px;
+            gap: 21px;
+            align-items: center;
+            padding-top: 0;
+            margin-bottom: 0;
         }
     }
 
@@ -60,33 +83,27 @@
 
         &:not(:last-child){
             margin-bottom: 40px;
+
+            @include m.mq('pc'){
+                margin-bottom: 0;
+            }
         }
 
-        @include m.mq('pc'){
-            font-size: 20px;
-        }
     }
     /* メニュー ここまで */
 
-    /* PC用のメニュー ここから */
-    &__navPc {
-        display: none;
+    
 
-        @include m.mq('pc'){
-            display: block;
-        }
-    }
+    // &__listsPc{
 
-    &__listsPc{
+    //     @include m.mq('pc'){
+    //         display: flex;
+    //         gap: 20px;
+    //     }
+    // }
 
-        @include m.mq('pc'){
-            display: flex;
-            gap: 20px;
-        }
-    }
-
-    &__listPc{
-        font-size: 20px;
-    }
+    // &__listPc{
+    //     font-size: 20px;
+    // }
     /* PC用のメニュー ここまで */
 }

@@ -30,20 +30,30 @@ $(document).ready(function () {
 
 // コンバージョンボタンが画面の下に来た時の挙動（位置を上に変える）
 const button = document.getElementById('ctaButton'); // ボタン要素を取得
+const breakpoint = 768; // TAB表示のブレークポイント
 
 // スクロールイベントを監視
+function handleScroll() {
+  // ページの高さ
+  const pageHeight = document.documentElement.scrollHeight;
+  // 現在のスクロール位置
+  const scrollPosition = window.innerHeight + window.scrollY;
+  
+  // ページの最後に近づいたか判断
+  if (pageHeight - scrollPosition < 100) { // 100は調整可能
+      button.classList.add('button-up');
+  } else {
+      button.classList.remove('button-up');
+  }
+}
+
+// 画面幅がブレークポイント以下の場合のみ実行
 window.addEventListener('scroll', () => {
-    // ページの高さ
-    const pageHeight = document.documentElement.scrollHeight;
-    // 現在のスクロール位置
-    const scrollPosition = window.innerHeight + window.scrollY;
-    
-    // ページの最後に近づいたか判断
-    if (pageHeight - scrollPosition < 100) { // 100は調整可能
-        button.classList.add('button-up');
-    } else {
-        button.classList.remove('button-up');
-    }
+  
+  if (window.innerWidth <= breakpoint) {
+      handleScroll();
+  }
+
 });
 
 //ギャラリーのスライダー

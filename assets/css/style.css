@@ -46,7 +46,7 @@ a:hover img {
 # ヘッダー
 ===================================================================*/
 
-.l-header { /* メニュー ここから */ /* メニュー ここまで */ /* PC用のメニュー ここから */ /* PC用のメニュー ここまで */
+.l-header { /* メニュー ここから */ /* メニュー ここまで */ /* PC用のメニュー ここまで */
 }
 
 .l-header__inner {
@@ -73,7 +73,7 @@ a:hover img {
 	height: auto;
 	position: fixed;
 	right: 0;
-	top: 0px;
+	top: 0;
 	transform: translateX(105%);
 	transition: all 0.5s ease 0s;
 	width: 100%;
@@ -89,14 +89,6 @@ a:hover img {
 
 .l-header__list:not(:last-child) {
 	margin-bottom: 40px;
-}
-
-.l-header__navPc {
-	display: none;
-}
-
-.l-header__listPc {
-	font-size: 20px;
 }
 
 /*===================================================================
@@ -1051,26 +1043,40 @@ a:hover img {
 
 @media screen and (min-width: 1240px) {
 
+.l-header__inner {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .l-header__contents {
-	margin-right: 12px;
+	gap: 170px;
+	justify-content: flex-start;
+}
+
+.l-header__logo {
+	margin-left: 100px;
+}
+
+.l-header__nav {
+	background-color: #f7f7f7;
+	position: static;
+	right: auto;
+	top: auto;
+	transform: none;
+	width: auto;
+	z-index: 0;
 }
 
 .l-header__lists {
+	align-items: center;
 	display: flex;
-	gap: 20px;
+	gap: 21px;
+	margin-bottom: 0;
+	padding-top: 0;
 }
 
-.l-header__list {
-	font-size: 20px;
-}
-
-.l-header__navPc {
-	display: block;
-}
-
-.l-header__listsPc {
-	display: flex;
-	gap: 20px;
+.l-header__list:not(:last-child) {
+	margin-bottom: 0;
 }
 
 .l-footer {
@@ -1133,12 +1139,13 @@ a:hover img {
 
 .c-cta {
 	bottom: auto;
-	left: 62.7%;
+	left: 61.11111%;
 	top: 553px;
 	transform: translateX(0);
 }
 
 .c-cta__link {
+	border-radius: 4px;
 	height: 96px;
 	width: 389px;
 }

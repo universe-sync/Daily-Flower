@@ -15,7 +15,7 @@
     background-color: #fff;
 
     @include m.mq('pc'){
-        left: 62.7%;
+        left: 61.11111%;
         transform: translateX(0);
         top: 553px;
         bottom: auto;
@@ -39,6 +39,7 @@
         @include m.mq('pc'){
             width: 389px;
             height: 96px;
+            border-radius: 4px;
         }
 
         &:hover{
