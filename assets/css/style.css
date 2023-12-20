@@ -603,6 +603,49 @@ a:hover img {
 
 /*最初のTOP画像追加*/
 
+.loader {
+	align-items: center;
+	background: url(../../../../../assets/img/loader-bg.png) no-repeat center/cover;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 110;
+}
+
+.loader::after {
+	background: rgba(255, 255, 255, 0.6);
+	content: "";
+	display: block;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 120;
+}
+
+.loader__logo {
+	content: "";
+	display: block;
+	display: none;
+	height: 500px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	z-index: 130;
+}
+
+.loader__logo img {
+	height: 100%;
+	width: 100%;
+}
+
 /*===================================================================
 # お申込みセクション
 ===================================================================*/
@@ -1386,6 +1429,34 @@ a:hover img {
 .p-voice__profRate > img {
 	height: 32px;
 	width: 155px;
+}
+
+}
+
+@keyframes border_anime {
+
+0% {
+	width: 0;
+}
+
+100% {
+	width: 47%;
+}
+
+}
+
+@keyframes arrowmove {
+
+0% {
+	bottom: 1%;
+}
+
+50% {
+	bottom: 3%;
+}
+
+100% {
+	bottom: 1%;
 }
 
 }
