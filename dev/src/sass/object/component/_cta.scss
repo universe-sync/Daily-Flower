@@ -9,21 +9,21 @@
     position: fixed; /* スクロールしても追従するコンバージョンボタン */
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50px;
+    bottom: 110px;
     transition: all 0.3s ease 0s;
     z-index: 101;
+    background-color: #fff;
 
     @include m.mq('pc'){
-        left: auto;
-        right: 11.8056%;
+        left: 61.11111%;
         transform: translateX(0);
-        top: 300px;
+        top: 553px;
         bottom: auto;
     }
 
     &__link{
         color: v.$text-color-bk;
-        background-color: transparent;
+        // background-color: transparent;
         border: 0.5px solid #333;
         border-radius: 2px;
         width: 215px;
@@ -39,6 +39,7 @@
         @include m.mq('pc'){
             width: 389px;
             height: 96px;
+            border-radius: 4px;
         }
 
         &:hover{
