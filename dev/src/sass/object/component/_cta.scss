@@ -6,100 +6,104 @@
 @use "../../global/mixin" as m;
 
 .c-cta {
-    position: fixed; /* スクロールしても追従するコンバージョンボタン */
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 110px;
-    transition: all 0.3s ease 0s;
-    z-index: 101;
-    background-color: #fff;
+  position: absolute; /* ボタン固定に修正 */
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% - 147px);
+  transition: all 0.3s ease 0s;
+  z-index: 101;
+  background-color: #fff;
 
-    @include m.mq('pc'){
-        left: 61.11111%;
-        transform: translateX(0);
-        top: 553px;
-        bottom: auto;
+  @include m.mq("pc") {
+    left: 61.11111%;
+    transform: translateX(0);
+    top: calc(100% - 227px);
+    bottom: auto;
+  }
+
+  &__link {
+    color: v.$text-color-bk;
+    // background-color: transparent;
+    border: 0.5px solid #333;
+    border-radius: 2px;
+    width: 215px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 11px 0px rgba(51, 51, 51, 0.25);
+    position: relative;
+    opacity: 0.8;
+
+    @include m.mq("pc") {
+      width: 389px;
+      height: 96px;
+      border-radius: 4px;
     }
 
-    &__link{
-        color: v.$text-color-bk;
-        // background-color: transparent;
-        border: 0.5px solid #333;
-        border-radius: 2px;
-        width: 215px;
-        height: 53px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 2px 11px 0px rgba(51, 51, 51, 0.25);
-        position: relative;
-        opacity: 0.8;
-
-        @include m.mq('pc'){
-            width: 389px;
-            height: 96px;
-            border-radius: 4px;
-        }
-
-        &:hover{
-            background-color: #FAEFEC;
-        }
-
-        &::after{ /* 矢印を擬似要素で表示 */
-            position: absolute;
-            content: "";
-            background-image: url(../../../../../assets/img/cta-arrow.svg);
-            background-repeat: no-repeat;
-            background-size: 13px 8px;
-            width: 13px;
-            height: 13px;
-            right: 12px;
-            bottom: 7px;
-
-           @include m.mq('pc'){
-            background-size: 24px 14px;
-            width: 24px;
-            height: 24px;
-            right: 24px;
-            bottom: 13px;
-           }
-        }
+    &:hover {
+      background-color: #faefec;
     }
 
-    &__firstLine{ /* 1行目のテキスト */
-        font-size: 11px;
-        line-height: 18px;
+    &::after {
+      /* 矢印を擬似要素で表示 */
+      position: absolute;
+      content: "";
+      background-image: url(../../../../../assets/img/cta-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: 13px 8px;
+      width: 13px;
+      height: 13px;
+      right: 12px;
+      bottom: 7px;
 
-        @include m.mq('pc'){
-            font-size: 20px;
-            line-height: 32px;
-        }
+      @include m.mq("pc") {
+        background-size: 24px 14px;
+        width: 24px;
+        height: 24px;
+        right: 24px;
+        bottom: 13px;
+      }
     }
+  }
 
-    &__number{ /* 50％Off */
-        font-size: 13px;
-        line-height: 21px;
+  &__firstLine {
+    /* 1行目のテキスト */
+    font-size: 11px;
+    line-height: 18px;
 
-        @include m.mq('pc'){
-            font-size: 24px;
-            line-height: 38px;
-        }
+    @include m.mq("pc") {
+      font-size: 20px;
+      line-height: 32px;
     }
+  }
 
-    &__secondLine{ /* 2行目のテキスト */
-        line-height: 27px;
-        align-self: flex-start; /* 2行目は左寄せ */
-        padding-left: 18px;
+  &__number {
+    /* 50％Off */
+    font-size: 13px;
+    line-height: 21px;
 
-        @include m.mq('pc'){
-            font-size: 30px;
-            line-height: 48px;
-            padding-left: 28px;
-        }
+    @include m.mq("pc") {
+      font-size: 24px;
+      line-height: 38px;
     }
+  }
+
+  &__secondLine {
+    /* 2行目のテキスト */
+    line-height: 27px;
+    align-self: flex-start; /* 2行目は左寄せ */
+    padding-left: 18px;
+
+    @include m.mq("pc") {
+      font-size: 30px;
+      line-height: 48px;
+      padding-left: 28px;
+    }
+  }
 }
 
-.c-cta.button-up{
-    bottom: 90px; /* 画面の下まで来た時は位置を上げる */
+.c-cta.button-up {
+  bottom: 90px; /* 画面の下まで来た時は位置を上げる */
 }

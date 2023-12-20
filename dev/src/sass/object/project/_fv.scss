@@ -8,9 +8,11 @@
 .p-fv {
   position: relative;
   padding: 38px 0 184px;
+  background: #f7f7f7;
 
   @include m.mq("pc") {
     padding: 0;
+    background: #fff;
   }
 
   &__message {
@@ -18,6 +20,7 @@
 
     @include m.mq("pc") {
       position: absolute;
+      padding: 0;
       top: calc(203 / 700 * 100%);
       left: calc(880 / 1440 * 100%);
     }
@@ -157,6 +160,11 @@
   animation-delay: 6s;
 }
 
+.delay-time03 {
+  animation-delay: 7s;
+}
+
+
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
@@ -169,6 +177,7 @@
   }
 }
 
+
 /* ===============================================
 # loader
 =============================================== */
@@ -177,14 +186,19 @@
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: url(../../../../../assets/img/loader-bg.png) no-repeat
+  background: url(../../../../../assets/img/loader-bg-sp\ 1.png) no-repeat
     center/cover;
-  z-index: 110;
+  z-index: 1110;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include m.mq("pc") {
+    background: url(../../../../../assets/img/loader-bg.png) no-repeat
+      center/cover;
+  }
 
   &::after {
     content: "";

@@ -17,10 +17,10 @@
   }
 
   &__inner {
-    padding: 0 55px;
+    padding: 0 58px;
 
     @include m.mq("pc") {
-      max-width: 820px;
+      max-width: 768px;
       margin: 0 auto;
       padding: 0;
     }
@@ -35,10 +35,10 @@
     }
 
     p {
-      font-size: 16px;
+      font-size: 14px;
 
       @include m.mq("pc") {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
   }
