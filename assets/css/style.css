@@ -831,6 +831,7 @@ a:hover img {
   color: #491d01;
   font-family: "Tangerine", cursive;
   font-size: 32px;
+  line-height: normal;
 }
 @media screen and (min-width: 1240px) {
   .p-flow__headText--top {
