@@ -118,3 +118,16 @@ $(".js-accordion").on("click", function (e) {
     $(this).next().slideDown(500);
   }
 });
+
+// フォーム送信ボタンをクリックでサンクスページ表示
+$(document).ready(function() {
+
+  $(".p-order__button").click(function(e) {
+    e.preventDefault();
+
+    var thanksSection = $('.p-order__thanks');
+
+    $(".p-order").hide();
+    thanksSection.show();
+  });
+});

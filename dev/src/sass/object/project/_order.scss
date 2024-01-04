@@ -6,5 +6,408 @@
 @use "../../global/mixin" as m;
 
 .p-order{
-    
+    background-image: url(../../../../../assets/img/order-title-bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-bottom: 72px;
+
+    @include m.mq(pc) {
+        background-image: url(../../../../../assets/img/order-pc-title-bg.png);
+        padding-bottom: 84px;
+    }
+
+    &__head {
+        background-image: url(../../../../../assets/img/order-head-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 375px;
+        height: 427px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include m.mq(pc) {
+            background-image: url(../../../../../assets/img/order-pc-head-bg.png);
+            width: 640px;
+            height: 427px;
+        }
+    }
+
+    &__title {
+        padding-bottom: 76px;
+    }
+
+    &__titleEn {
+        font-size: 22px;
+
+        @include m.mq(pc) {
+            font-size: 32px;
+        }
+    }
+
+    &__titleJp {
+        font-size: 16px;
+
+        @include m.mq(pc) {
+            font-size: 18px;
+        }
+    }
+
+    &__textBox {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 238px;
+        height: 120px;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.60);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include m.mq(pc) {
+            width: 300px;
+        }
+    }
+
+    &__headText {
+        font-size: 22px;
+        color: #491D01;
+
+        @include m.mq(pc) {
+            font-size: 30px;
+        }
+    }
+
+    &__formHead {
+        width: 335px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include m.mq(tab) {
+            width: 700px;
+        }
+
+        @include m.mq(pc) {
+            flex-direction: row;
+            gap: 33px;
+            padding-top: 83px;
+            padding-bottom: 21px;
+            margin: 0;
+        }
+    }
+
+    &__formTitle {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+
+        @include m.mq(pc) {
+            font-size: 30px;
+        }
+    }
+
+    &__titleSub {
+        font-size: 18px;
+        font-weight: 500;
+
+        @include m.mq(pc) {
+            font-size: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    &__form {
+        width: 335px;
+        height: 642px;
+        border-radius: 3px;
+        background: #FCFFFC;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include m.mq(tab) {
+            width: 700px;
+            height: 500px;
+        }
+
+        @include m.mq(pc) {
+            width: 1240px;
+            height: 457px;
+            padding-top: 22px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__formField {
+        @include m.mq(pc) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__fieldTitle {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include m.mq(pc) {
+            text-align: left;
+            padding: 42px 10px 0 65px;
+        }
+    }
+
+    &__fieldTitle2 {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include m.mq(pc) {
+            text-align: left;
+            padding: 43px 10px 0 65px;
+        }
+    }
+
+    &__fieldLabel {
+        font-size: 18px;
+
+        @include m.mq(pc) {
+            width: 100%;
+            font-size: 24px;
+        }
+    }
+
+    &__formItems {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 24px;
+
+        @include m.mq(tab) {
+            flex-direction: row;
+        }
+
+        @include m.mq(pc) {
+            gap: 26px;
+            padding-top: 35px;
+            padding-right: 272px;
+            margin-left: auto;
+        }
+    }
+
+    &__formText {
+        width: 291px;
+        height: 40px;
+        padding: 7px 19px;
+        color: #A7A6A6;
+        font-weight: 500;
+
+        @include m.mq(pc) {
+            height: 52px;
+            font-size: 24px;
+        }
+    }
+
+
+    &__rubyItems {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 24px;
+
+        @include m.mq(tab) {
+            flex-direction: row;
+        }
+
+        @include m.mq(pc) {
+            gap: 26px;
+            margin-left: auto;
+            padding-top: 35px;
+            padding-right: 272px;
+        }
+    }
+
+    &__formMails {
+        display: flex;
+        flex-direction: column;
+        padding-left: 24px;
+
+        @include m.mq(pc) {
+            padding-top: 35px;
+            padding-right: 65px;
+            margin-left: auto;
+        }
+    }
+
+    &__formMail1 {
+        padding-bottom: 18px;
+    }
+
+    &__mailText {
+        width: 291px;
+        height: 40px;
+        padding: 7px 19px;
+        color: #A7A6A6;
+        font-weight: 500;
+
+        @include m.mq(tab) {
+            width: 400px;
+        }
+
+        @include m.mq(pc) {
+            width: 812px;
+            height: 52px;
+            font-size: 24px;
+        }
+    }
+
+    &__formButton {
+        padding-top: 56px;
+        text-align: center;
+
+        @include m.mq(pc) {
+            padding-top: 57px;
+        }
+    }
+
+    &__button {
+        height: 66px;
+        padding: 15px 53px;
+        color: #FFF;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        border-radius: 3px;
+        background: rgba(73, 29, 1, 0.70);
+    }
+
+    &__thanks {
+        display: none;
+        background-image: url(../../../../../assets/img/order-title-bg.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        padding-bottom: 72px;
+    }
+
+    &__thanksBox {
+        border-radius: 3px;
+        background: rgba(255, 217, 208, 0.5);
+        display: flex;
+        width: 335px;
+        height: 762px;
+        flex-direction: column;
+        gap: 45px;
+        text-align: center;
+        margin: 40px auto 72px;
+        padding-top: 40px;
+        padding-bottom: 76px;
+    }
+
+    &__thanksHead {
+        color: #F07070;
+        font-family: Yu Mincho;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    &__thanksText {
+        & > span {
+            color: #F07070;
+        }
+    }
+
+    &__contact {
+
+    }
+
+    &__contactBox {
+        border-radius: 3px;
+        background-color: #FFF;
+        display: flex;
+        width: 335px;
+        height: 338px;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__contactHead {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: calc(20px - 2px);
+        padding-left: calc((291px - 277px) / 2);
+        padding-right: calc((291px - 277px) / 2);
+    }
+
+    &__contactTitle {
+        width: 277px;
+        font-family: Yu Mincho;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__contactMail {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: calc(20px - 8px);
+
+        & img {
+            width: 30px;
+        }
+    }
+
+    &__mailAddress {
+        margin-top: auto;
+    }
+
+    &__contactTel {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: calc(20px - 8px);
+
+        & img {
+            width: 30px;
+        }
+    }
+
+    &__telNumber {
+        margin-top: auto;
+    }
+
+    &__contactText {
+        padding-top: 20px;
+    }
+
+    &__pcHidden {
+        @include m.mq(pc) {
+            display: none;
+        }
+    }
+
+
+
 }
