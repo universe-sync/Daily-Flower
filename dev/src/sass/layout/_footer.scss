@@ -37,15 +37,21 @@
     }
 
     &__list{
-        font-size: 14px;
 
         &:not(:last-child){
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
+    }
+
+    &__listLink{
+        font-size: 14px;
+        line-height: 22px;
+        
         @include m.mq('pc'){
             font-size: 20px;
         }
+
     }
 
     &__copyrightPc{ /* PC用のコピーライト */
@@ -61,9 +67,9 @@
 
     &__contentWrap{ /* ロゴとSNSアイコンを横並びにする */
         display: flex;
-        gap: 18px;
+        gap: 17px;
         max-width: 325px;
-        margin: 25px auto 0;
+        margin: 23px auto 0;
 
         @include m.mq('pc'){
             gap: 30px;
@@ -77,7 +83,7 @@
 
     &__icons{ /* SNSアイコン */
         display: flex;
-        gap: 18px;
+        gap: 15px;
     }
 
     &__icon{
@@ -108,8 +114,9 @@
         text-align: center;
         color: v.$text-color-br;
         font-size: 20px;
+        line-height: 32px;
         margin-top: 65px;
-        padding-bottom: 50px;
+        padding-bottom: 45px;
 
         @include m.mq('pc'){
             display: none; /* PCでは非表示にする */

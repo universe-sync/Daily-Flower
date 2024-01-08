@@ -21,54 +21,45 @@ $(document).ready(function () {
     return false;
   });
 
-  //メニュー内のリンクをクリックした時もドロワーを閉じる
-  $('.js-drawer-close').on('click', function (e) {
-    $('.c-drawer__iconActive').removeClass('c-drawer__iconActive');
-    $('body').css('overflow', ''); // スクロールを有効化
+  // ドロワーメニュー内のリンクをクリックした時の処理
+  $('.l-header__listLink').on('click', function (e) {
+    e.preventDefault(); // デフォルトの挙動を防止
+
+    // 目的のセクションIDとスクロール位置を取得
+    var targetId = $(this).attr('href');
+    var targetPosition = $(targetId).offset().top;
+    var offset = 70; // 上に余白を設定
+
+    // スムーズスクロールを先に実行
+    $('html, body').animate({
+      scrollTop: targetPosition - offset
+    }, 500, function() {
+      // スクロール完了後にドロワーメニューを閉じる
+      let targetClass = $('.js-drawer').attr('data-target');
+      $('.' + targetClass).removeClass('c-drawer__iconActive');
+      $('.js-drawer').find('.c-drawer__bar').removeClass('c-drawer__iconActive');
+      $('body').css('overflow', ''); // スクロールを有効化
+    });
   });
-});
-
-// コンバージョンボタンが画面の下に来た時の挙動（位置を上に変える）
-const button = document.getElementById('ctaButton'); // ボタン要素を取得
-const breakpoint = 768; // TAB表示のブレークポイント
-
-// スクロールイベントを監視
-function handleScroll() {
-  // ページの高さ
-  const pageHeight = document.documentElement.scrollHeight;
-  // 現在のスクロール位置
-  const scrollPosition = window.innerHeight + window.scrollY;
-  
-  // ページの最後に近づいたか判断
-  if (pageHeight - scrollPosition < 100) { // 100は調整可能
-      button.classList.add('button-up');
-  } else {
-      button.classList.remove('button-up');
-  }
-}
-
-// 画面幅がブレークポイント以下の場合のみ実行
-window.addEventListener('scroll', () => {
-  
-  if (window.innerWidth <= breakpoint) {
-      handleScroll();
-  }
 
 });
+
+//追従するCVボタン
 
 //ギャラリーのスライダー
 $('.p-plan__slider').slick({
   autoplay: true, //自動的に動き出すか。初期値はfalse。
-  autoplaySpeed: 5000, // 自動再生のスピードを10秒に設定
+  autoplaySpeed: 7000, // 自動再生のスピードを7秒に設定
   infinite: true, //スライドをループさせるかどうか。初期値はtrue。
   speed: 1000, //スライドのスピード。初期値は300。
-  slidesToShow: 3, //スライドを画面に3枚見せる
+  slidesToShow: 1, //1枚だけ画像全体を表示させる
   slidesToScroll: 1, //1回のスクロールで1枚の写真を移動して見せる
   prevArrow: '<div class="slick-prev"></div>', //矢印部分PreviewのHTMLを変更
   nextArrow: '<div class="slick-next"></div>', //矢印部分NextのHTMLを変更
-  centerMode: true, //要素を中央ぞろえにする
-  variableWidth: true, //幅の違う画像の高さを揃えて表示
-  dots: true, //下部ドットナビゲーションの表示
+  centerMode: true, //画面の中心に画像を表示させる
+  variableWidth: true, //左右の画像を部分的に表示させる
+  dots: false, //下部ドットナビゲーションの表示
+
   // responsive: [
   //   {
   //     breakpoint: 768, // 768px以上の画面サイズ

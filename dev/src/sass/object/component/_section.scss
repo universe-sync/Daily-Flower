@@ -8,7 +8,7 @@
 .c-section {
     
     &__title{ /* セクションタイトル */
-        padding-top: 60px;
+        padding-top: 58px;
         text-align: center;
         font-family: 'YuMincho', 'Yu Mincho', '游明朝体', 'Yu Mincho Light', sans-serif;        
     }
@@ -17,7 +17,7 @@
         display: block;
         font-size: 24px;
         font-weight: 600;
-        line-height: 38px;
+        line-height: 34px;
 
         @include m.mq('pc'){
             font-size: 32px;

@@ -13,7 +13,7 @@
     // padding-bottom: 1500px;
 
     &__courseWrap{ /* コースパート全体 */
-        margin: 100px auto 0;
+        margin: 115px auto 0;
         text-align: center;
     }
 
@@ -33,42 +33,81 @@
         border: 1px solid #333;
         background-color: #FCFFFC;
         margin: 0 auto;
-        width: calc(193px / 375px * 100%);
+        width: calc(266px / 375px * 100%);
         height: auto;
         position: relative;
         padding-bottom: 50px;
+        border-radius: 3px;
+
+        &::after{ /* 選べるコースの背景 */
+            position: absolute;
+            content: "";
+            background-color: #FCFFFC;
+            width: calc(187px / 266px * 100%);
+            height: 52px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -27px;
+            filter: blur(10px);
+        }
     }
 
-    &__upperText { /* 枠のタイトル（選べるコース） */
+    &__upper { /* 枠のタイトル（選べるコース） */
         position: absolute;
-        background-color: #FCFFFC;
         left: 50%;
         transform: translateX(-50%);
-        top: -10px;
-        white-space: nowrap;
-        padding: 0 5px;
+        top: -16px;
+        background-color: #FCFFFC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        z-index: 10;
+        flex-wrap: nowrap;
+        width: calc(155px / 266px * 100%);
+        height: 30px;
+        color: v.$text-color-br;
+    }
+
+    &__upperText{ /* テキスト→「選べるコース」 */
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.05em;
+    }
+
+    &__upperNum{ /* テキスト→「①または②」 */
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: -0.05em;
     }
 
     &__courseTitle { /* コース名 */
-        margin-top: 20px;
+        margin-top: 44px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px;
     }
 
     &__price { /* 金額 */
-    
+        font-size: 18px;
+        line-height: 29px;
     }
 
     &__priceNum{ /* 金額の数字 */
-
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 38px;
+        margin-right: 7px;
     }
 
     &__shipping { /* 送料無料 */
-    
+        font-size: 18px;
+        line-height: 29px;
     }
 
     &__courseImg{ /* コース内の画像 */
-        width: calc(100px / 191px * 100%);
-        height: auto;
-        margin: 0 auto;
+        width: calc(173px / 265px * 100%);
+        margin: 13px auto 0;
     }
 
     &__lowerText { /* お花の本数 */
@@ -79,29 +118,53 @@
         white-space: nowrap;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 50px;
+        bottom: 20px;
         padding: 1px 15px;
+        font-size: 18px;
+        line-height: 29px;
+        color: v.$text-color-br;
     }
 
     &__or { /* プランの間にある「or」 */
-        margin: 20px auto;
+        margin: 15px auto;
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 61px;
+        color: v.$text-color-br;
     }
 
     .p-plan__plus { /* コースと選べる間隔との間にあるプラス画像 */
         width: 40px;
         height: 40px;
-        margin: 30px auto;
+        margin: 54.5px auto;
     }
 
     &__intervals { /* 選べる間隔パート */
         border: 1px solid #333;
         background-color: #FCFFFC;
-        margin: 0 auto 58px;
-        width: calc(193px / 375px * 100%);
+        margin: 0 auto 60px;
+        width: calc(328px / 375px * 100%);
+        border-radius: 3px;
         height: auto;
         position: relative;
-        padding-bottom: 50px;
+        padding-top: 23px;
+        padding-bottom: 46px;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+
+        &::after{ /* 選べる間隔の背景 */
+            position: absolute;
+            content: "";
+            background-color: #FCFFFC;
+            width: calc(187px / 328px * 100%);
+            height: 52px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -27px;
+            filter: blur(10px);
+        }
     }
     
     &__intervalsTitle { /* 選べる間隔のタイトル */
@@ -109,25 +172,37 @@
         background-color: #FCFFFC;
         left: 50%;
         transform: translateX(-50%);
-        top: -10px;
+        top: -17px;
         white-space: nowrap;
-        padding: 0 5px;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.05em;
+        color: v.$text-color-br;
+        z-index: 10;
     }
     
     &__interval { /* 間隔のパターン */
         margin-top: 30px;
     }
     
-    &__intervalWeelk { /* 毎週・隔週 */
-    
+    &__intervalWeek { /* 毎週・隔週 */
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 35px;
     }
     
-    &_intervalText { /* お好きな曜日 */
-    
+    &__intervalText { /* お好きな曜日 */
+        font-size: 17px;
+        line-height: 27px;
+        margin-top: 11px;
     }
     
     &__intervalOr { /* 間隔パート内の「or」 */
-    
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 38px;
+        margin-top: 33px;
+        color: v.$text-color-br;
     }
     
     &__gallery { /* ギャラリー */
@@ -144,83 +219,101 @@
         line-height: 40px;
     }
     
-    &__galleryText {
-    
-    }
-    
-    &__galleryImg {
-    
+    &__galleryText { /* ギャラリーの説明 */
+        font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+        line-height: 26px;
+        margin-top: 8px;
     }
     
     &__slider { /* スライダー */
-        width:94%; /* 横幅94%で左右に余白を持たせて中央寄せ */
-        margin:0 auto;
+        padding-top:44px;
+        padding-bottom: 87px;
+    }
 
-        img{
-            width: 60vw; /* スライダー内の画像を60vwにしてレスポンシブ化 */
-            height: auto;
-        }
+    &__galleryContent{ /* 画像の幅とマージン */
+        width: 56VW;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    &__imgText{ /* 画像内のテキスト（コース名） */
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-flex;
+        font-size: 14px;
+        line-height: 22px;
+        background-color: #fff;
+        padding: 12px 19px;
+        // margin: 0 auto;
+        white-space: nowrap;
+        border-radius: 3px;
+        // width: 168px;
+        text-align: center;
+        opacity: 0.8;
     }
 }
 
 .p-plan__slider .slick-slide {
-	transform: scale(0.8); /* 左右の画像のサイズを80%に */
-	transition: all .5s; /* 拡大や透過のアニメーションを0.5秒で行う */
-	opacity: 0.5; /* 透過50% */
+    // width: 56vw;
+	// transform: scale(0.6); /* 左右の画像のサイズを80%に */
+	// transition: all .5s; /* 拡大や透過のアニメーションを0.5秒で行う */
+	// opacity: 0.5; /* 透過50% */
 }
 
 .p-plan__slider .slick-slide.slick-center{
-	transform: scale(1); /* 中央の画像のサイズだけ等倍に */
-	opacity: 1; /* 透過なし */
+	// transform: scale(1); /* 中央の画像のサイズだけ等倍に */
+	// opacity: 1; /* 透過なし */
 }
 
-/* 矢印の設定 */
-
-/*戻る、次へ矢印の位置*/
-.slick-prev, 
+/*戻る、次へ矢印*/
+.slick-prev,
 .slick-next {
     position: absolute; /*絶対配置にする*/
-    top: 42%;
+    top: 43%;
     cursor: pointer; /*マウスカーソルを指マークに*/
-    outline: none;/*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #666;/*矢印の色*/
-    border-right: 2px solid #666;/*矢印の色*/
+    outline: none; /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #333; /*矢印の色*/
+    border-right: 2px solid #333; /*矢印の色*/
     height: 15px;
     width: 15px;
+    z-index: 1;
 }
 
 .slick-prev { /*戻る矢印の位置と形状*/
-    left: -1.5%;
+    left: 15.5%;
     transform: rotate(-135deg);
 }
 
 .slick-next { /*次へ矢印の位置と形状*/
-    right: -1.5%;
+    right: 15.5%;
     transform: rotate(45deg);
 }
 
 /*ドットナビゲーションの設定*/
 
 .slick-dots {
-    text-align:center;
-	margin:20px 0 0 0;
+    // text-align:center;
+	// margin:20px 0 0 0;
+    // display: none;
 }
 
 .slick-dots li {
-    display:inline-block;
-	margin:0 5px;
+    // display:inline-block;
+	// margin:0 5px;
 }
 
 .slick-dots button {
-    color: transparent;
-    outline: none;
-    width:8px;/*ドットボタンのサイズ*/
-    height:8px;/*ドットボタンのサイズ*/
-    display:block;
-    border-radius:50%;
-    background:#ccc;/*ドットボタンの色*/
+    // color: transparent;
+    // outline: none;
+    // width:8px; /*ドットボタンのサイズ*/
+    // height:8px; /*ドットボタンのサイズ*/
+    // display:block;
+    // border-radius:50%;
+    // background:#ccc; /*ドットボタンの色*/
 }
 
 .slick-dots .slick-active button{
-    background:#333;/*ドットボタンの現在地表示の色*/
+    // background:#333; /*ドットボタンの現在地表示の色*/
 }
