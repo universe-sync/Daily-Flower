@@ -10,23 +10,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    // padding-bottom: 1500px;
+
+    @include m.mq('pc'){
+        background-image: url(../../../../../assets/img/plan-bg_pc.jpg);
+        // background-position: center center;
+    }
 
     &__courseWrap{ /* コースパート全体 */
-        margin: 115px auto 0;
+        max-width: 976px;
+        margin: 0 auto 60px;
         text-align: center;
     }
 
     &__courses {
+        margin-top: 115px;
     
-    }
-
-    &__courseA {
-    
-    }
-
-    &__courseB {
-    
+        @include m.mq('pc'){
+            display: flex;
+            align-items: center;
+            margin-top: 96px;
+        }
     }
 
     &__course{ /* 各コース */
@@ -39,6 +42,11 @@
         padding-bottom: 50px;
         border-radius: 3px;
 
+        @include m.mq('pc'){
+            width: 350px;
+            margin: 0;
+        }
+
         &::after{ /* 選べるコースの背景 */
             position: absolute;
             content: "";
@@ -49,6 +57,10 @@
             transform: translateX(-50%);
             top: -27px;
             filter: blur(10px);
+
+            @include m.mq('pc'){
+                width: 274.91px;
+            }
         }
     }
 
@@ -67,18 +79,32 @@
         width: calc(155px / 266px * 100%);
         height: 30px;
         color: v.$text-color-br;
+
+        @include m.mq('pc'){
+            gap: 0;
+        }
     }
 
     &__upperText{ /* テキスト→「選べるコース」 */
         font-size: 20px;
         line-height: 32px;
         letter-spacing: -0.05em;
+
+        @include m.mq('pc'){
+            font-size: 30px;
+            line-height: 48px;
+        }
     }
 
     &__upperNum{ /* テキスト→「①または②」 */
         font-size: 24px;
         line-height: 38px;
         letter-spacing: -0.05em;
+
+        @include m.mq('pc'){
+            font-size: 30px;
+            line-height: 48px;
+        }
     }
 
     &__courseTitle { /* コース名 */
@@ -86,11 +112,21 @@
         font-size: 24px;
         font-weight: 700;
         line-height: 34px;
+
+        @include m.mq('pc'){
+            font-size: 28px;
+            line-height: 45px;
+        }
     }
 
     &__price { /* 金額 */
         font-size: 18px;
         line-height: 29px;
+
+        @include m.mq('pc'){
+            font-size: 22px;
+            line-height: 35px;
+        }
     }
 
     &__priceNum{ /* 金額の数字 */
@@ -98,16 +134,31 @@
         font-weight: 500;
         line-height: 38px;
         margin-right: 7px;
+
+        @include m.mq('pc'){
+            font-size: 32px;
+            line-height: 51px;
+        }
     }
 
     &__shipping { /* 送料無料 */
         font-size: 18px;
         line-height: 29px;
+
+        @include m.mq('pc'){
+            font-size: 22px;
+            line-height: 35px;
+        }
     }
 
     &__courseImg{ /* コース内の画像 */
         width: calc(173px / 265px * 100%);
         margin: 13px auto 0;
+
+        @include m.mq('pc'){
+            width: 239px;
+            height: 260px;
+        }
     }
 
     &__lowerText { /* お花の本数 */
@@ -123,6 +174,11 @@
         font-size: 18px;
         line-height: 29px;
         color: v.$text-color-br;
+
+        @include m.mq('pc'){
+            font-size: 24px;
+            line-height: 38px;
+        }
     }
 
     &__or { /* プランの間にある「or」 */
@@ -131,18 +187,28 @@
         font-weight: 500;
         line-height: 61px;
         color: v.$text-color-br;
+
+        @include m.mq('pc'){
+            font-size: 64px;
+            line-height: 103px;
+        }
     }
 
     .p-plan__plus { /* コースと選べる間隔との間にあるプラス画像 */
         width: 40px;
         height: 40px;
         margin: 54.5px auto;
+
+        @include m.mq('pc'){
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__intervals { /* 選べる間隔パート */
         border: 1px solid #333;
         background-color: #FCFFFC;
-        margin: 0 auto 60px;
+        margin: 0 auto;
         width: calc(328px / 375px * 100%);
         border-radius: 3px;
         height: auto;
@@ -154,6 +220,10 @@
         justify-content: center;
         gap: 28px;
 
+        @include m.mq('pc'){
+            width: 100%;
+        }
+
         &::after{ /* 選べる間隔の背景 */
             position: absolute;
             content: "";
@@ -164,6 +234,11 @@
             transform: translateX(-50%);
             top: -27px;
             filter: blur(10px);
+
+            @include m.mq('pc'){
+                width: 201px;
+                height: 50px;
+            }
         }
     }
     
@@ -179,6 +254,11 @@
         letter-spacing: -0.05em;
         color: v.$text-color-br;
         z-index: 10;
+
+        @include m.mq('pc'){
+            font-size: 30px;
+            line-height: 48px;
+        }
     }
     
     &__interval { /* 間隔のパターン */
@@ -189,12 +269,22 @@
         font-size: 22px;
         font-weight: 700;
         line-height: 35px;
+
+        @include m.mq('pc'){
+            font-size: 28px;
+            line-height: 45px;
+        }
     }
     
     &__intervalText { /* お好きな曜日 */
         font-size: 17px;
         line-height: 27px;
         margin-top: 11px;
+
+        @include m.mq('pc'){
+            font-size: 24px;
+            line-height: 38px;
+        }
     }
     
     &__intervalOr { /* 間隔パート内の「or」 */
@@ -203,6 +293,11 @@
         line-height: 38px;
         margin-top: 33px;
         color: v.$text-color-br;
+
+        @include m.mq('pc'){
+            font-size: 36px;
+            line-height: 58px;
+        }
     }
     
     &__gallery { /* ギャラリー */
@@ -211,6 +306,12 @@
     
     &__titleWrap{ /* ギャラリーのタイトルと説明の余白調整 */
         margin: 0 40px;
+
+        @include m.mq('pc'){
+            margin: 0;
+            display: flex;
+            gap: 37px;
+        }
     }
 
     &__galleryTitle { /* ギャラリーのタイトル */
@@ -232,8 +333,15 @@
 
     &__galleryContent{ /* 画像の幅とマージン */
         width: 56VW;
-        margin: 0 20px;
+        height: auto;
+        margin: 0 10px;
         position: relative;
+        align-items: flex-end;
+
+        @include m.mq('pc'){
+            width: 300px;
+            height: auto;
+        }
     }
 
     &__imgText{ /* 画像内のテキスト（コース名） */
@@ -256,14 +364,13 @@
 }
 
 .p-plan__slider .slick-slide {
-    // width: 56vw;
-	// transform: scale(0.6); /* 左右の画像のサイズを80%に */
-	// transition: all .5s; /* 拡大や透過のアニメーションを0.5秒で行う */
+    transform: scale(0.8); /* 左右の画像のサイズを80%に */
+	transition: all .5s; /* 拡大や透過のアニメーションを0.5秒で行う */
 	// opacity: 0.5; /* 透過50% */
 }
 
 .p-plan__slider .slick-slide.slick-center{
-	// transform: scale(1); /* 中央の画像のサイズだけ等倍に */
+	transform: scale(1); /* 中央の画像のサイズだけ等倍に */
 	// opacity: 1; /* 透過なし */
 }
 
@@ -316,4 +423,10 @@
 
 .slick-dots .slick-active button{
     // background:#333; /*ドットボタンの現在地表示の色*/
+}
+
+.test{
+    height: 2000px;
+    background-color: #888888
+    ;
 }

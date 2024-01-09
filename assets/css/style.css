@@ -389,6 +389,7 @@ a:hover img {
 
 .c-cv {
 	bottom: 20px;
+	display: none;
 	position: fixed;
 	right: 20px;
 	z-index: 100;
@@ -439,6 +440,10 @@ a:hover img {
 	height: 8px;
 	margin-top: 5px;
 	width: 15px; /* 矢印 */
+}
+
+.button-up {
+	bottom: 300px !important;
 }
 
 /*===================================================================
@@ -822,8 +827,13 @@ a:hover img {
 }
 
 .p-plan__courseWrap {
-	margin: 115px auto 0; /* コースパート全体 */
+	margin: 0 auto 60px;
+	max-width: 976px; /* コースパート全体 */
 	text-align: center;
+}
+
+.p-plan__courses {
+	margin-top: 115px;
 }
 
 .p-plan__course {
@@ -944,7 +954,7 @@ a:hover img {
 	gap: 28px;
 	height: auto;
 	justify-content: center;
-	margin: 0 auto 60px;
+	margin: 0 auto;
 	padding-bottom: 46px;
 	padding-top: 23px;
 	position: relative;
@@ -1027,7 +1037,9 @@ a:hover img {
 }
 
 .p-plan__galleryContent {
-	margin: 0 20px;
+	align-items: flex-end;
+	height: auto;
+	margin: 0 10px;
 	position: relative;
 	width: 56VW; /* 画像の幅とマージン */
 }
@@ -1046,6 +1058,15 @@ a:hover img {
 	text-align: center;
 	transform: translateX(-50%);
 	white-space: nowrap;
+}
+
+.p-plan__slider .slick-slide {
+	transform: scale(0.8); /* 左右の画像のサイズを80%に */
+	transition: all 0.5s; /* 拡大や透過のアニメーションを0.5秒で行う */
+}
+
+.p-plan__slider .slick-slide.slick-center {
+	transform: scale(1); /* 中央の画像のサイズだけ等倍に */
 }
 
 /*戻る、次へ矢印*/
@@ -1074,6 +1095,11 @@ a:hover img {
 }
 
 /*ドットナビゲーションの設定*/
+
+.test {
+	background-color: #888888;
+	height: 2000px;
+}
 
 /*===================================================================
 # What's Daily Flower（サービス）セクション
@@ -1426,6 +1452,10 @@ a:hover img {
 	max-width: 1240px; /* インナー幅は1240px */
 }
 
+.c-section__title {
+	padding-top: 83px;
+}
+
 .c-section__titleEn {
 	font-size: 32px;
 	line-height: 51px;
@@ -1647,6 +1677,119 @@ a:hover img {
 	height: 100px;
 	left: -30px;
 	width: 100px;
+}
+
+.p-plan {
+	background-image: url(../../../../../assets/img/plan-bg_pc.jpg);
+}
+
+.p-plan__courses {
+	align-items: center;
+	display: flex;
+	margin-top: 96px;
+}
+
+.p-plan__course {
+	margin: 0;
+	width: 350px;
+}
+
+.p-plan__course::after {
+	width: 274.91px;
+}
+
+.p-plan__upper {
+	gap: 0;
+}
+
+.p-plan__upperText {
+	font-size: 30px;
+	line-height: 48px;
+}
+
+.p-plan__upperNum {
+	font-size: 30px;
+	line-height: 48px;
+}
+
+.p-plan__courseTitle {
+	font-size: 28px;
+	line-height: 45px;
+}
+
+.p-plan__price {
+	font-size: 22px;
+	line-height: 35px;
+}
+
+.p-plan__priceNum {
+	font-size: 32px;
+	line-height: 51px;
+}
+
+.p-plan__shipping {
+	font-size: 22px;
+	line-height: 35px;
+}
+
+.p-plan__courseImg {
+	height: 260px;
+	width: 239px;
+}
+
+.p-plan__lowerText {
+	font-size: 24px;
+	line-height: 38px;
+}
+
+.p-plan__or {
+	font-size: 64px;
+	line-height: 103px;
+}
+
+.p-plan .p-plan__plus {
+	height: 60px;
+	width: 60px;
+}
+
+.p-plan__intervals {
+	width: 100%;
+}
+
+.p-plan__intervals::after {
+	height: 50px;
+	width: 201px;
+}
+
+.p-plan__intervalsTitle {
+	font-size: 30px;
+	line-height: 48px;
+}
+
+.p-plan__intervalWeek {
+	font-size: 28px;
+	line-height: 45px;
+}
+
+.p-plan__intervalText {
+	font-size: 24px;
+	line-height: 38px;
+}
+
+.p-plan__intervalOr {
+	font-size: 36px;
+	line-height: 58px;
+}
+
+.p-plan__titleWrap {
+	display: flex;
+	gap: 37px;
+	margin: 0;
+}
+
+.p-plan__galleryContent {
+	height: auto;
+	width: 300px;
 }
 
 .p-service {

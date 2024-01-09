@@ -11,6 +11,10 @@
         padding-top: 58px;
         text-align: center;
         font-family: 'YuMincho', 'Yu Mincho', '游明朝体', 'Yu Mincho Light', sans-serif;        
+    
+        @include m.mq('pc'){
+            padding-top: 83px;
+        }
     }
 
     &__titleEn{

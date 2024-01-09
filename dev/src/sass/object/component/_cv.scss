@@ -10,6 +10,7 @@
     right: 20px;
     bottom: 20px;
     z-index: 100;
+    display: none;
 
     @include m.mq('pc'){
         right: calc(50% - 620px);
@@ -62,4 +63,8 @@
         height: 8px;
         margin-top: 5px;
     }
+}
+
+.button-up{
+    bottom: 300px!important;
 }
