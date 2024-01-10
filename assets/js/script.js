@@ -47,29 +47,29 @@ $(document).ready(function () {
   });
 });
 
-//ギャラリーのスライダー
+// ギャラリーのスライダー
+// SlickはPCのスタイルがデフォルトになる
 $(".p-plan__slider").slick({
   autoplay: true, //自動的に動き出すか。初期値はfalse。
-  autoplaySpeed: 7000, // 自動再生のスピードを7秒に設定
+  autoplaySpeed: 3000, // 自動再生のスピードを7秒に設定
   infinite: true, //スライドをループさせるかどうか。初期値はtrue。
   speed: 1000, //スライドのスピード。初期値は300。
-  slidesToShow: 5, //1枚だけ画像全体を表示させる
+  slidesToShow: 5, //5枚の画像を表示させる
   slidesToScroll: 1, //1回のスクロールで1枚の写真を移動して見せる
   prevArrow: '<div class="slick-prev"></div>', //矢印部分PreviewのHTMLを変更
   nextArrow: '<div class="slick-next"></div>', //矢印部分NextのHTMLを変更
   centerMode: true, //画面の中心に画像を表示させる
-  variableWidth: true, //左右の画像を部分的に表示させる
   centerPadding: '80px',
-  dots: false, //下部ドットナビゲーションの表示
+  variableWidth: true, //左右の画像を部分的に表示させる
+  dots: true, //下部ドットナビゲーションの表示
 
   responsive: [
     {
-      breakpoint: 1240, // 768px以上の画面サイズ
+      breakpoint: 1240, // 1240px以下の画面サイズ
       settings: {
-        slidesToShow: 5, // 5枚の画像を表示
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
+        // slidesToShow: 4, // 5枚の画像を表示
+        centerPadding: '0px',
+        dots: false
       }
     }
     // 他のブレイクポイント設定もここに追加可能

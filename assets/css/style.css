@@ -917,6 +917,14 @@ a:hover img {
 	width: 65.2830188679%; /* コース内の画像 */
 }
 
+.p-plan__lightImg {
+	margin-top: 4px; /* PCでのコース画像のマージン（ライト） */
+}
+
+.p-plan__standardImg {
+	margin-top: 23px; /* PCでのコース画像のマージン（スタンダード） */
+}
+
 .p-plan__lowerText {
 	background-color: rgba(255, 217, 208, 0.8980392157);
 	border-radius: 3px;
@@ -1015,6 +1023,9 @@ a:hover img {
 .p-plan__gallery { /* ギャラリー */
 }
 
+.p-plan__galleryContainer { /* PC　ギャラリータイトルのインナー幅 */
+}
+
 .p-plan__titleWrap {
 	margin: 0 40px; /* ギャラリーのタイトルと説明の余白調整 */
 }
@@ -1061,11 +1072,13 @@ a:hover img {
 }
 
 .p-plan__slider .slick-slide {
+	opacity: 0.7; /* 透過70% */
 	transform: scale(0.8); /* 左右の画像のサイズを80%に */
 	transition: all 0.5s; /* 拡大や透過のアニメーションを0.5秒で行う */
 }
 
 .p-plan__slider .slick-slide.slick-center {
+	opacity: 1; /* 透過なし */
 	transform: scale(1); /* 中央の画像のサイズだけ等倍に */
 }
 
@@ -1095,6 +1108,31 @@ a:hover img {
 }
 
 /*ドットナビゲーションの設定*/
+
+.slick-dots {
+	display: none;
+	margin: 40px 0 0 0;
+	text-align: center;
+}
+
+.slick-dots li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.slick-dots button {
+	background: #ccc; /*ドットボタンの色*/
+	border-radius: 50%;
+	color: transparent;
+	display: block;
+	height: 8px; /*ドットボタンのサイズ*/
+	outline: none;
+	width: 8px; /*ドットボタンのサイズ*/
+}
+
+.slick-dots .slick-active button {
+	background: #333; /*ドットボタンの現在地表示の色*/
+}
 
 .test {
 	background-color: #888888;
@@ -1690,7 +1728,9 @@ a:hover img {
 }
 
 .p-plan__course {
+	height: 468px;
 	margin: 0;
+	padding-bottom: 0;
 	width: 350px;
 }
 
@@ -1715,11 +1755,13 @@ a:hover img {
 .p-plan__courseTitle {
 	font-size: 28px;
 	line-height: 45px;
+	margin-top: 38px;
 }
 
 .p-plan__price {
 	font-size: 22px;
 	line-height: 35px;
+	margin-top: 2px;
 }
 
 .p-plan__priceNum {
@@ -1729,7 +1771,7 @@ a:hover img {
 
 .p-plan__shipping {
 	font-size: 22px;
-	line-height: 35px;
+	line-height: 27px;
 }
 
 .p-plan__courseImg {
@@ -1749,10 +1791,15 @@ a:hover img {
 
 .p-plan .p-plan__plus {
 	height: 60px;
+	margin-bottom: 44px;
+	margin-top: 7px;
 	width: 60px;
 }
 
 .p-plan__intervals {
+	gap: 200px;
+	padding-bottom: 40px;
+	padding-top: 12px;
 	width: 100%;
 }
 
@@ -1764,6 +1811,7 @@ a:hover img {
 .p-plan__intervalsTitle {
 	font-size: 30px;
 	line-height: 48px;
+	top: -26px;
 }
 
 .p-plan__intervalWeek {
@@ -1774,6 +1822,7 @@ a:hover img {
 .p-plan__intervalText {
 	font-size: 24px;
 	line-height: 38px;
+	margin-top: 2px;
 }
 
 .p-plan__intervalOr {
@@ -1781,15 +1830,54 @@ a:hover img {
 	line-height: 58px;
 }
 
+.p-plan__galleryContainer {
+	margin: 0 auto;
+	width: 1140px;
+}
+
 .p-plan__titleWrap {
+	align-items: flex-end;
 	display: flex;
 	gap: 37px;
 	margin: 0;
 }
 
+.p-plan__galleryTitle {
+	font-size: 80px;
+	line-height: 80px;
+}
+
+.p-plan__galleryText {
+	font-size: 18px;
+	line-height: 29px;
+}
+
+.p-plan__slider {
+	padding-bottom: 53px;
+}
+
 .p-plan__galleryContent {
 	height: auto;
 	width: 300px;
+}
+
+.slick-prev,
+.slick-next {
+	height: 30px;
+	top: 40.5%;
+	width: 30px;
+}
+
+.slick-prev {
+	left: calc(50% - 485px); /* 中心から指定の位置 */
+	position: absolute;
+	transform: translateY(-50%) rotate(-135deg);
+}
+
+.slick-next {
+	position: absolute;
+	right: calc(50% - 485px); /* 中心から指定の位置 */
+	transform: translateY(-50%) rotate(45deg);
 }
 
 .p-service {

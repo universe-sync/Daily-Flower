@@ -44,7 +44,9 @@
 
         @include m.mq('pc'){
             width: 350px;
+            height: 468px;
             margin: 0;
+            padding-bottom: 0;
         }
 
         &::after{ /* 選べるコースの背景 */
@@ -116,6 +118,7 @@
         @include m.mq('pc'){
             font-size: 28px;
             line-height: 45px;
+            margin-top: 38px;
         }
     }
 
@@ -126,6 +129,7 @@
         @include m.mq('pc'){
             font-size: 22px;
             line-height: 35px;
+            margin-top: 2px;
         }
     }
 
@@ -147,7 +151,7 @@
 
         @include m.mq('pc'){
             font-size: 22px;
-            line-height: 35px;
+            line-height: 27px;
         }
     }
 
@@ -159,6 +163,15 @@
             width: 239px;
             height: 260px;
         }
+    }
+
+    &__lightImg{ /* PCでのコース画像のマージン（ライト） */
+        margin-top: 4px;
+        
+    }
+
+    &__standardImg{ /* PCでのコース画像のマージン（スタンダード） */
+        margin-top: 23px;
     }
 
     &__lowerText { /* お花の本数 */
@@ -202,6 +215,8 @@
         @include m.mq('pc'){
             width: 60px;
             height: 60px;
+            margin-top: 7px;
+            margin-bottom: 44px;
         }
     }
 
@@ -222,6 +237,9 @@
 
         @include m.mq('pc'){
             width: 100%;
+            padding-top: 12px;
+            padding-bottom: 40px;
+            gap: 200px;
         }
 
         &::after{ /* 選べる間隔の背景 */
@@ -258,6 +276,7 @@
         @include m.mq('pc'){
             font-size: 30px;
             line-height: 48px;
+            top: -26px;
         }
     }
     
@@ -284,6 +303,7 @@
         @include m.mq('pc'){
             font-size: 24px;
             line-height: 38px;
+            margin-top: 2px;
         }
     }
     
@@ -303,6 +323,14 @@
     &__gallery { /* ギャラリー */
         
     }
+
+    &__galleryContainer{ /* PC　ギャラリータイトルのインナー幅 */
+        
+        @include m.mq('pc'){
+            width: 1140px;
+            margin: 0 auto;
+        }
+    }
     
     &__titleWrap{ /* ギャラリーのタイトルと説明の余白調整 */
         margin: 0 40px;
@@ -311,6 +339,7 @@
             margin: 0;
             display: flex;
             gap: 37px;
+            align-items: flex-end;
         }
     }
 
@@ -318,17 +347,31 @@
         font-family: Tangerine;
         font-size: 40px;
         line-height: 40px;
+
+        @include m.mq('pc'){
+            font-size: 80px;
+            line-height: 80px;
+        }
     }
     
     &__galleryText { /* ギャラリーの説明 */
         font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
         line-height: 26px;
         margin-top: 8px;
+
+        @include m.mq('pc'){
+            font-size: 18px;
+            line-height: 29px;
+        }
     }
     
     &__slider { /* スライダー */
         padding-top:44px;
         padding-bottom: 87px;
+
+        @include m.mq('pc'){
+            padding-bottom: 53px;
+        }
     }
 
     &__galleryContent{ /* 画像の幅とマージン */
@@ -366,12 +409,12 @@
 .p-plan__slider .slick-slide {
     transform: scale(0.8); /* 左右の画像のサイズを80%に */
 	transition: all .5s; /* 拡大や透過のアニメーションを0.5秒で行う */
-	// opacity: 0.5; /* 透過50% */
+	opacity: 0.7; /* 透過70% */
 }
 
 .p-plan__slider .slick-slide.slick-center{
 	transform: scale(1); /* 中央の画像のサイズだけ等倍に */
-	// opacity: 1; /* 透過なし */
+	opacity: 1; /* 透過なし */
 }
 
 /*戻る、次へ矢印*/
@@ -386,43 +429,61 @@
     height: 15px;
     width: 15px;
     z-index: 1;
+
+    @include m.mq('pc'){
+        width: 30px;
+        height: 30px;
+        top: 40.5%;
+    }
 }
 
 .slick-prev { /*戻る矢印の位置と形状*/
     left: 15.5%;
     transform: rotate(-135deg);
+
+    @include m.mq('pc'){
+        position: absolute;
+        left: calc(50% - 485px); /* 中心から指定の位置 */
+        transform: translateY(-50%) rotate(-135deg);
+    }
 }
 
 .slick-next { /*次へ矢印の位置と形状*/
     right: 15.5%;
     transform: rotate(45deg);
+
+    @include m.mq('pc'){
+        position: absolute;
+        right: calc(50% - 485px); /* 中心から指定の位置 */
+        transform: translateY(-50%) rotate(45deg);
+    }
 }
 
 /*ドットナビゲーションの設定*/
 
 .slick-dots {
-    // text-align:center;
-	// margin:20px 0 0 0;
-    // display: none;
+    text-align:center;
+	margin:40px 0 0 0;
+    display: none;
 }
 
 .slick-dots li {
-    // display:inline-block;
-	// margin:0 5px;
+    display:inline-block;
+	margin:0 5px;
 }
 
 .slick-dots button {
-    // color: transparent;
-    // outline: none;
-    // width:8px; /*ドットボタンのサイズ*/
-    // height:8px; /*ドットボタンのサイズ*/
-    // display:block;
-    // border-radius:50%;
-    // background:#ccc; /*ドットボタンの色*/
+    color: transparent;
+    outline: none;
+    width:8px; /*ドットボタンのサイズ*/
+    height:8px; /*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc; /*ドットボタンの色*/
 }
 
 .slick-dots .slick-active button{
-    // background:#333; /*ドットボタンの現在地表示の色*/
+    background:#333; /*ドットボタンの現在地表示の色*/
 }
 
 .test{
