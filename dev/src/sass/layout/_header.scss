@@ -18,13 +18,15 @@
         align-items: center;
 
         @include m.mq('pc'){
-            gap: 170px;
+            gap: 169px;
             justify-content: flex-start;
         }
     }
 
     &__logo{ /* ロゴ画像 */
         width: 165px;
+        z-index: 20;
+        position: relative;
     }
 
     /* メニュー ここから */
@@ -34,7 +36,8 @@
         height: 600px;
         top: 0;
         right: 0;
-        z-index: -1;
+        // z-index: -1;
+        z-index: 10;
         transform: translateX(105%);
         transition: all 0.5s ease 0s;
         background-color: #ffd9d0;
@@ -59,7 +62,7 @@
 
         @include m.mq('pc'){
             display: flex;
-            gap: 21px;
+            gap: 25px;
             align-items: center;
             padding-top: 0;
             margin-bottom: 0;
@@ -102,10 +105,14 @@
 
     &__access{ /* ログインと新規登録 */
         display: flex;
-        gap: 100px;
+        gap: calc(100px / 375px * 100%);
         justify-content: center;
         margin: 97px auto 0;
         position: relative;
+
+        @include m.mq('tab'){
+            gap: calc(300px / 768px * 100%);
+        }
 
         @include m.mq('pc'){ /* PCはボーダーで囲む（仕切りは疑似要素のafter）*/
             margin-top: 0;
@@ -146,7 +153,18 @@
                 height: 49px;
             }
         }
+    }
 
+    &__overlay{ /* ドロワーメニューを表示する際、重なっているコンテンツにぼかしをかける */
+        display: none; /* デフォルトでは非表示 */
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 520px;
+        backdrop-filter: blur(5px); /* ぼかし効果 */
+        z-index: 5; /* メニューより低く、他のコンテンツより高いz-indexに設定 */
     }
     /* メニュー ここまで */
 

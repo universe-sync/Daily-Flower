@@ -60,7 +60,9 @@ a:hover img {
 }
 
 .l-header__logo {
+	position: relative;
 	width: 165px; /* ロゴ画像 */
+	z-index: 20;
 }
 
 .l-header__nav {
@@ -73,7 +75,7 @@ a:hover img {
 	transform: translateX(105%);
 	transition: all 0.5s ease 0s;
 	width: 100%;
-	z-index: -1;
+	z-index: 10;
 }
 
 .l-header__lists {
@@ -96,7 +98,7 @@ a:hover img {
 
 .l-header__access {
 	display: flex; /* ログインと新規登録 */
-	gap: 100px;
+	gap: 26.6666666667%;
 	justify-content: center;
 	margin: 97px auto 0;
 	position: relative;
@@ -123,6 +125,19 @@ a:hover img {
 	width: 1px;
 }
 
+.l-header__overlay {
+	bottom: 0;
+	display: none; /* デフォルトでは非表示 */ /* ドロワーメニューを表示する際、重なっているコンテンツにぼかしをかける */
+	height: 520px;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 80px;
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px); /* ぼかし効果 */
+	z-index: 5; /* メニューより低く、他のコンテンツより高いz-indexに設定 */
+}
+
 /*===================================================================
 # フッター
 ===================================================================*/
@@ -141,8 +156,8 @@ a:hover img {
 	text-align: center; /* フッターメニュー */
 }
 
-.l-footer__list:not(:last-child) {
-	margin-bottom: 6px;
+.l-footer__lists :not(last-child) {
+	margin-bottom: 7.5px;
 }
 
 .l-footer__listLink {
@@ -153,7 +168,7 @@ a:hover img {
 .l-footer__copyrightPc {
 	display: none; /* デフォルトは非表示 */ /* PC用のコピーライト */
 	font-size: 20px;
-	margin-top: 20px;
+	margin-top: 6px;
 	text-align: center;
 }
 
@@ -194,7 +209,7 @@ a:hover img {
 	font-size: 20px;
 	line-height: 32px;
 	margin-top: 65px;
-	padding-bottom: 45px;
+	padding-bottom: 50px;
 	text-align: center;
 }
 
@@ -439,7 +454,7 @@ a:hover img {
 .c-cv__text4 {
 	height: 8px;
 	margin-top: 5px;
-	width: 15px; /* 矢印 */
+	width: 17px; /* 矢印 */
 }
 
 .button-up {
@@ -811,9 +826,57 @@ a:hover img {
 
 /*最初のTOP画像追加*/
 
+.loader {
+	align-items: center;
+	background: url(../../../../../assets/img/loader-bg-sp\ 1.png) no-repeat center/cover;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1110;
+}
+
+.loader::after {
+	background: rgba(255, 255, 255, 0.6);
+	content: "";
+	display: block;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 120;
+}
+
+.loader__logo {
+	content: "";
+	display: block;
+	display: none;
+	height: 500px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	z-index: 130;
+}
+
+.loader__logo img {
+	height: 100%;
+	width: 100%;
+}
+
 /*===================================================================
 # お申込みセクション
 ===================================================================*/
+
+.test {
+	background-color: #d9d9d9;
+	height: 2000px; /* ダミーの高さ */
+}
 
 /*===================================================================
 # プランセクション
@@ -827,8 +890,7 @@ a:hover img {
 }
 
 .p-plan__courseWrap {
-	margin: 0 auto 60px;
-	max-width: 976px; /* コースパート全体 */
+	margin: 0 auto 60px; /* コースパート全体 */
 	text-align: center;
 }
 
@@ -856,7 +918,7 @@ a:hover img {
 	position: absolute; /* 選べるコースの背景 */
 	top: -27px;
 	transform: translateX(-50%);
-	width: 70.3007518797%;
+	width: 187px;
 }
 
 .p-plan__upper {
@@ -872,7 +934,7 @@ a:hover img {
 	position: absolute; /* 枠のタイトル（選べるコース） */
 	top: -16px;
 	transform: translateX(-50%);
-	width: 58.2706766917%;
+	width: 155px;
 	z-index: 10;
 }
 
@@ -918,11 +980,12 @@ a:hover img {
 }
 
 .p-plan__lightImg {
+	margin-bottom: 8px;
 	margin-top: 4px; /* PCでのコース画像のマージン（ライト） */
 }
 
 .p-plan__standardImg {
-	margin-top: 23px; /* PCでのコース画像のマージン（スタンダード） */
+	margin-top: 12px; /* PCでのコース画像のマージン（スタンダード） */
 }
 
 .p-plan__lowerText {
@@ -948,7 +1011,7 @@ a:hover img {
 	margin: 15px auto; /* プランの間にある「or」 */
 }
 
-.p-plan .p-plan__plus {
+.p-plan__plus {
 	height: 40px;
 	margin: 54.5px auto;
 	width: 40px; /* コースと選べる間隔との間にあるプラス画像 */
@@ -979,7 +1042,7 @@ a:hover img {
 	position: absolute; /* 選べる間隔の背景 */
 	top: -27px;
 	transform: translateX(-50%);
-	width: 57.012195122%;
+	width: 187px;
 }
 
 .p-plan__intervalsTitle {
@@ -1132,11 +1195,6 @@ a:hover img {
 
 .slick-dots .slick-active button {
 	background: #333; /*ドットボタンの現在地表示の色*/
-}
-
-.test {
-	background-color: #888888;
-	height: 2000px;
 }
 
 /*===================================================================
@@ -1332,6 +1390,25 @@ a:hover img {
 
 @media screen and (min-width: 768px) {
 
+.l-header__access {
+	gap: 39.0625%;
+}
+
+.l-footer__listLink {
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.c-section__titleEn {
+	font-size: 28px;
+	line-height: 43px;
+}
+
+.c-section__titleJp {
+	font-size: 16px;
+	line-height: 26px;
+}
+
 .p-faq__box {
 	width: 745px;
 }
@@ -1347,6 +1424,64 @@ a:hover img {
 
 .p-flow__inner {
 	padding: 0 20px;
+}
+
+.p-plan__courseWrap {
+	max-width: 850px;
+}
+
+.p-plan__courses {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 96px;
+}
+
+.p-plan__course {
+	margin-left: 0;
+	margin-right: 0;
+	width: 300px;
+}
+
+.p-plan__plus {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.p-plan__intervals {
+	gap: 70px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: calc(100% - 40px);
+}
+
+.p-plan__galleryTitle {
+	font-size: 50px;
+	line-height: 50px;
+}
+
+.p-plan__galleryContent {
+	height: auto;
+	width: 200px;
+}
+
+.slick-prev,
+.slick-next {
+	top: 36.5%;
+}
+
+.slick-prev {
+	left: calc(50% - 335px); /* 中心から指定の位置 */
+	position: absolute;
+	transform: translateY(-50%) rotate(-135deg);
+}
+
+.slick-next {
+	position: absolute;
+	right: calc(50% - 335px); /* 中心から指定の位置 */
+	transform: translateY(-50%) rotate(45deg);
 }
 
 .p-service__list { /*PC,TAB横並び*/
@@ -1383,7 +1518,7 @@ a:hover img {
 @media screen and (min-width: 1240px) {
 
 .l-header__contents {
-	gap: 170px;
+	gap: 169px;
 	justify-content: flex-start;
 }
 
@@ -1401,7 +1536,7 @@ a:hover img {
 .l-header__lists {
 	align-items: center;
 	display: flex;
-	gap: 21px;
+	gap: 25px;
 	margin-bottom: 0;
 	padding-top: 0;
 }
@@ -1447,8 +1582,12 @@ a:hover img {
 }
 
 .l-footer {
-	padding-bottom: 40px;
+	padding-bottom: 32px;
 	padding-top: 25px;
+}
+
+.l-footer__inner {
+	max-width: 1114px;
 }
 
 .l-footer__contents {
@@ -1458,11 +1597,17 @@ a:hover img {
 }
 
 .l-footer__lists {
-	margin-top: 15px;
+	margin-top: 10px;
+	text-align: right;
+}
+
+.l-footer__lists :not(last-child) {
+	margin-bottom: 0;
 }
 
 .l-footer__listLink {
 	font-size: 20px;
+	line-height: 33.5px;
 }
 
 .l-footer__copyrightPc {
@@ -1471,6 +1616,7 @@ a:hover img {
 
 .l-footer__contentWrap {
 	gap: 30px;
+	margin-top: 0;
 	max-width: 410px;
 }
 
@@ -1548,6 +1694,38 @@ a:hover img {
 .c-cv {
 	bottom: 100px;
 	right: calc(50% - 620px);
+}
+
+.c-cv__link {
+	height: 180px;
+	width: 180px;
+}
+
+.c-cv__text1 {
+	font-size: 18px;
+	line-height: 29px;
+	margin-top: 12px;
+}
+
+.c-cv__num {
+	font-size: 24px;
+	line-height: 38px;
+}
+
+.c-cv__text2 {
+	font-size: 22px;
+	line-height: 26px;
+}
+
+.c-cv__text3 {
+	font-size: 22px;
+	line-height: 35px;
+}
+
+.c-cv__text4 {
+	height: 12px;
+	margin-top: 10px;
+	width: 32px;
 }
 
 .p-about {
@@ -1717,13 +1895,23 @@ a:hover img {
 	width: 100px;
 }
 
+.loader {
+	background: url(../../../../../assets/img/loader-bg.png) no-repeat center/cover;
+}
+
 .p-plan {
 	background-image: url(../../../../../assets/img/plan-bg_pc.jpg);
 }
 
+.p-plan__courseWrap {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 976px;
+}
+
 .p-plan__courses {
-	align-items: center;
-	display: flex;
+	margin-left: 0;
+	margin-right: 0;
 	margin-top: 96px;
 }
 
@@ -1740,6 +1928,7 @@ a:hover img {
 
 .p-plan__upper {
 	gap: 0;
+	width: 255px;
 }
 
 .p-plan__upperText {
@@ -1789,7 +1978,7 @@ a:hover img {
 	line-height: 103px;
 }
 
-.p-plan .p-plan__plus {
+.p-plan__plus {
 	height: 60px;
 	margin-bottom: 44px;
 	margin-top: 7px;
@@ -1798,9 +1987,10 @@ a:hover img {
 
 .p-plan__intervals {
 	gap: 200px;
+	margin: 0 auto;
 	padding-bottom: 40px;
 	padding-top: 12px;
-	width: 100%;
+	width: 976px;
 }
 
 .p-plan__intervals::after {
@@ -1853,7 +2043,8 @@ a:hover img {
 }
 
 .p-plan__slider {
-	padding-bottom: 53px;
+	padding-bottom: 49px;
+	padding-top: 68px;
 }
 
 .p-plan__galleryContent {

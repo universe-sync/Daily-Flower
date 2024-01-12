@@ -17,18 +17,36 @@
     }
 
     &__courseWrap{ /* コースパート全体 */
-        max-width: 976px;
         margin: 0 auto 60px;
         text-align: center;
+
+        @include m.mq('tab'){
+            max-width: 850px;
+        }
+
+        @include m.mq('pc'){
+            max-width: 976px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__courses {
         margin-top: 115px;
-    
-        @include m.mq('pc'){
+
+        @include m.mq('tab'){
             display: flex;
             align-items: center;
             margin-top: 96px;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: space-between;
+        }
+    
+        @include m.mq('pc'){
+            margin-top: 96px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
@@ -42,6 +60,12 @@
         padding-bottom: 50px;
         border-radius: 3px;
 
+        @include m.mq('tab'){
+            width: 300px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
         @include m.mq('pc'){
             width: 350px;
             height: 468px;
@@ -53,7 +77,7 @@
             position: absolute;
             content: "";
             background-color: #FCFFFC;
-            width: calc(187px / 266px * 100%);
+            width: 187px;
             height: 52px;
             left: 50%;
             transform: translateX(-50%);
@@ -78,12 +102,13 @@
         gap: 10px;
         z-index: 10;
         flex-wrap: nowrap;
-        width: calc(155px / 266px * 100%);
+        width: 155px;
         height: 30px;
         color: v.$text-color-br;
 
         @include m.mq('pc'){
             gap: 0;
+            width: 255px;
         }
     }
 
@@ -167,11 +192,11 @@
 
     &__lightImg{ /* PCでのコース画像のマージン（ライト） */
         margin-top: 4px;
-        
+        margin-bottom: 8px;
     }
 
     &__standardImg{ /* PCでのコース画像のマージン（スタンダード） */
-        margin-top: 23px;
+        margin-top: 12px;
     }
 
     &__lowerText { /* お花の本数 */
@@ -207,10 +232,15 @@
         }
     }
 
-    .p-plan__plus { /* コースと選べる間隔との間にあるプラス画像 */
+    &__plus { /* コースと選べる間隔との間にあるプラス画像 */
         width: 40px;
         height: 40px;
         margin: 54.5px auto;
+
+        @include m.mq('tab'){
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
 
         @include m.mq('pc'){
             width: 60px;
@@ -235,18 +265,27 @@
         justify-content: center;
         gap: 28px;
 
+        @include m.mq('tab'){
+            width: calc(100% - 40px);
+            margin-left: 20px;
+            margin-right: 20px;
+            gap: 70px;
+        }
+
         @include m.mq('pc'){
-            width: 100%;
             padding-top: 12px;
             padding-bottom: 40px;
             gap: 200px;
+            margin: 0 auto;
+            width: 976px;
         }
 
         &::after{ /* 選べる間隔の背景 */
             position: absolute;
             content: "";
             background-color: #FCFFFC;
-            width: calc(187px / 328px * 100%);
+            // width: calc(187px / 328px * 100%);
+            width: 187px;
             height: 52px;
             left: 50%;
             transform: translateX(-50%);
@@ -348,6 +387,11 @@
         font-size: 40px;
         line-height: 40px;
 
+        @include m.mq('tab'){
+            font-size: 50px;
+            line-height: 50px;
+        }
+
         @include m.mq('pc'){
             font-size: 80px;
             line-height: 80px;
@@ -370,7 +414,8 @@
         padding-bottom: 87px;
 
         @include m.mq('pc'){
-            padding-bottom: 53px;
+            padding-top: 68px;
+            padding-bottom: 49px;
         }
     }
 
@@ -380,6 +425,11 @@
         margin: 0 10px;
         position: relative;
         align-items: flex-end;
+
+        @include m.mq('tab'){
+            width: 200px;
+            height: auto;
+        }
 
         @include m.mq('pc'){
             width: 300px;
@@ -430,6 +480,10 @@
     width: 15px;
     z-index: 1;
 
+    @include m.mq('tab'){
+        top: 36.5%;
+    }
+
     @include m.mq('pc'){
         width: 30px;
         height: 30px;
@@ -441,6 +495,12 @@
     left: 15.5%;
     transform: rotate(-135deg);
 
+    @include m.mq('tab'){
+        position: absolute;
+        left: calc(50% - 335px); /* 中心から指定の位置 */
+        transform: translateY(-50%) rotate(-135deg);
+    }
+
     @include m.mq('pc'){
         position: absolute;
         left: calc(50% - 485px); /* 中心から指定の位置 */
@@ -451,6 +511,12 @@
 .slick-next { /*次へ矢印の位置と形状*/
     right: 15.5%;
     transform: rotate(45deg);
+
+    @include m.mq('tab'){
+        position: absolute;
+        right: calc(50% - 335px); /* 中心から指定の位置 */
+        transform: translateY(-50%) rotate(45deg);
+    }
 
     @include m.mq('pc'){
         position: absolute;
@@ -484,10 +550,4 @@
 
 .slick-dots .slick-active button{
     background:#333; /*ドットボタンの現在地表示の色*/
-}
-
-.test{
-    height: 2000px;
-    background-color: #888888
-    ;
 }

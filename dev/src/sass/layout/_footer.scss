@@ -11,12 +11,16 @@
 
     @include m.mq('pc'){
         padding-top: 25px;
-        padding-bottom: 40px;
+        padding-bottom: 32px;
     }
 
     &__inner{
         margin: 0 auto;
         max-width: 1200px;
+
+        @include m.mq('pc'){
+            max-width: 1114px;
+        }
     }
 
     &__contents{
@@ -32,24 +36,31 @@
         text-align: center;
 
         @include m.mq('pc'){
-            margin-top: 15px;
-        }
-    }
-
-    &__list{
-
-        &:not(:last-child){
-            margin-bottom: 6px;
+            margin-top: 10px;
+            text-align: right;
         }
 
+        :not(last-child){
+            margin-bottom: 7.5px;
+
+            @include m.mq('pc'){
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__listLink{
         font-size: 14px;
         line-height: 22px;
         
+        @include m.mq('tab'){
+            font-size: 16px;
+            line-height: 25px;
+        }
+
         @include m.mq('pc'){
             font-size: 20px;
+            line-height: 33.5px;
         }
 
     }
@@ -58,7 +69,7 @@
         display: none; /* デフォルトは非表示 */
         text-align: center;
         font-size: 20px;
-        margin-top: 20px;
+        margin-top: 6px;
 
         @include m.mq('pc'){
             display: block;
@@ -74,6 +85,7 @@
         @include m.mq('pc'){
             gap: 30px;
             max-width: 410px;
+            margin-top: 0;
         }
     }
 
@@ -116,7 +128,7 @@
         font-size: 20px;
         line-height: 32px;
         margin-top: 65px;
-        padding-bottom: 45px;
+        padding-bottom: 50px;
 
         @include m.mq('pc'){
             display: none; /* PCでは非表示にする */

@@ -23,6 +23,11 @@
         font-weight: 600;
         line-height: 34px;
 
+        @include m.mq('tab'){
+            font-size: 28px;
+            line-height: 43px;
+        }
+
         @include m.mq('pc'){
             font-size: 32px;
             line-height: 51px;
@@ -32,6 +37,11 @@
     &__titleJp{
         font-size: 14px;
         line-height: 22px;
+
+        @include m.mq('tab'){
+            font-size: 16px;
+            line-height: 26px;
+        }
 
         @include m.mq('pc'){
             font-size: 18px;

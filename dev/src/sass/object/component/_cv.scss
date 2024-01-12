@@ -30,6 +30,11 @@
         height: 115px;
         border-radius: 50%;
 
+        @include m.mq('pc'){
+            width: 180px;
+            height: 180px;
+        }
+
         &:hover{
             background-color: #FFD9D0B2;
             opacity: 1;
@@ -40,28 +45,55 @@
         font-size: 11px;
         line-height: 18px;
         margin-top: 4px;
+
+        @include m.mq('pc'){
+            font-size: 18px;
+            line-height: 29px;
+            margin-top: 12px;
+        }
     }
 
     &__num{ /* 1行目の数字→50 */
         font-size: 15px;
         line-height: 25px;
+
+        @include m.mq('pc'){
+            font-size: 24px;
+            line-height: 38px;
+        }
     }
 
     &__text2{ /* お花の定期便は */
         font-size: 14px;
         line-height: 14px;
         margin-top: 7px;
+
+        @include m.mq('pc'){
+            font-size: 22px;
+            line-height: 26px;
+        }
     }
 
     &__text3{ /* こちら */
         font-size: 14px;
         line-height: 23px;
+
+        @include m.mq('pc'){
+            font-size: 22px;
+            line-height: 35px;
+        }
     }
 
     &__text4{ /* 矢印 */
-        width: 15px;
+        width: 17px;
         height: 8px;
         margin-top: 5px;
+
+        @include m.mq('pc'){
+            width: 32px;
+            height: 12px;
+            margin-top: 10px;
+        }
     }
 }
 

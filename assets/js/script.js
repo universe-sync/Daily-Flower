@@ -10,6 +10,7 @@ $(document).ready(function () {
 
     //ドロワーアイコン（バー）のアニメーション
     $(this).find(".c-drawer__bar").toggleClass("c-drawer__iconActive");
+    $("#overlay").fadeToggle(300); // オーバーレイ（ぼかし）を一緒に表示させる
 
     // 背景のスクロールを制御 メニューを開いている時はスクロールさせない
     if ($("." + targetClass).hasClass("c-drawer__iconActive")) {
@@ -41,6 +42,7 @@ $(document).ready(function () {
         let targetClass = $(".js-drawer").attr("data-target");
         $("." + targetClass).removeClass("c-drawer__iconActive");
         $(".js-drawer").find(".c-drawer__bar").removeClass("c-drawer__iconActive");
+        $("#overlay").fadeOut(300);
         $("body").css("overflow", ""); // スクロールを有効化
       }
     );
@@ -51,7 +53,7 @@ $(document).ready(function () {
 // SlickはPCのスタイルがデフォルトになる
 $(".p-plan__slider").slick({
   autoplay: true, //自動的に動き出すか。初期値はfalse。
-  autoplaySpeed: 3000, // 自動再生のスピードを7秒に設定
+  autoplaySpeed: 7000, // 自動再生のスピードを7秒に設定
   infinite: true, //スライドをループさせるかどうか。初期値はtrue。
   speed: 1000, //スライドのスピード。初期値は300。
   slidesToShow: 5, //5枚の画像を表示させる
@@ -65,9 +67,8 @@ $(".p-plan__slider").slick({
 
   responsive: [
     {
-      breakpoint: 1240, // 1240px以下の画面サイズ
+      breakpoint: 768, // SPサイズ
       settings: {
-        // slidesToShow: 4, // 5枚の画像を表示
         centerPadding: '0px',
         dots: false
       }
@@ -147,10 +148,12 @@ window.onload = function () {
     var cvButton = document.querySelector(".c-cv");
     var serviceSection = document.getElementById("about");
     var orderSection = document.getElementById("flow");
+    var voiceSection = document.getElementById("voice");
 
-    var servicePosition = serviceSection.offsetTop;
-    var orderPosition = orderSection.offsetTop;
-    var orderBottom = orderPosition + orderSection.offsetHeight;
+    // 適正な位置で表示・非表示させるように調整を施す（250px引く・1200px足す）
+    var servicePosition = serviceSection.offsetTop - 250;
+    var orderPosition = orderSection.offsetTop - 250;
+    var orderBottom = orderPosition + orderSection.offsetHeight + 1400;
     var scrollPosition = window.scrollY;
 
     if (scrollPosition < servicePosition) {
