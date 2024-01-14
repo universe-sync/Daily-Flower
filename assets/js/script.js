@@ -176,3 +176,86 @@ window.onload = function () {
     }
   });
 };
+
+//orderセクション----------------------------------------------------
+$(document).ready(function() {
+  // ふりがなの入力欄は、平仮名だけ入力できるよう制限する
+  $('#ruby-lastName').on('change', function(){
+    var input = $(this).val();
+    var result = input.replace(/(?=.*?[^\u3041-\u309F])[^\u3041-\u309F\s].*/, "");
+    $(this).val(result);
+  });
+
+  $('#ruby-firstName').on('change', function(){
+    var input = $(this).val();
+    var result = input.replace(/(?=.*?[^\u3041-\u309F])[^\u3041-\u309F\s].*/, "");
+    $(this).val(result);
+  });
+
+  // メールアドレスの入力で、アドレス不一致のとき、間違いをアラートで指摘する
+  const email1Input = $('#your-email');
+  const email2Input = $('#your-email2');
+
+  function validateEmailMatch() {
+    const email1 = email1Input.val().trim();
+    const email2 = email2Input.val().trim();
+
+    if (email1 !== '' && email2 !== '' && email1 !== email2) {
+      alert('メールアドレスが一致しません。もう一度確認してください。');
+      return false;
+    };
+    return true;
+  };
+
+  email1Input.blur(validateEmailMatch);
+  email2Input.blur(validateEmailMatch);
+
+  $(".p-order__button").click(function(e) {
+    e.preventDefault();
+
+    // 未入力の欄があるか確認
+    const isAnyFieldEmpty = $('#ruby-lastName, #ruby-firstName, #your-email, #your-email2').filter(function() {
+      return $(this).val().trim() === '';
+    }).length > 0;
+
+    if (isAnyFieldEmpty) {
+      alert('未入力の欄があります。全ての項目を入力してください。');
+      return;
+    }
+
+    // メールアドレスの一致を確認
+    if (validateEmailMatch()) {
+      var thanksSection = $('.js-thanksScroll');
+
+      // サンクスページを表示
+      $(".p-order").hide();
+      $('.p-order__thanks').show();
+
+      // Thankyou!表示までスクロール
+      thanksSection.get(0).scrollIntoView({ behavior: 'smooth', block: 'start'});
+
+    // スクロールイベントを検知して、一定位置までスクロールしたら自動的にスクロールを停止する
+      $(window).on('scroll', function() {
+        var scrollDistance = $(document).scrollTop();
+        var thanksSectionTop = thanksSection.offset().top;
+
+      // お礼のセクションが画面に表示されたらスクロールを停止する
+      if (scrollDistance <= thanksSectionTop) {
+        $(window).off('scroll'); // スクロールイベントのリスナーを解除
+      };
+    });
+  };
+});
+
+
+  // メールアドレス欄に入力された値を取得し、サンクスページに反映させる。
+  const yourMailSpan = $('.js-yourMail');
+
+  function updateYourMail() {
+    const emailValue = email1Input.val().trim();
+    yourMailSpan.text(emailValue);
+  }
+
+  email1Input.on('input', updateYourMail);
+  email2Input.on('input', updateYourMail);
+});

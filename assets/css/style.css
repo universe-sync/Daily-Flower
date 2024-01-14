@@ -873,9 +873,289 @@ a:hover img {
 # お申込みセクション
 ===================================================================*/
 
-.test {
-	background-color: #d9d9d9;
-	height: 2000px; /* ダミーの高さ */
+.p-order {
+	background-image: url(../../../../../assets/img/order-title-bg.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 72px;
+}
+
+.p-order__head {
+	background-image: url(../../../../../assets/img/order-head-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 427px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 375px;
+}
+
+.p-order__title {
+	padding-bottom: 76px;
+}
+
+.p-order__titleEn {
+	font-size: 22px;
+}
+
+.p-order__titleJp {
+	font-size: 16px;
+}
+
+.p-order__textBox {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	height: 120px;
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 238px;
+}
+
+.p-order__headText {
+	color: #491D01;
+	font-size: 22px;
+}
+
+.p-order__formHead {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 56px;
+	padding-top: 56px;
+	width: 335px;
+}
+
+.p-order__formTitle {
+	font-size: 20px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.p-order__titleSub {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.p-order__form {
+	background: #FCFFFC;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	height: 642px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 335px;
+}
+
+.p-order__fieldTitle {
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 20px;
+	padding-top: 25px;
+}
+
+.p-order__fieldTitle2,
+.p-order__fieldTitle3 {
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 20px;
+	padding-top: 48px;
+}
+
+.p-order__fieldLabel {
+	font-size: 18px;
+}
+
+.p-order__formItems {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding-left: 24px;
+}
+
+.p-order__formText {
+	color: #333;
+	font-weight: 500;
+	height: 40px;
+	padding: 7px 19px;
+	width: 291px;
+}
+
+.p-order__rubyItems {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding-left: 24px;
+}
+
+.p-order__formMails {
+	display: flex;
+	flex-direction: column;
+	padding-left: 24px;
+}
+
+.p-order__formMail1 {
+	padding-bottom: 18px;
+}
+
+.p-order__mailText {
+	color: #333;
+	font-weight: 500;
+	height: 40px;
+	padding: 7px 19px;
+	width: 291px;
+}
+
+.p-order__formButton {
+	padding-top: 56px;
+	text-align: center;
+}
+
+.p-order__button {
+	background: rgba(73, 29, 1, 0.7);
+	border-radius: 3px;
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 500;
+	height: 66px;
+	padding: 15px 53px;
+	text-align: center;
+}
+
+.p-order__thanks {
+	background-image: url(../../../../../assets/img/order-title-bg.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: none;
+	padding-bottom: 72px;
+}
+
+.p-order__thanksBox {
+	background: rgba(255, 217, 208, 0.5);
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
+	height: 762px;
+	margin: 40px auto 72px;
+	padding-bottom: 76px;
+	padding-top: 40px;
+	text-align: center;
+	width: 335px;
+}
+
+.p-order__thanksWrap {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.p-order__thanksHead {
+	color: #F07070;
+	font-family: Yu Mincho;
+	font-size: 30px;
+}
+
+.p-order__thanksText > span {
+	color: #F07070;
+}
+
+.p-order__contactBox {
+	background-color: #FFF;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	height: 338px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	width: 335px;
+}
+
+.p-order__contactHead {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 18px;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.p-order__contactTitle {
+	font-family: Yu Mincho;
+	font-size: 20px;
+	font-weight: 600;
+	width: 277px;
+}
+
+.p-order__contactMail {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 12px;
+}
+
+.p-order__contactMail img {
+	width: 30px;
+}
+
+.p-order__mailAddress {
+	margin-top: auto;
+}
+
+.p-order__contactTel {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 12px;
+}
+
+.p-order__contactTel img {
+	width: 30px;
+}
+
+.p-order__telNumber {
+	margin-top: auto;
+}
+
+.p-order__contactText {
+	padding-top: 20px;
+}
+
+.p-order__spHidden {
+	display: none;
+}
+
+.p-order__leftalignment {
+	-moz-text-align-last: left;
+	text-align-last: left;
+}
+
+::-moz-placeholder {
+	color: #A7A6A6;
+}
+
+::placeholder {
+	color: #A7A6A6;
 }
 
 /*===================================================================
@@ -1426,6 +1706,95 @@ a:hover img {
 	padding: 0 20px;
 }
 
+.p-order__formHead {
+	width: 700px;
+}
+
+.p-order__form {
+	height: 500px;
+	width: 700px;
+}
+
+.p-order__formItems {
+	flex-direction: row;
+}
+
+.p-order__rubyItems {
+	flex-direction: row;
+}
+
+.p-order__mailText {
+	width: 400px;
+}
+
+.p-order__thanksBox {
+	height: 646px;
+	max-width: 768px;
+	padding-bottom: 117px;
+	padding-left: 30px;
+	padding-right: 30px;
+	width: -moz-max-content;
+	width: max-content;
+}
+
+.p-order__thanksWrap {
+	gap: 0;
+}
+
+.p-order__thanksHead {
+	font-size: 54px;
+}
+
+.p-order__thanksHeadSub {
+	font-size: 20px;
+}
+
+.p-order__thanksText2 {
+	font-size: 20px;
+}
+
+.p-order__contactBox {
+	margin-bottom: 218px;
+	padding-left: 24px;
+	padding-right: 24px;
+	width: 700px;
+}
+
+.p-order__contactHead {
+	padding-bottom: 23px;
+}
+
+.p-order__contactTitle {
+	font-size: 24px;
+	width: -moz-max-content;
+	width: max-content;
+}
+
+.p-order__contactMail {
+	gap: 20px;
+	padding-top: 17px;
+}
+
+.p-order__contactTel {
+	gap: 20px;
+	padding-top: 17px;
+}
+
+.p-order__contactText {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+}
+
+.p-order__spHidden {
+	display: block;
+}
+
+.p-order__leftalignmentTab {
+	-moz-text-align-last: left;
+	text-align-last: left;
+}
+
 .p-plan__courseWrap {
 	max-width: 850px;
 }
@@ -1897,6 +2266,134 @@ a:hover img {
 
 .loader {
 	background: url(../../../../../assets/img/loader-bg.png) no-repeat center/cover;
+}
+
+.p-order {
+	background-image: url(../../../../../assets/img/order-pc-title-bg.png);
+	padding-bottom: 84px;
+}
+
+.p-order__head {
+	background-image: url(../../../../../assets/img/order-pc-head-bg.png);
+	height: 427px;
+	width: 640px;
+}
+
+.p-order__titleEn {
+	font-size: 32px;
+}
+
+.p-order__titleJp {
+	font-size: 18px;
+}
+
+.p-order__textBox {
+	width: 300px;
+}
+
+.p-order__headText {
+	font-size: 30px;
+}
+
+.p-order__formHead {
+	flex-direction: row;
+	gap: 33px;
+	margin: 0;
+	padding-bottom: 21px;
+	padding-top: 83px;
+}
+
+.p-order__formTitle {
+	font-size: 30px;
+}
+
+.p-order__titleSub {
+	font-size: 20px;
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+.p-order__form {
+	height: 457px;
+	margin-left: 0;
+	margin-right: 0;
+	padding-top: 22px;
+	width: 1240px;
+}
+
+.p-order__formField {
+	display: flex;
+	flex-direction: row;
+}
+
+.p-order__fieldTitle {
+	padding: 42px 10px 0 65px;
+	text-align: left;
+}
+
+.p-order__fieldTitle2,
+.p-order__fieldTitle3 {
+	padding: 43px 10px 0 65px;
+	text-align: left;
+}
+
+.p-order__fieldLabel {
+	font-size: 24px;
+	width: 100%;
+}
+
+.p-order__formItems {
+	gap: 26px;
+	margin-left: auto;
+	padding-right: 272px;
+	padding-top: 35px;
+}
+
+.p-order__formText {
+	font-size: 24px;
+	height: 52px;
+}
+
+.p-order__rubyItems {
+	gap: 26px;
+	margin-left: auto;
+	padding-right: 272px;
+	padding-top: 35px;
+}
+
+.p-order__formMails {
+	margin-left: auto;
+	padding-right: 65px;
+	padding-top: 35px;
+}
+
+.p-order__mailText {
+	font-size: 24px;
+	height: 52px;
+	width: 812px;
+}
+
+.p-order__formButton {
+	padding-top: 57px;
+}
+
+.p-order__thanksBox {
+	max-width: 1240px;
+	padding-bottom: 117px;
+	padding-left: 296px;
+	padding-right: 296px;
+	width: -moz-max-content;
+	width: max-content;
+}
+
+.p-order__contactBox {
+	padding-left: 44px;
+	padding-right: 44px;
+	width: 813px;
+}
+
+.p-order__contactLine {
+	width: 813px;
 }
 
 .p-plan {
