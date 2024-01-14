@@ -234,18 +234,18 @@ $(document).ready(function() {
       // Thankyou!表示までスクロール
       thanksSection.get(0).scrollIntoView({ behavior: 'smooth', block: 'start'});
 
-    // スクロールイベントを検知して、一定位置までスクロールしたら自動的にスクロールを停止する
+      // スクロールイベントを検知して、一定位置までスクロールしたら自動的にスクロールを停止する
       $(window).on('scroll', function() {
         var scrollDistance = $(document).scrollTop();
         var thanksSectionTop = thanksSection.offset().top;
 
-      // お礼のセクションが画面に表示されたらスクロールを停止する
-      if (scrollDistance <= thanksSectionTop) {
-        $(window).off('scroll'); // スクロールイベントのリスナーを解除
-      };
-    });
-  };
-});
+        // お礼のセクションが画面に表示されたらスクロールを停止する
+        if (scrollDistance <= thanksSectionTop) {
+          $(window).off('scroll'); // スクロールイベントのリスナーを解除
+        };
+      });
+    };
+  });
 
 
   // メールアドレス欄に入力された値を取得し、サンクスページに反映させる。
