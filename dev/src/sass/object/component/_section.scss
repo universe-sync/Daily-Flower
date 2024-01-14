@@ -8,16 +8,25 @@
 .c-section {
     
     &__title{ /* セクションタイトル */
-        padding-top: 60px;
+        padding-top: 58px;
         text-align: center;
         font-family: 'YuMincho', 'Yu Mincho', '游明朝体', 'Yu Mincho Light', sans-serif;        
+    
+        @include m.mq('pc'){
+            padding-top: 83px;
+        }
     }
 
     &__titleEn{
         display: block;
         font-size: 24px;
         font-weight: 600;
-        line-height: 38px;
+        line-height: 34px;
+
+        @include m.mq('tab'){
+            font-size: 28px;
+            line-height: 43px;
+        }
 
         @include m.mq('pc'){
             font-size: 32px;
@@ -28,6 +37,11 @@
     &__titleJp{
         font-size: 14px;
         line-height: 22px;
+
+        @include m.mq('tab'){
+            font-size: 16px;
+            line-height: 26px;
+        }
 
         @include m.mq('pc'){
             font-size: 18px;

@@ -1,0 +1,102 @@
+/*===================================================================
+# 追従するコンバージョンボタン（Call To Action）
+===================================================================*/
+
+@use "../../global/variables" as v;
+@use "../../global/mixin" as m;
+
+.c-cv{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    display: none;
+
+    @include m.mq('pc'){
+        right: calc(50% - 620px);
+        bottom: 100px;
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: v.$text-color-br;
+        border: 1px solid #491D01;
+        background-color: #F7F7F7;
+        opacity: 0.7;
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+
+        @include m.mq('pc'){
+            width: 180px;
+            height: 180px;
+        }
+
+        &:hover{
+            background-color: #FFD9D0B2;
+            opacity: 1;
+        }
+    }
+
+    &__text1{ /* 初月50%Off */
+        font-size: 11px;
+        line-height: 18px;
+        margin-top: 4px;
+
+        @include m.mq('pc'){
+            font-size: 18px;
+            line-height: 29px;
+            margin-top: 12px;
+        }
+    }
+
+    &__num{ /* 1行目の数字→50 */
+        font-size: 15px;
+        line-height: 25px;
+
+        @include m.mq('pc'){
+            font-size: 24px;
+            line-height: 38px;
+        }
+    }
+
+    &__text2{ /* お花の定期便は */
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 7px;
+
+        @include m.mq('pc'){
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
+
+    &__text3{ /* こちら */
+        font-size: 14px;
+        line-height: 23px;
+
+        @include m.mq('pc'){
+            font-size: 22px;
+            line-height: 35px;
+        }
+    }
+
+    &__text4{ /* 矢印 */
+        width: 17px;
+        height: 8px;
+        margin-top: 5px;
+
+        @include m.mq('pc'){
+            width: 32px;
+            height: 12px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.button-up{
+    bottom: 300px!important;
+}
