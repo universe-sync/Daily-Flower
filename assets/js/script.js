@@ -80,21 +80,26 @@ $(".p-plan__slider").slick({
 // 最初のTOP画像バックグラウンドからロゴが浮き出て３秒後に消える
 $(function () {
   function end_loader() {
-    $(".loader").fadeOut(4000); /*フェードアウト４秒に変更*/
+    $(".loader").fadeOut(4000, function() {
+      // フェードアウト後にロゴを非表示にする
+      hide_logo();
+    });
   }
+
   function show_logo() {
-    $(".loader .loader__logo").fadeIn(600);
+    // ロゴを表示し、4000ms後にend_loaderを呼び出す
+    $(".loader .loader__logo").fadeIn(600, function() {
+      setTimeout(end_loader, 4000); // 4000ms後にend_loaderを呼び出す
+    });
   }
+
   function hide_logo() {
     $(".loader .loader__logo").fadeOut(600);
   }
-  $(window).on("load", function () {
-    setTimeout(function () {
-      show_logo();
-    }, 1000);
-    setTimeout(function () {
-      end_loader();
-    }, 4000); /*画像表示時間３秒から4秒に変更*/
+
+  $(document).ready(function () {
+    // ドキュメント準備完了時にロゴを表示する
+    setTimeout(show_logo, 1000);
   });
 });
 
