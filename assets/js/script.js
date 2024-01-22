@@ -183,12 +183,22 @@ $(document).ready(function() {
   $('#ruby-lastName').on('change', function(){
     var input = $(this).val();
     var result = input.replace(/(?=.*?[^\u3041-\u309F])[^\u3041-\u309F\s].*/, "");
+
+    if(result !== input) {
+      alert("ふりがなは平仮名のみを入力してください。");
+    }
+
     $(this).val(result);
   });
 
   $('#ruby-firstName').on('change', function(){
     var input = $(this).val();
     var result = input.replace(/(?=.*?[^\u3041-\u309F])[^\u3041-\u309F\s].*/, "");
+
+    if(result !== input) {
+      alert("ふりがなは平仮名のみを入力してください。");
+    }
+
     $(this).val(result);
   });
 
