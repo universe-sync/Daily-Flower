@@ -37,6 +37,10 @@
 
     &__title {
         padding-bottom: 76px;
+
+        @include m.mq(pc) {
+            padding-bottom: 26px;
+        }
     }
 
     &__titleEn {
@@ -71,6 +75,7 @@
 
         @include m.mq(pc) {
             width: 300px;
+            top: calc(139px + 60px);
         }
     }
 
@@ -119,6 +124,7 @@
     &__titleSub {
         font-size: 18px;
         font-weight: 500;
+        line-height: 22px;
 
         @include m.mq(pc) {
             font-size: 20px;
@@ -242,6 +248,11 @@
         }
     }
 
+    &__formAttention {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
     &__formMails {
         display: flex;
         flex-direction: column;
@@ -249,13 +260,17 @@
 
         @include m.mq(pc) {
             padding-top: 35px;
-            padding-right: 65px;
+            padding-right: 68px;
             margin-left: auto;
         }
     }
 
     &__formMail1 {
         padding-bottom: 18px;
+    }
+
+    &__formMail2 {
+        padding-top: 3px;
     }
 
     &__mailText {
@@ -329,9 +344,8 @@
         @include m.mq(pc) {
             width: max-content;
             max-width: 1240px;
-            padding-left: 296px;
-            padding-right: 296px;
-            padding-bottom: 117px;
+            margin-top: 48px;
+            padding: 25px 296px 117px;
         }
     }
 
@@ -369,9 +383,16 @@
         }
     }
     &__thanksText2 {
+        font-size: 18px;
+        line-height: 32px;
+
         @include m.mq(tab) {
             font-size: 20px;
         }
+    }
+
+    &__leftalignment {
+        line-height: 30px;
     }
 
     &__contact {
@@ -398,14 +419,15 @@
         }
 
         @include m.mq(pc) {
-            width: 813px;
+            width: calc(813px + (44px * 2));
             padding-left: 44px;
             padding-right: 44px;
         }
     }
 
     &__contactHead {
-        display: inline-block;
+        display: block;
+        gap: 20px;
         margin-left: auto;
         margin-right: auto;
         padding-bottom: calc(20px - 2px);
@@ -422,16 +444,30 @@
         font-family: Yu Mincho;
         font-size: 20px;
         font-weight: 600;
+        position: relative;
+        font-feature-settings: "palt" 1;
+
+        &::after {
+            content: "";
+            background: #333;
+            width: 281px;
+            height: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+            display: inline-block;
+            position: absolute;
+        }
 
         @include m.mq(tab) {
             font-size: 24px;
             width: max-content;
         }
-    }
 
-    &__contactLine {
         @include m.mq(pc) {
-            width: 813px;
+            &::after {
+                width: 813px;
+            }
         }
     }
 
@@ -439,23 +475,34 @@
         display: flex;
         flex-direction: row;
         gap: 16px;
+        margin-top: 30px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: calc(20px - 8px);
 
         & img {
             width: 30px;
+
+            @include m.mq(pc) {
+                width: 40px;
+            }
         }
 
         @include m.mq(tab) {
             gap: 20px;
             padding-top: calc(25px - 8px);
+        }
 
+        @include m.mq(pc) {
+            padding-top: 0;
         }
     }
 
     &__mailAddress {
         margin-top: auto;
+
+        @include m.mq(pc) {
+            font-size: 20px;
+        }
     }
 
     &__contactTel {
@@ -464,10 +511,14 @@
         gap: 16px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: calc(20px - 8px);
+        padding-top: 23px;
 
         & img {
             width: 30px;
+
+            @include m.mq(pc) {
+                width: 40px;
+            }
         }
 
         @include m.mq(tab) {
@@ -478,6 +529,10 @@
 
     &__telNumber {
         margin-top: auto;
+
+        @include m.mq(pc) {
+            font-size: 20px;
+        }
     }
 
     &__contactText {
