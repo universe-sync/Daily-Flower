@@ -202,6 +202,16 @@ $(document).ready(function() {
     $(this).val(result);
   });
 
+  // メールアドレスの入力欄の変更を監視
+  $('#your-email').on('change', function(){
+    var email = $(this).val();
+    // メールアドレスに@が含まれているかチェック
+    if(!email.includes('@')) {
+      alert("有効なメールアドレスを入力してください。");
+      $(this).val(''); // アラート後、入力された内容を削除
+    }
+  });
+
   // メールアドレスの入力で、アドレス不一致のとき、間違いをアラートで指摘する
   const email1Input = $('#your-email');
   const email2Input = $('#your-email2');
