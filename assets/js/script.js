@@ -183,13 +183,33 @@ $(document).ready(function() {
   $('#ruby-lastName').on('change', function(){
     var input = $(this).val();
     var result = input.replace(/(?=.*?[^\u3041-\u309F])[^\u3041-\u309F\s].*/, "");
+
+    if(result !== input) {
+      alert("ふりがなは平仮名のみを入力してください。");
+    }
+
     $(this).val(result);
   });
 
   $('#ruby-firstName').on('change', function(){
     var input = $(this).val();
     var result = input.replace(/(?=.*?[^\u3041-\u309F])[^\u3041-\u309F\s].*/, "");
+
+    if(result !== input) {
+      alert("ふりがなは平仮名のみを入力してください。");
+    }
+
     $(this).val(result);
+  });
+
+  // メールアドレスの入力欄の変更を監視
+  $('#your-email').on('change', function(){
+    var email = $(this).val();
+    // メールアドレスに@が含まれているかチェック
+    if(!email.includes('@')) {
+      alert("有効なメールアドレスを入力してください。");
+      $(this).val(''); // アラート後、入力された内容を削除
+    }
   });
 
   // メールアドレスの入力で、アドレス不一致のとき、間違いをアラートで指摘する
