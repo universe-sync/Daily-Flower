@@ -560,7 +560,6 @@ a:hover img {
 	display: flex;
 	flex-direction: row;
 	max-width: 313px;
-	color: #333;
 }
 
 .p-faq__qIcon {
@@ -570,6 +569,7 @@ a:hover img {
 	height: 26px;
 	margin: 18px 16px 18px 8px;
 	width: 23px;
+	color: #333;
 }
 
 .p-faq__qText {
@@ -577,6 +577,7 @@ a:hover img {
 	margin-top: auto;
 	max-width: 248px;
 	text-align: left;
+	color: #333;
 }
 
 .p-faq__aWrapper {
