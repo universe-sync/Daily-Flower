@@ -10,7 +10,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
+body * {
 	color: #333333;
 	font-family: YuGothic, "Yu Gothic", sans-serif;
 	font-weight: 400;
@@ -24,10 +24,6 @@ object {
 	display: block;
 	height: auto;
 	max-width: 100%;
-}
-
-button{
-	color: #333;
 }
 
 a {
