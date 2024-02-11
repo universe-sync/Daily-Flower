@@ -518,6 +518,7 @@ a:hover img {
 	display: block;
 	position: relative;
 	width: 100%;
+	cursor: pointer;
 }
 
 .p-faq__head::before {
@@ -1043,6 +1044,7 @@ a:hover img {
 	height: 66px;
 	padding: 15px 53px;
 	text-align: center;
+	cursor: pointer;
 }
 
 .p-order__thanks {
