@@ -10,7 +10,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-body * {
+body {
 	color: #333333;
 	font-family: YuGothic, "Yu Gothic", sans-serif;
 	font-weight: 400;
@@ -560,6 +560,7 @@ a:hover img {
 	display: flex;
 	flex-direction: row;
 	max-width: 313px;
+	color: #333;
 }
 
 .p-faq__qIcon {
