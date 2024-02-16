@@ -569,7 +569,7 @@ a:hover img {
 	border-radius: 50%;
 	height: 26px;
 	margin: 18px 16px 18px 8px;
-	width: 23px;
+	width: 26px;
 	color: #333;
 }
 
@@ -599,7 +599,7 @@ a:hover img {
 	height: 26px;
 	margin-left: 8px;
 	margin-right: 6px;
-	width: 23px;
+	width: 26px;
 }
 
 .p-faq__a {
@@ -610,7 +610,7 @@ a:hover img {
 .p-faq__aInner {
 	background-color: #F9F1F0;
 	display: block;
-	padding: 12px 13px;
+	padding: 0px 13px 12px 13px;
 	width: 279px;
 }
 
@@ -1738,7 +1738,7 @@ a:hover img {
 }
 
 .p-faq__aInner {
-	padding: 23px 24px 41px 24px;
+	padding: 0px 24px 41px 24px;
 	width: 689px;
 }
 
